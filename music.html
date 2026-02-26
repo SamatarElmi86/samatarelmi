@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; font-family: 'Playfair Display', serif; -webkit-font-smoothing: antialiased; }
+        body { background: #fff; font-family: 'Playfair Display', serif; -webkit-font-smoothing: antialiased; color: #1a1a1a; }
         
         nav { 
             position: fixed; top: 0; width: 100%; height: 90px; 
@@ -20,31 +20,38 @@
 
         .music-container { padding-top: 90px; width: 100%; }
         
+        /* 3-COLUMN ADAPTIVE GRID */
         .music-grid { 
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
             width: 100%;
             gap: 0;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .album-card { 
             position: relative; 
-            aspect-ratio: 1 / 1; 
-            border: 0.5px solid #eee;
+            border-right: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
             background: #fff;
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Aligns players to the top since heights vary */
             justify-content: center;
-            padding: 10%; /* Provides breathing room for the player inside the square */
+            padding: 40px 20px; 
         }
 
-        .album-card iframe {
-            width: 100%;
-            height: 100%;
-            max-width: 350px;
-            max-height: 470px;
-            border: 0;
+        .album-card iframe { 
+            width: 100%; 
+            max-width: 350px; 
+            border: 0; 
         }
+
+        /* Press Section */
+        .press-section { padding: 80px 10%; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .press-header { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; color: #d4af37; margin-bottom: 40px; }
+        .press-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; font-size: 0.7rem; opacity: 0.7; }
+        .press-item { transition: 0.3s; }
+        .press-item:hover { color: #d4af37; opacity: 1; }
 
         @media (max-width: 1100px) { .music-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 750px) { .music-grid { grid-template-columns: 1fr; } }
@@ -66,24 +73,55 @@
         <div class="music-grid">
             
             <div class="album-card">
-                <iframe src="https://bandcamp.com/EmbeddedPlayer/album=1203996551/size=large/bgcol=ffffff/linkcol=d4af37/tracklist=false/transparent=true/" seamless>
+                <iframe style="height: 753px;" src="https://bandcamp.com/EmbeddedPlayer/album=1203996551/size=large/bgcol=ffffff/linkcol=d4af37/transparent=true/" seamless>
                     <a href="https://knomadspock.bandcamp.com/album/through-the-walls">Through the Walls by Knomad Spock</a>
                 </iframe>
             </div>
 
             <div class="album-card">
-                <iframe src="https://bandcamp.com/EmbeddedPlayer/album=460727373/size=large/bgcol=ffffff/linkcol=d4af37/tracklist=false/transparent=true/" seamless>
+                <iframe style="height: 753px;" src="https://bandcamp.com/EmbeddedPlayer/album=460727373/size=large/bgcol=ffffff/linkcol=d4af37/transparent=true/" seamless>
                     <a href="https://knomadspock.bandcamp.com/album/a-darker-light">A Darker Light by Knomad Spock</a>
                 </iframe>
             </div>
 
             <div class="album-card">
-                <iframe src="https://bandcamp.com/EmbeddedPlayer/album=4229182211/size=large/bgcol=ffffff/linkcol=d4af37/tracklist=false/transparent=true/" seamless>
+                <iframe style="height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=4229182211/size=large/bgcol=ffffff/linkcol=d4af37/transparent=true/" seamless>
                     <a href="https://knomadspock.bandcamp.com/album/winter-of-discontent">Winter Of Discontent by Knomad Spock</a>
                 </iframe>
             </div>
 
+            <div class="album-card">
+                <iframe style="height: 654px;" src="https://bandcamp.com/EmbeddedPlayer/album=3795881969/size=large/bgcol=ffffff/linkcol=d4af37/transparent=true/" seamless>
+                    <a href="https://bombedbuildings.bandcamp.com/album/000">000 by BØMBED BUILDINGS x KNOMAD SPOCK</a>
+                </iframe>
+            </div>
+
+            <div class="album-card">
+                <iframe style="height: 555px;" src="https://bandcamp.com/EmbeddedPlayer/album=4110747684/size=large/bgcol=ffffff/linkcol=d4af37/transparent=true/" seamless>
+                    <a href="https://bombedbuildings.bandcamp.com/album/001">001 by BØMBED BUILDINGS x KNOMAD SPOCK</a>
+                </iframe>
+            </div>
+
+            <div class="album-card">
+                <iframe style="height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=3495429211/size=large/bgcol=ffffff/linkcol=d4af37/tracklist=false/transparent=true/" seamless>
+                    <a href="https://jehst.bandcamp.com/track/storm-z-meal-feat-samatar-elmi-2">Storm Z Meal feat. Samatar Elmi by Jehst</a>
+                </iframe>
+            </div>
+
         </div>
+
+        <section class="press-section">
+            <h2 class="press-header">Critical Acclaim</h2>
+            <div class="press-grid">
+                <div class="press-item">Clash</div>
+                <div class="press-item">Afropunk</div>
+                <div class="press-item">Buzzmag</div>
+                <div class="press-item">Record Collector</div>
+                <div class="press-item">BBC Radio 6</div>
+                <div class="press-item">BBC Radio 4</div>
+            </div>
+        </section>
     </main>
+
 </body>
 </html>
