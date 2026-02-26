@@ -1,13 +1,19 @@
-/* --- BASE SETUP --- */
+/* --- GLOBAL STYLES --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --gold: #d4af37;
+    --dark: #1a1a1a;
+    --silver: #b0b0b0;
+}
 
 body {
     background-color: #ffffff;
-    font-family: 'Playfair Display', serif;
-    color: #333;
+    font-family: 'Playfair Display', serif; /* Standard Serif */
+    color: var(--dark);
 }
 
-/* --- NAV RIBBON --- */
+/* --- NAVIGATION --- */
 nav {
     position: fixed;
     top: 0; width: 100%; height: 80px;
@@ -19,79 +25,73 @@ nav {
 
 .logo {
     font-family: 'Montserrat', sans-serif;
-    color: #d4af37; font-weight: 500; letter-spacing: 4px;
+    color: var(--gold); font-weight: 500; letter-spacing: 4px;
     text-decoration: none; text-transform: uppercase;
 }
 
 .nav-links { list-style: none; display: flex; gap: 25px; }
 .nav-links a {
-    text-decoration: none; color: #333;
+    text-decoration: none; color: var(--dark);
     font-family: 'Montserrat', sans-serif; font-size: 0.7rem;
     text-transform: uppercase; letter-spacing: 2px;
 }
-.nav-links a.active { color: #d4af37; }
 
-/* --- THE WRITING GRID (Bianca Pina Style) --- */
-.writing-page-wrapper {
-    padding-top: 80px; /* Moves content below the fixed nav */
+/* --- ABOUT PAGE (The Fix) --- */
+.about-container {
+    padding: 150px 10% 80px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+.about-image img {
+    width: 100%; /* Keeps it contained to its column */
+    max-width: 500px; /* Prevents it from becoming "huge" */
+    height: auto;
+    display: block;
+}
+
+.bio-intro {
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+/* --- WRITING GRID (The Bianca Pina Fix) --- */
 .writing-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* FORCES 3 COLUMNS */
-    gap: 0; 
-    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 80px;
+    gap: 0;
 }
 
 .work-card {
     position: relative;
-    width: 100%;
-    aspect-ratio: 1 / 1; /* FORCES PERFECT SQUARES */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
-    background: #f9f9f9;
+    background: #f0f0f0; /* Grey box shows if image is missing */
 }
 
 .work-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* CRITICAL: Crops image to fit the square instead of being massive */
-    display: block;
-    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    object-fit: cover; /* Crops to square */
 }
 
 .work-info {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    display: flex; flex-direction: column;
-    justify-content: center; align-items: center;
-    padding: 10%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex; flex-direction: column; justify-content: center;
+    align-items: center; opacity: 0; transition: 0.4s;
 }
 
-/* Hover Interactivity */
 .work-card:hover .work-info { opacity: 1; }
-.work-card:hover img { transform: scale(1.05); }
-
-.work-info h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #d4af37; text-transform: uppercase;
-    letter-spacing: 2px; font-size: clamp(0.8rem, 1.5vw, 1.2rem);
-    margin-bottom: 10px;
-}
-
-.work-info p { font-size: 0.8rem; color: #666; font-style: italic; }
-
-/* --- HERO (FOR INDEX) --- */
-.hero { position: relative; height: 100vh; width: 100vw; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); object-fit: cover; z-index: -1; }
-.gold-title { font-family: 'Montserrat', sans-serif; color: #d4af37; font-size: clamp(2rem, 8vw, 5rem); letter-spacing: 12px; text-transform: uppercase; }
 
 /* --- MOBILE --- */
 @media (max-width: 800px) {
-    .writing-grid { grid-template-columns: 1fr; } /* Stacks images on phones */
+    .about-container, .writing-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
 }
