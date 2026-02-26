@@ -1,24 +1,51 @@
-/* --- HERO SECTION (Home Page Only) --- */
+/* --- RESET & FONTS --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #fff;
+    font-family: 'Playfair Display', serif;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    position: fixed;
+    top: 0; width: 100%; height: 90px;
+    padding: 0 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: white; border-bottom: 1px solid #f0f0f0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    color: #d4af37; font-weight: 500; letter-spacing: 5px;
+    text-decoration: none; text-transform: uppercase;
+}
+
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a {
+    text-decoration: none; color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif; font-size: 0.75rem;
+    text-transform: uppercase; letter-spacing: 2px;
+}
+
+/* --- HOME PAGE: ON ROAD STYLE --- */
 .hero {
     position: relative;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    background-color: #000; /* Backdrop for video loading */
 }
 
 .hero-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     object-fit: cover;
     z-index: 1;
 }
@@ -31,33 +58,111 @@
 
 .gold-title {
     font-family: 'Montserrat', sans-serif;
-    color: var(--gold);
-    font-size: clamp(2.5rem, 10vw, 6rem); /* Responsive fluid sizing */
-    letter-spacing: 15px; /* Spacing as seen in On Road */
+    color: #d4af37;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    letter-spacing: 15px;
     text-transform: uppercase;
-    font-weight: 400;
-    margin-bottom: 10px;
-    text-shadow: 0px 4px 20px rgba(0,0,0,0.5); /* Lift off video */
+    text-shadow: 0px 4px 15px rgba(0,0,0,0.4);
 }
 
 .gold-subtitle {
     font-family: 'Montserrat', sans-serif;
-    color: var(--gold);
-    font-size: 0.9rem;
-    letter-spacing: 6px;
+    color: #d4af37;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    opacity: 0.9;
+    font-size: 0.8rem;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+/* --- ABOUT PAGE: EDITORIAL GRID --- */
+.about-container {
+    padding: 160px 10% 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* This forces the side-by-side layout */
+    gap: 80px;
+    align-items: start;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    filter: grayscale(10%);
+}
+
+.about-text h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.6rem;
-    color: var(--gold);
+    text-transform: uppercase; letter-spacing: 4px;
+    font-size: 0.8rem; color: #b0b0b0; margin-bottom: 20px;
+}
+
+.bio-intro {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    color: #d4af37;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.9; /* Improved spacing */
+    margin-bottom: 25px;
+}
+
+/* Future Works Box */
+.future-works-box {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.future-works-box h3 {
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.future-works-box ul {
+    list-style: none;
+}
+
+.future-works-box li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fafafa;
+    padding-bottom: 5px;
+}
+
+/* --- WRITING GRID --- */
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 90px;
+    gap: 0;
+}
+
+.work-card {
+    position: relative;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 1024px) {
+    .about-grid, .writing-grid { grid-template-columns: 1fr; }
+    .hero-video { height: 100%; }
 }
