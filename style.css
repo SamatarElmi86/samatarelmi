@@ -1,19 +1,19 @@
-/* --- RESET & BASE --- */
+/* --- BASE SETUP --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     background-color: #ffffff;
     font-family: 'Playfair Display', serif;
-    overflow-x: hidden;
+    color: #333;
 }
 
-/* --- NAVIGATION RIBBON --- */
+/* --- NAV RIBBON --- */
 nav {
     position: fixed;
-    top: 0; width: 100%;
-    padding: 25px 50px;
+    top: 0; width: 100%; height: 80px;
+    padding: 0 50px;
     display: flex; justify-content: space-between; align-items: center;
-    background: white; border-bottom: 1px solid #f0f0f0;
+    background: white; border-bottom: 1px solid #eee;
     z-index: 1000;
 }
 
@@ -31,59 +31,67 @@ nav {
 }
 .nav-links a.active { color: #d4af37; }
 
-/* --- WRITING GRID (Bianca Pina Style) --- */
-.work-container {
-    padding-top: 80px; /* Space for the Nav bar */
+/* --- THE WRITING GRID (Bianca Pina Style) --- */
+.writing-page-wrapper {
+    padding-top: 80px; /* Moves content below the fixed nav */
 }
 
 .writing-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
-    gap: 0; /* No gaps for the flush look */
+    grid-template-columns: repeat(3, 1fr); /* FORCES 3 COLUMNS */
+    gap: 0; 
+    width: 100%;
 }
 
 .work-card {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; /* Forces square shape */
+    aspect-ratio: 1 / 1; /* FORCES PERFECT SQUARES */
     overflow: hidden;
-    cursor: pointer;
+    background: #f9f9f9;
 }
 
 .work-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents stretching */
-    transition: transform 0.8s ease;
+    object-fit: cover; /* CRITICAL: Crops image to fit the square instead of being massive */
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .work-info {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
+    padding: 10%;
+    text-align: center;
     opacity: 0;
     transition: opacity 0.4s ease;
-    padding: 20px;
-    text-align: center;
 }
 
+/* Hover Interactivity */
 .work-card:hover .work-info { opacity: 1; }
 .work-card:hover img { transform: scale(1.05); }
 
 .work-info h3 {
     font-family: 'Montserrat', sans-serif;
     color: #d4af37; text-transform: uppercase;
-    letter-spacing: 2px; font-size: 1rem; margin-bottom: 10px;
+    letter-spacing: 2px; font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    margin-bottom: 10px;
 }
 
-.work-info p { font-size: 0.85rem; color: #666; font-style: italic; }
+.work-info p { font-size: 0.8rem; color: #666; font-style: italic; }
+
+/* --- HERO (FOR INDEX) --- */
+.hero { position: relative; height: 100vh; width: 100vw; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); object-fit: cover; z-index: -1; }
+.gold-title { font-family: 'Montserrat', sans-serif; color: #d4af37; font-size: clamp(2rem, 8vw, 5rem); letter-spacing: 12px; text-transform: uppercase; }
 
 /* --- MOBILE --- */
-@media (max-width: 768px) {
-    .writing-grid { grid-template-columns: 1fr; } /* 1 column on mobile */
-    nav { padding: 20px; }
+@media (max-width: 800px) {
+    .writing-grid { grid-template-columns: 1fr; } /* Stacks images on phones */
     .nav-links { display: none; }
 }
