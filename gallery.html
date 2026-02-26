@@ -4,35 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Samatar Elmi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #fff; font-family: 'Playfair Display', serif; -webkit-font-smoothing: antialiased; }
+        
+        /* Navigation */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 90px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 0 60px; background: white; border-bottom: 1px solid #f0f0f0; z-index: 1000; 
+        }
+        .logo { font-family: 'Montserrat', sans-serif; color: #d4af37; text-decoration: none; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; font-size: 1.1rem; }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { color: #1a1a1a; font-family: 'Montserrat', sans-serif; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        .gallery-container { padding-top: 90px; width: 100%; }
+        
+        /* THE GRID */
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            width: 100%;
+            gap: 0;
+        }
+
+        .album-box { 
+            position: relative; 
+            aspect-ratio: 1 / 1; 
+            overflow: hidden; 
+            background: #1a1a1a;
+            cursor: pointer;
+        }
+
+        .album-box img { 
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.5s ease;
+        }
+
+        /* Hover Overlay - Group Name */
+        .album-overlay { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(255, 255, 255, 0.95); 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            text-align: center; padding: 20px; 
+            opacity: 0; visibility: hidden; z-index: 10;
+            transition: all 0.4s ease;
+        }
+
+        .album-box:hover .album-overlay { opacity: 1; visibility: visible; }
+        .album-box:hover img { transform: scale(1.05); opacity: 0.3; }
+
+        .album-overlay h3 { 
+            font-family: 'Montserrat', sans-serif; color: #d4af37; 
+            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 3px; 
+            margin-bottom: 5px;
+        }
+        .album-overlay p { font-size: 0.8rem; color: #666; font-style: italic; }
+
+        /* Responsive */
+        @media (max-width: 1000px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { 
+            .gallery-grid { grid-template-columns: 1fr; } 
+            nav { padding: 0 30px; }
+        }
+    </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html" class="logo">SAMATAR ELMI</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="writing.html">Writing</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="gallery.html" class="active">Gallery</a></li>
-            <li><a href="graft.html">Graft</a></li>
-            <li><a href="hilaac.html">Hilaac</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
     </nav>
 
-    <main class="work-container">
-        <div class="work-grid">
-            <div class="work-item">
-                <img src="IMG_2515.jpg" alt="Artistic Mask">
-                <div class="work-overlay"><h3>Visual Studies</h3></div>
+    <main class="gallery-container">
+        <div class="gallery-grid">
+            
+            <div class="album-box">
+                <img src="your-photo-1.jpg" alt="Live Performances">
+                <div class="album-overlay">
+                    <h3>Performances</h3>
+                    <p>Live at Latitude & more</p>
+                </div>
             </div>
-            <div class="work-item">
-                <img src="IMG_4799.jpg" alt="Portrait Detail">
-                <div class="work-overlay"><h3>Identity Series</h3></div>
+
+            <div class="album-box">
+                <img src="your-photo-2.jpg" alt="Studio Sessions">
+                <div class="album-overlay">
+                    <h3>Creative Process</h3>
+                    <p>Studio & Archive</p>
+                </div>
             </div>
+
+            <div class="album-box">
+                <img src="0gs4mvja.JPEG" alt="Portraits">
+                <div class="album-overlay">
+                    <h3>Portraits</h3>
+                    <p>Press & Editorial</p>
+                </div>
+            </div>
+
+            <div class="album-box">
+                <img src="your-photo-4.jpg" alt="Installations">
+                <div class="album-overlay">
+                    <h3>Installations</h3>
+                    <p>DIY Multi-media</p>
+                </div>
+            </div>
+
+            <div class="album-box">
+                <img src="your-photo-5.jpg" alt="Travels">
+                <div class="album-overlay">
+                    <h3>Travels</h3>
+                    <p>Field notes</p>
+                </div>
+            </div>
+
+            <div class="album-box">
+                <img src="your-photo-6.jpg" alt="Collaborations">
+                <div class="album-overlay">
+                    <h3>Collaborations</h3>
+                    <p>With Jamie Smith & others</p>
+                </div>
+            </div>
+
         </div>
     </main>
+
 </body>
 </html>
