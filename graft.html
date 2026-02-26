@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; font-family: 'Playfair Display', serif; color: #1a1a1a; line-height: 1.6; }
+        body { background: #fff; font-family: 'Playfair Display', serif; color: #1a1a1a; -webkit-font-smoothing: antialiased; line-height: 1.8; }
         
         nav { 
             position: fixed; top: 0; width: 100%; height: 90px; 
@@ -18,21 +18,27 @@
         .nav-links { display: flex; list-style: none; gap: 20px; }
         .nav-links a { color: #1a1a1a; font-family: 'Montserrat', sans-serif; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        .content-container { padding: 150px 10% 80px; max-width: 1200px; margin: 0 auto; }
-        .page-title { font-family: 'Montserrat', sans-serif; font-size: 2rem; letter-spacing: 10px; text-transform: uppercase; color: #d4af37; margin-bottom: 60px; text-align: center; }
+        .content-container { padding: 180px 10% 100px; max-width: 1100px; margin: 0 auto; }
+        .page-header { margin-bottom: 80px; text-align: center; }
+        .page-title { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; letter-spacing: 12px; text-transform: uppercase; color: #1a1a1a; margin-bottom: 10px; }
+        .page-subtitle { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #d4af37; }
 
-        .graft-item { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin-bottom: 60px; border-top: 1px solid #f0f0f0; padding-top: 40px; }
-        .graft-role { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 500; color: #d4af37; }
-        .graft-desc { font-size: 1.05rem; }
+        .graft-grid { display: grid; grid-template-columns: 1fr; gap: 2px; background: #f0f0f0; border: 1px solid #f0f0f0; }
+        .graft-row { display: grid; grid-template-columns: 300px 1fr; background: #fff; padding: 50px; gap: 40px; }
+        
+        .role-title { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #d4af37; font-weight: 500; }
+        .role-desc { font-size: 1.1rem; color: #333; }
+        .role-desc em { color: #1a1a1a; font-weight: 600; font-style: normal; }
 
-        @media (max-width: 800px) {
-            .graft-item { grid-template-columns: 1fr; gap: 10px; }
-            nav { padding: 0 20px; }
-            .nav-links { display: none; } /* Consider a mobile burger menu later */
+        @media (max-width: 900px) {
+            .graft-row { grid-template-columns: 1fr; padding: 40px 20px; gap: 15px; }
+            nav { padding: 0 25px; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html" class="logo">SAMATAR ELMI</a>
         <div class="nav-links">
@@ -47,35 +53,48 @@
     </nav>
 
     <main class="content-container">
-        <h1 class="page-title">Graft</h1>
+        <header class="page-header">
+            <h1 class="page-title">Graft</h1>
+            <p class="page-subtitle">Academic, Editorial & Pedagogical Praxis</p>
+        </header>
 
-        <div class="graft-item">
-            <div class="graft-role">Academic & Research</div>
-            <div class="graft-desc">
-                PhD Researcher exploring the intersections of archetypes and the creative process. Peer Reviewer for <em>Neurodiversity</em> (SAGE Journal).
+        <section class="graft-grid">
+            <div class="graft-row">
+                <div class="role-title">Research & Peer Review</div>
+                <div class="role-desc">
+                    <em>PhD Researcher</em> examining the psychological and structural dimensions of archetypes within the creative process. Serves as a <em>Peer Reviewer for Neurodiversity (SAGE Journal)</em>, contributing to the critical evaluation of neurodivergent scholarship.
+                </div>
             </div>
-        </div>
 
-        <div class="graft-item">
-            <div class="graft-role">Mentorship & Pedagogy</div>
-            <div class="graft-desc">
-                NMH Mentor and Instructor specializing in Neurodiversity & Creative Practice. Facilitator of Decolonised Creativity and the Archetypes and Creative Process seminar series.
+            <div class="graft-row">
+                <div class="role-title">Instruction & Facilitation</div>
+                <div class="role-desc">
+                    Lead Instructor for <em>Neurodiversity & Creative Practice</em> and <em>Archetypes and the Creative Process</em>. Facilitator of <em>Decolonised Creativity</em> seminars, focused on dismantling colonial pedagogical frameworks to foster radical artistic autonomy.
+                </div>
             </div>
-        </div>
 
-        <div class="graft-item">
-            <div class="graft-role">Editorial</div>
-            <div class="graft-desc">
-                Poetry Editor for <strong>flipped eye press</strong>, identifying and nurturing the most vital voices in contemporary poetics.
+            <div class="graft-row">
+                <div class="role-title">Mentorship</div>
+                <div class="role-desc">
+                    Specialist <em>NMH Mentor</em>, providing tailored psychological and academic support for neurodivergent students and professionals in higher education and creative industries.
+                </div>
             </div>
-        </div>
 
-        <div class="graft-item">
-            <div class="graft-role">Community</div>
-            <div class="graft-desc">
-                Community Organiser focused on radical grassroots structural change and creative advocacy.
+            <div class="graft-row">
+                <div class="role-title">Editorial Oversight</div>
+                <div class="role-desc">
+                    Poetry Editor for <em>flipped eye press</em>. Curatorial lead in identifying, developing, and advocating for innovative voices in contemporary global poetics.
+                </div>
             </div>
-        </div>
+
+            <div class="graft-row">
+                <div class="role-title">Advocacy</div>
+                <div class="role-desc">
+                    <em>Community Organiser</em> dedicated to grassroots structural reform and the intersection of social justice and the creative arts.
+                </div>
+            </div>
+        </section>
     </main>
+
 </body>
 </html>
