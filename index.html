@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samatar Elmi | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
+    <nav class="home-nav">
         <a href="index.html" class="logo">SAMATAR ELMI</a>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
@@ -23,11 +23,18 @@
         </ul>
     </nav>
 
-    <header class="hero" style="background-color: #f4f4f4; background-image: url('IMG_E0772.jpg'); background-size: cover; background-position: center;">
+    <header class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="homepage-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
         <div class="hero-content">
-            <h1 style="color: #333;">Samatar Elmi</h1>
-            <p style="color: #b76e79; letter-spacing: 5px;">Artist &bull; Writer &bull; Musician</p>
+            <h1 class="gold-title">Samatar Elmi</h1>
+            <p class="gold-subtitle">Artist &bull; Writer &bull; Musician</p>
         </div>
+        
+        <div class="scroll-indicator">Scroll</div>
     </header>
 
 </body>
