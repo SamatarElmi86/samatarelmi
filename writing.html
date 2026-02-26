@@ -2,80 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writing | Samatar Elmi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* ... Global styles same as above ... */
+        .writing-grid { display: grid; grid-template-columns: repeat(3, 1fr); padding-top: 80px; width: 100%; }
+        .work-card { position: relative; aspect-ratio: 1/1; overflow: hidden; cursor: pointer; }
+        .work-card img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* THE HOVER OVERLAY FIX */
+        .work-info { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(255,255,255,0.95); opacity: 0; transition: 0.4s ease;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 20px; z-index: 5;
+        }
+        /* This rule triggers the hover text */
+        .work-card:hover .work-info { opacity: 1; }
+        
+        .work-info h3 { font-family: 'Montserrat', sans-serif; color: #d4af37; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; }
+    </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html" class="logo">SAMATAR ELMI</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="writing.html" class="active">Writing</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="graft.html">Graft</a></li>
-            <li><a href="hilaac.html">Hilaac</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
-    </nav>
+        </nav>
 
-    <main class="writing-page-wrapper">
-        <div class="writing-grid">
-            
-            <div class="work-card">
-                <img src="Epic.JPG" alt="The Epic of Cader Idris">
-                <div class="work-info">
-                    <h3>The Epic of Cader Idris</h3>
-                    <p>Flipped Eye Press, 2024</p>
-                </div>
+    <div class="writing-grid">
+        <div class="work-card">
+            <img src="IMG_4319.jpg">
+            <div class="work-info">
+                <h3>Portrait of Colossus</h3>
+                <p>flipped eye press, 2021</p>
             </div>
-
-            <div class="work-card">
-                <img src="101.JPG" alt="Portrait of Colossus">
-                <div class="work-info">
-                    <h3>Portrait of Colossus</h3>
-                    <p>PBS Pamphlet Choice</p>
-                </div>
-            </div>
-
-            <div class="work-card">
-                <img src="BZIU7263.JPG" alt="Agen Bien Fou">
-                <div class="work-info">
-                    <h3>Agen Bien Fou</h3>
-                    <p>Kulvert Press, 2026</p>
-                </div>
-            </div>
-
-            <div class="work-card">
-                <img src="00e6c02e-d257-4d92-ad82-2982028559bb.JPG" alt="Our Eyes are Crystal Balls">
-                <div class="work-info">
-                    <h3>Our Eyes are Crystal Balls</h3>
-                    <p>Poetry Collection</p>
-                </div>
-            </div>
-
-            <div class="work-card">
-                <img src="More Fiya.jpg" alt="Anthologies">
-                <div class="work-info">
-                    <h3>Anthologies</h3>
-                    <p>More Fiya, Filigree, After Plath</p>
-                </div>
-            </div>
-
-            <div class="work-card">
-                <img src="Prairie.jpg" alt="Selected Journals">
-                <div class="work-info">
-                    <h3>Selected Journals</h3>
-                    <p>Poetry Review, Magma, Iota</p>
-                </div>
-            </div>
-
         </div>
-    </main>
-
+        </div>
 </body>
 </html>
