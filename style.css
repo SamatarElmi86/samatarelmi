@@ -1,235 +1,73 @@
-/* --- CSS VARIABLES (Color Palette) --- */
-:root {
-  --crisp-white: #ffffff;
-  --light-silver: #f4f4f4;
-  --silver: #b0b0b0;
-  --dark-silver: #333333;
-  --rose-gold: #b76e79;
-  --gold: #d4af37;
-  
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Playfair Display', serif;
+/* --- UNIVERSAL RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* --- GLOBAL STYLES --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+    --crisp-white: #ffffff;
+    --light-silver: #e0e0e0;
+    --silver: #c0c0c0;
+    --dark-silver: #4a4a4a;
+    --rose-gold: #b76e79;
+    --gold: #d4af37;
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--crisp-white);
-  color: var(--dark-silver);
-  line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-a {
-  text-decoration: none;
-  color: var(--dark-silver);
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--rose-gold);
+    background-color: var(--crisp-white);
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-silver);
+    overflow-x: hidden;
 }
 
 /* --- NAVIGATION --- */
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 2rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid var(--light-silver);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background 0.3s ease;
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 3px;
-  color: var(--dark-silver);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-.nav-links li a {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 1px;
+.nav-links a {
+    text-decoration: none;
+    color: var(--silver);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s;
 }
 
-.nav-links li a.active {
-  color: var(--gold);
-  border-bottom: 1px solid var(--gold);
+.nav-links a:hover, .nav-links a.active {
+    color: var(--gold);
 }
 
-/* --- HOME PAGE (Hero Section) --- */
-.hero {
-  height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3)), url('IMG_E0772.jpg'); /* The desert horse image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content h1 {
-  color: var(--crisp-white);
-  font-size: 4rem;
-  letter-spacing: 5px;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-}
-
-.hero-content p {
-  color: var(--crisp-white);
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.hero-content .highlight {
-  color: var(--gold);
-}
-
-/* --- ABOUT PAGE --- */
-.about-container {
-  padding: 150px 10% 100px 10%; /* Offset for fixed header */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--light-silver);
-  box-shadow: 10px 10px 0px var(--light-silver);
-  transition: transform 0.3s ease;
-}
-
-.about-image img:hover {
-  border-color: var(--rose-gold);
-}
-
-.about-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: var(--dark-silver);
-}
-
-.about-text h1::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 2px;
-  background-color: var(--gold);
-  margin-top: 15px;
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: var(--dark-silver);
-}
-
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 900px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .nav-links {
-    display: none; /* In a full build, add a hamburger menu here */
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-/* --- WORK PAGES (Grid Layout) --- */
-.work-container {
-  padding: 150px 5% 50px 5%;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.work-item {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--light-silver);
-  aspect-ratio: 1 / 1; /* Keeps everything square and tidy */
-}
-
-.work-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(20%);
-  transition: all 0.5s ease;
-}
-
-.work-item:hover img {
-  transform: scale(1.05);
-  filter: grayscale(0%);
-}
-
-.work-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7));
-  color: var(--crisp-white);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.work-item:hover .work-overlay {
-  opacity: 1;
-}
-
-.work-overlay h3 {
-  font-size: 1rem;
-  color: var(--gold);
-}
-  }/* --- HERO VIDEO STYLES --- */
+/* --- FULL SCREEN HERO --- */
 .hero {
     position: relative;
     height: 100vh;
-    width: 100%;
-    overflow: hidden; /* Keeps the video contained */
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,19 +75,90 @@ nav {
 
 .hero-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1; /* Puts video behind the text */
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures it fills the screen like a background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .hero-content {
-    z-index: 1; /* Ensures text is on top */
     text-align: center;
+    z-index: 10;
 }
+
+.gold-title {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold);
+    font-size: 5rem;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 15px;
+    /* Soft shadow to ensure readability over video */
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.gold-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--silver);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    transform: rotate(90deg);
+    right: 50px;
+}
+
+/* --- PORTFOLIO PAGES (Writing, Music, Gallery, etc.) --- */
+.work-container {
+    padding: 150px 5% 50px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.work-item {
+    background-color: var(--light-silver);
+    overflow: hidden;
+    border: 1px solid var(--light-silver);
+    transition: border 0.3s;
+}
+
+.work-item:hover {
+    border-color: var(--rose-gold);
+}
+
+.work-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(10%);
+    transition: transform 0.5s ease;
+}
+
+.work-item:hover img {
+    transform: scale(1.03);
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .gold-title { font-size: 2.2rem; letter-spacing: 5px; }
+    .nav-links { display: none; } /* Consider adding a mobile menu icon later */
+    .hero-content { padding: 0 20px; }
 }
