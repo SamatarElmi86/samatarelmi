@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samatar Elmi | About</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>About | Samatar Elmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
-        /* GLOBAL RESET FOR ABOUT */
+        /* --- CORE RESET --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #fff; font-family: 'Playfair Display', serif; color: #1a1a1a; -webkit-font-smoothing: antialiased; }
         
-        /* NAVIGATION */
+        /* --- NAVIGATION RIBBON --- */
         nav { 
             position: fixed; top: 0; width: 100%; height: 90px; 
             display: flex; justify-content: space-between; align-items: center; 
@@ -18,57 +18,64 @@
         }
         .logo { font-family: 'Montserrat', sans-serif; color: #d4af37; text-decoration: none; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; font-size: 1.1rem; }
         .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { color: #1a1a1a; font-family: 'Montserrat', sans-serif; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .nav-links a { color: #1a1a1a; font-family: 'Montserrat', sans-serif; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
         .nav-links a:hover { color: #d4af37; }
 
-        /* EDITORIAL LAYOUT */
+        /* --- EDITORIAL GRID --- */
         .about-container { 
             display: flex; gap: 70px; padding: 160px 10% 100px; 
             max-width: 1400px; margin: 0 auto; align-items: flex-start; 
         }
         
-        /* IMAGE LOCK */
-        .about-image { flex: 0 0 400px; } /* Physically prevents image from getting huge */
+        /* Image Locked Column */
+        .about-image { flex: 0 0 400px; } 
         .about-image img { width: 100%; height: auto; display: block; filter: grayscale(10%); border: 1px solid #f0f0f0; }
         
-        /* TEXT STYLING */
+        /* Text Column */
         .about-text { flex: 1; }
-        .bio-intro { font-size: 1.8rem; line-height: 1.3; color: #d4af37; margin-bottom: 30px; font-style: italic; }
-        .about-text p { font-size: 1.1rem; line-height: 1.9; margin-bottom: 25px; color: #333; }
-        
-        /* FUTURE WORKS BOX */
-        .future-works { background: #fafafa; padding: 35px; border-left: 3px solid #d4af37; margin-top: 40px; }
-        .future-works h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 20px; color: #1a1a1a; }
-        .future-works ul { list-style: none; }
-        .future-works li { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+        .bio-para { font-size: 1.2rem; line-height: 1.9; margin-bottom: 25px; color: #333; }
+        .bio-para em { font-style: italic; }
 
-        @media (max-width: 950px) {
-            .about-container { flex-direction: column; align-items: center; }
-            .about-image { flex: 0 0 auto; width: 100%; max-width: 450px; }
-            nav { padding: 0 20px; } .nav-links { display: none; }
+        /* --- THE FUTURE WORKS BOX (AS REQUESTED) --- */
+        .future-works { background: #fafafa; padding: 40px; border-left: 3px solid #d4af37; margin-top: 40px; }
+        .future-works h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 20px; color: #1a1a1a; }
+        .future-works ul { list-style: none; }
+        .future-works li { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        .future-works li:last-child { border-bottom: none; }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 1000px) {
+            .about-container { flex-direction: column; align-items: center; padding-top: 120px; }
+            .about-image { flex: 0 0 auto; width: 100%; max-width: 450px; margin-bottom: 40px; }
+            nav { padding: 0 30px; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html" class="logo">SAMATAR ELMI</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="writing.html">Writing</a>
-            <a href="music.html">Music</a>
-            <a href="gallery.html">Gallery</a>
-        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
     </nav>
 
     <main class="about-container">
         <div class="about-image">
             <img src="0gs4mvja.JPEG" alt="Samatar Elmi">
         </div>
+
         <div class="about-text">
-            <p class="bio-intro">Samatar Elmi is an award-winning writer, musician, and educator.</p>
-            <p>His debut collection, <em>The Epic of Cader Idris</em> (flipped eye press, 2024), marks a significant contribution to contemporary poetry.</p>
-            <p>As <strong>Knomad Spock</strong>, his albums have been met with critical acclaim and featured on BBC Radio 6.</p>
+            <p class="bio-para">Samatar Elmi is an award-winning writer, musician, and educator.</p>
+            
+            <p class="bio-para">His debut collection, <em>The Epic of Cader Idris</em> (flipped eye press, 2024), marks a significant contribution to contemporary poetry.</p>
+            
+            <p class="bio-para">As <strong>Knomad Spock</strong>, his albums have been met with critical acclaim and featured on BBC Radio 6.</p>
             
             <div class="future-works">
                 <h3>Future Works</h3>
@@ -80,5 +87,6 @@
             </div>
         </div>
     </main>
+
 </body>
 </html>
