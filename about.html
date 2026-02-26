@@ -19,9 +19,9 @@
         .nav-links { display: flex; list-style: none; gap: 20px; }
         .nav-links a { color: #1a1a1a; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* THE EDITORIAL GRID */
+        /* EDITORIAL GRID FIX */
         .about-container { display: flex; gap: 60px; padding: 140px 10% 80px; max-width: 1300px; margin: 0 auto; align-items: flex-start; }
-        .about-image { flex: 0 0 380px; } /* FORCES image to stay small */
+        .about-image { flex: 0 0 380px; } /* This locks the image width */
         .about-image img { width: 100%; height: auto; display: block; filter: grayscale(100%); border: 1px solid #f0f0f0; }
         
         .about-text { flex: 1; }
@@ -30,8 +30,6 @@
         
         .future-works { background: #f9f9f9; padding: 30px; border-left: 4px solid #d4af37; margin-top: 40px; }
         .future-works h3 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 15px; }
-        .future-works ul { list-style: none; padding: 0; }
-        .future-works li { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
 
         @media (max-width: 900px) {
             .about-container { flex-direction: column; align-items: center; padding-top: 100px; }
@@ -45,4 +43,21 @@
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="
+            <a href="writing.html">Writing</a>
+            <a href="music.html">Music</a>
+        </div>
+    </nav>
+
+    <main class="about-container">
+        <div class="about-image"><img src="0gs4mvja.JPEG" alt="Samatar Elmi"></div>
+        <div class="about-text">
+            <p class="bio-intro">Samatar Elmi is an award-winning writer, musician, and educator.</p>
+            <p>His debut collection, <em>The Epic of Cader Idris</em> (flipped eye press, 2024), marks a significant contribution to contemporary poetry.</p>
+            <div class="future-works">
+                <h3>Future Works</h3>
+                <p><strong>2026:</strong> ‘Agen Bien Fou’ (Kulvert Press)</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
