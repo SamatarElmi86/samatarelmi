@@ -1,11 +1,120 @@
-<main class="content-container" style="text-align: center; max-width: 600px;">
-    <h1 class="page-title">The Dispatch</h1>
-    <p style="margin-bottom: 40px; font-style: italic;">Occasional notes on poetry, futurism, and the creative process.</p>
-    
-    <form style="display: flex; flex-direction: column; gap: 20px;">
-        <input type="email" placeholder="EMAIL ADDRESS" style="padding: 15px; border: 1px solid #f0f0f0; font-family: 'Montserrat'; letter-spacing: 2px; text-align: center; outline: none;">
-        <button type="submit" style="background: #d4af37; color: white; border: none; padding: 15px; font-family: 'Montserrat'; letter-spacing: 3px; cursor: pointer; text-transform: uppercase;">Subscribe</button>
-    </form>
-    
-    <p style="margin-top: 30px; font-size: 0.7rem; color: #999; text-transform: uppercase; letter-spacing: 1px;">No spam. Just the work.</p>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Balls | Samatar Elmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #fff; font-family: 'Montserrat', sans-serif; color: #1a1a1a; -webkit-font-smoothing: antialiased; }
+        
+        /* The Ribbon (Fixed across all pages) */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 90px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 0 60px; background: white; border-bottom: 1px solid #f0f0f0; z-index: 1000; 
+        }
+        .logo { color: #d4af37; text-decoration: none; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; font-size: 1.1rem; }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { color: #1a1a1a; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Bianca Pina Inspired Content Style */
+        .main-content { 
+            padding: 200px 10% 100px; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            text-align: center;
+        }
+        .title-large { 
+            font-size: 3.5rem; 
+            font-weight: 300; 
+            letter-spacing: -1px; 
+            margin-bottom: 20px; 
+            font-family: 'Playfair Display', serif;
+        }
+        .subtitle { 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            color: #d4af37; 
+            margin-bottom: 80px; 
+            display: block;
+        }
+        .description { 
+            font-size: 1.2rem; 
+            line-height: 1.8; 
+            color: #444; 
+            margin-bottom: 60px; 
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* Minimal Newsletter Form */
+        .subscribe-form { max-width: 500px; margin: 0 auto; }
+        input[type="email"] {
+            width: 100%;
+            padding: 20px 0;
+            border: none;
+            border-bottom: 1px solid #1a1a1a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            outline: none;
+            text-align: center;
+            margin-bottom: 30px;
+            background: transparent;
+        }
+        button {
+            background: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover { background: #d4af37; }
+
+        @media (max-width: 768px) {
+            nav { padding: 0 30px; }
+            .nav-links { display: none; }
+            .title-large { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">SAMATAR ELMI</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="graft.html">Graft</a>
+            <a href="hilaac.html">Hilaac</a>
+            <a href="newsletter.html">Newsletter</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <span class="subtitle">The Dispatch</span>
+        <h1 class="title-large">Crystal Balls</h1>
+        <p class="description">
+            Occasional dispatches on poetry, archetypes, and the creative process. 
+            A space for the research that lives between the lines.
+        </p>
+
+        <form class="subscribe-form" action="YOUR_BACKEND_URL" method="POST">
+            <input type="email" placeholder="YOUR EMAIL ADDRESS" required>
+            <br>
+            <button type="submit">Subscribe</button>
+        </form>
+    </main>
+
+</body>
+</html>
