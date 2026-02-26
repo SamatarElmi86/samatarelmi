@@ -6,19 +6,17 @@
 }
 
 :root {
-    --crisp-white: #ffffff;
-    --light-silver: #f5f5f5;
+    --white: #ffffff;
+    --light-silver: #f4f4f4;
     --silver: #b0b0b0;
-    --dark-silver: #333333;
-    --rose-gold: #b76e79;
+    --dark-grey: #333333;
     --gold: #d4af37;
 }
 
 body {
-    background-color: var(--crisp-white);
+    background-color: var(--white);
     font-family: 'Playfair Display', serif;
-    color: var(--dark-silver);
-    line-height: 1.6;
+    color: var(--dark-grey);
 }
 
 /* --- NAVIGATION --- */
@@ -41,7 +39,7 @@ nav {
     font-weight: 500;
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 
@@ -53,27 +51,26 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--dark-silver);
+    color: var(--dark-grey);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a.active {
     color: var(--gold);
 }
 
-/* --- HOME PAGE HERO (VIDEO) --- */
+/* --- HOME HERO VIDEO --- */
 .hero {
     position: relative;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .hero-video {
@@ -87,27 +84,102 @@ nav {
     z-index: -1;
 }
 
-.hero-content {
-    text-align: center;
-    z-index: 10;
-}
-
 .gold-title {
     font-family: 'Montserrat', sans-serif;
     color: var(--gold);
     font-size: clamp(2.5rem, 8vw, 5rem);
     letter-spacing: 12px;
     text-transform: uppercase;
-    margin-bottom: 10px;
     text-shadow: 0px 4px 15px rgba(0,0,0,0.4);
 }
 
-.gold-subtitle {
+/* --- WRITING GRID (Bianca Pina Style) --- */
+.work-container {
+    padding-top: 150px;
+}
+
+.writing-intro {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8rem;
+    color: var(--silver);
+}
+
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; /* Flush images */
+}
+
+.work-card {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.work-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+}
+
+.work-card:hover .work-info {
+    opacity: 1;
+}
+
+.work-card:hover img {
+    transform: scale(1.1);
+}
+
+.work-info h3 {
     font-family: 'Montserrat', sans-serif;
     color: var(--gold);
-    font-size: 1rem;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
     text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.work-info p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.detail-link {
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
 }
 
 /* --- ABOUT PAGE LAYOUT --- */
@@ -121,20 +193,11 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 60px;
-    align-items: start;
 }
 
 .about-image img {
     width: 100%;
-    height: auto;
-    border: 1px solid var(--light-silver);
-    filter: grayscale(15%);
-}
-
-.about-text p {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    margin-bottom: 20px;
+    border: 1px solid #eee;
 }
 
 .bio-intro {
@@ -143,69 +206,10 @@ nav {
     font-weight: 500;
 }
 
-.section-title {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: var(--silver);
-    font-size: 0.8rem;
-    margin-bottom: 15px;
-}
-
-.upcoming-box {
-    background: var(--light-silver);
-    padding: 30px;
-    margin: 40px 0;
-    border-left: 4px solid var(--gold);
-}
-
-.upcoming-box h3 {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-.upcoming-box ul {
-    list-style: none;
-    font-size: 0.95rem;
-}
-
-.contact-footer {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
-
-.contact-footer h4 {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
-.contact-footer a {
-    color: var(--gold);
-    text-decoration: none;
-}
-
-/* --- GALLERY GRID --- */
-.work-container { padding: 150px 5% 50px; }
-.work-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-    gap: 20px; 
-}
-.work-item img, .work-item video { 
-    width: 100%; 
-    height: 400px; 
-    object-fit: cover; 
-}
-
-/* --- MOBILE RESPONSIVENESS --- */
+/* --- MOBILE --- */
 @media (max-width: 900px) {
+    .writing-grid { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; } /* Simplicity for mobile */
-    .about-container { padding-top: 100px; }
+    nav { padding: 20px; }
+    .nav-links { display: none; }
 }
