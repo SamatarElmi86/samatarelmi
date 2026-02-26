@@ -4,35 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samatar Elmi | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* GLOBAL RESET FOR HOME */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; overflow: hidden; background-color: #000; font-family: 'Montserrat', sans-serif; }
+        
+        /* NAVIGATION */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 90px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 0 60px; background: white; border-bottom: 1px solid #f0f0f0; z-index: 1000; 
+        }
+        .logo { color: #d4af37; text-decoration: none; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; font-size: 1.1rem; }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { color: #1a1a1a; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .nav-links a:hover { color: #d4af37; }
+
+        /* HERO VIDEO SECTION */
+        .hero { position: relative; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; }
+        .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .hero-content { position: relative; z-index: 2; text-align: center; }
+        
+        /* TYPOGRAPHY */
+        .gold-title { color: #d4af37; font-size: clamp(2.5rem, 8vw, 5.5rem); letter-spacing: 15px; text-transform: uppercase; font-weight: 400; text-shadow: 0px 4px 15px rgba(0,0,0,0.4); margin-bottom: 10px; }
+        .gold-subtitle { color: #d4af37; letter-spacing: 6px; text-transform: uppercase; font-size: 0.9rem; font-weight: 300; }
+        
+        @media (max-width: 800px) { nav { padding: 0 20px; } .nav-links { display: none; } }
+    </style>
 </head>
 <body>
-
-    <nav class="home-nav">
+    <nav>
         <a href="index.html" class="logo">SAMATAR ELMI</a>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="writing.html">Writing</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="graft.html">Graft</a></li>
-            <li><a href="hilaac.html">Hilaac</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
     </nav>
 
-    <header class="hero">
+    <div class="hero">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="homepage-video.mp4" type="video/mp4">
         </video>
-        
         <div class="hero-content">
             <h1 class="gold-title">Samatar Elmi</h1>
             <p class="gold-subtitle">Artist &bull; Writer &bull; Musician</p>
         </div>
-    </header>
-
+    </div>
 </body>
 </html>
