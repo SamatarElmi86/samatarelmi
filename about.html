@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; font-family: 'Playfair Display', serif; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        body { background: #ffffff; font-family: 'Playfair Display', serif; color: #1a1a1a; line-height: 1.8; -webkit-font-smoothing: antialiased; }
         
-        /* Ribbon */
+        /* Navigation Ribbon */
         nav { 
             position: fixed; top: 0; width: 100%; height: 90px; 
             display: flex; justify-content: space-between; align-items: center; 
@@ -18,30 +18,59 @@
         .logo { font-family: 'Montserrat', sans-serif; color: #d4af37; text-decoration: none; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; font-size: 1.1rem; }
         .nav-links { display: flex; list-style: none; gap: 20px; }
         .nav-links a { color: #1a1a1a; font-family: 'Montserrat', sans-serif; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
+        .nav-links a:hover { color: #d4af37; }
 
-        .container { padding: 150px 10% 80px; max-width: 1200px; margin: 0 auto; }
-        
-        h2.section-break { 
-            font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 8px; 
-            font-size: 1rem; color: #d4af37; margin: 100px 0 50px; text-align: center; border-bottom: 1px solid #eee; padding-bottom: 20px;
+        /* Main Layout */
+        .about-container { 
+            display: grid; 
+            grid-template-columns: 1fr 1.2fr; 
+            min-height: 100vh; 
+            padding-top: 90px;
         }
 
-        /* Review Grid */
-        .reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-        .review-card { background: #fdfdfd; padding: 40px; border: 1px solid #f0f0f0; position: relative; }
-        .review-card p { font-style: italic; font-size: 1.05rem; margin-bottom: 20px; }
-        .review-card cite { font-family: 'Montserrat', sans-serif; font-style: normal; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; color: #d4af37; }
+        .image-side {
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+        }
 
-        /* Tables for Data */
-        .data-table { width: 100%; border-collapse: collapse; margin-bottom: 60px; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; }
-        .data-table tr { border-bottom: 1px solid #eee; }
-        .data-table td { padding: 20px 10px; vertical-align: top; }
-        .data-table td:first-child { font-weight: 600; text-transform: uppercase; letter-spacing: 1px; width: 30%; }
-        .data-table a { color: #d4af37; text-decoration: none; }
+        .image-side img {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            filter: grayscale(100%);
+            border-radius: 2px;
+        }
 
-        @media (max-width: 800px) {
-            .reviews-grid { grid-template-columns: 1fr; }
-            nav { padding: 0 20px; }
+        .text-side {
+            padding: 100px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+
+        .bio-text {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        @media (max-width: 900px) {
+            .about-container { grid-template-columns: 1fr; }
+            .image-side { padding: 40px; order: 1; }
+            .text-side { padding: 60px 30px; order: 2; }
+            nav { padding: 0 25px; }
             .nav-links { display: none; }
         }
     </style>
@@ -57,83 +86,27 @@
             <a href="gallery.html">Gallery</a>
             <a href="graft.html">Graft</a>
             <a href="hilaac.html">Hilaac</a>
+            <a href="reviews.html">Reviews</a>
             <a href="newsletter.html">Newsletter</a>
         </div>
     </nav>
 
-    <div class="container">
-        <h1 style="font-size: 3rem; margin-bottom: 40px;">Samatar Elmi</h1>
-        <p style="font-size: 1.2rem; max-width: 800px; margin-bottom: 60px;">Samatar Elmi is a poet, musician (as Knomad Spock), and researcher. His work operates at the intersection of mythology, neurodiversity, and the Somali diaspora.</p>
-
-        <h2 class="section-break">Selected Reviews</h2>
-        
-        <div class="reviews-grid">
-            <div class="review-card">
-                <p>"Brilliant, subversive, surreal. Playful yet biting, Elmi is masterful. Hilarious. A high wire act of language."</p>
-                <cite>— Warsan Shire</cite>
-            </div>
-
-            <div class="review-card">
-                <p>"The result is an expansive book that maintains a constant tune in the key of displacement - a daring, ambitious pleasure to read."</p>
-                <cite>— Roger Robinson</cite>
-            </div>
-
-            <div class="review-card">
-                <p>"Everything here is in a quantum state, alive with the possibility of things reconfiguring themselves... a brilliance all his own."</p>
-                <cite>— Fiona Sampson (The Guardian)</cite>
-            </div>
-
-            <div class="review-card">
-                <p>"It is the work of a hybrid sensibility taking its cues equally from the rhythms of the Hip Hop emcee and the wisdom of a true historian."</p>
-                <cite>— Kayo Chingonyi</cite>
-            </div>
-
-            <div class="review-card">
-                <p>"Samatar Elmi's conflation of the snail carrying their home on their backs with the lives of those living in exile is riveting."</p>
-                <cite>— CA Conrad</cite>
-            </div>
-
-            <div class="review-card">
-                <p>"A searingly forthright début... seamlessly blends Somali oral history, Ovidian tales and Homer's Odyssey."</p>
-                <cite>— Poetry Book Society</cite>
-            </div>
+    <main class="about-container">
+        <div class="image-side">
+            <img src="portrait.jpg" alt="Samatar Elmi">
         </div>
 
-        <h2 class="section-break">Publications</h2>
-        <table class="data-table">
-            <tr><td>The Epic of Cader Idris</td><td>Bloomsbury, 2024</td></tr>
-            <tr><td>Portrait of Colossus</td><td>flipped eye press, 2021</td></tr>
-            <tr><td>More Fiya</td><td>Canongate Books, 2022</td></tr>
-            <tr><td>Filigree</td><td>Inscribe Press, 2018</td></tr>
-            <tr><td>Poetry Magazine</td><td>Poetry Foundation, Sept 2025</td></tr>
-            <tr><td>Knomad Spock: A Darker Light</td><td>Firstborn, 2024</td></tr>
-        </table>
+        <div class="text-side">
+            <h1 class="about-title">Samatar Elmi</h1>
+            <div class="bio-text">
+                <p>Samatar Elmi is a poet, musician, and researcher whose work navigates the complex intersections of mythology, neurodiversity, and the Somali diaspora. As an artist operating across multiple registers, he explores the "ruptures" in cultural narratives and the resilience of the human soul.</p>
+                <br>
+                <p>His literary output, including <em>The Epic of Cader Idris</em> and <em>Portrait of Colossus</em>, has been widely acclaimed for its linguistic acuity and philosophical depth. Performing as <strong>Knomad Spock</strong>, he fuses nomadic oral traditions with experimental jazz and hip-hop sensibilities.</p>
+                <br>
+                <p>He is currently based in the UK, where he continues to develop <strong>Hilaac</strong> and the <strong>Graft</strong> pedagogical frameworks.</p>
+            </div>
+        </div>
+    </main>
 
-        <h2 class="section-break">Selected Performances</h2>
-        <table class="data-table">
-            <tr><td>Southbank Centre</td><td>London Literature Festival (Somali Week) 2025</td></tr>
-            <tr><td>Whitechapel Gallery</td><td>Numbi Festival 2025</td></tr>
-            <tr><td>Latitude Festival</td><td>Headline Performance</td></tr>
-            <tr><td>BBC Live Sessions</td><td>Janice Walton</td></tr>
-            <tr><td>Serpentine Gallery</td><td>James Barnor Exhibition</td></tr>
-        </table>
-
-        <h2 class="section-break">Archive & Commissions</h2>
-        <table class="data-table">
-            <tr><td>Landslides</td><td><a href="https://www.youtube.com/watch?v=lAoreGpxQZI">Freedom Festival Commission 2022</a></td></tr>
-            <tr><td>An Ode to Tea</td><td><a href="https://numbi.org/an-ode-to-tea-by-samatar-elmi/">Numbi Arts Commission 2020</a></td></tr>
-            <tr><td>Knomad Spock</td><td><a href="#">Clash Magazine Review</a></td></tr>
-            <tr><td>Geoffrey Dearmer Prize</td><td><a href="https://poems.poetrysociety.org.uk/poems/the-snails/">The Snails (Poetry Society)</a></td></tr>
-        </table>
-
-        <h2 class="section-break">Upcoming Projects</h2>
-        <table class="data-table">
-            <tr><td>Agen Bien Fou (Parts 1 & 2)</td><td>Kulvert Press, 2026</td></tr>
-            <tr><td>Our Eyes are Crystal Balls</td><td>TBC, 2027</td></tr>
-            <tr><td>ISDA Tour</td><td>Global Somali Diaspora Anthology Tour 2027-28</td></tr>
-            <tr><td>Ghost Dance</td><td>New Album, Firstborn 2027</td></tr>
-        </table>
-
-    </div>
 </body>
 </html>
