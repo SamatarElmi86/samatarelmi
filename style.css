@@ -1,14 +1,82 @@
-/* --- ABOUT PAGE: EDITORIAL LAYOUT --- */
+/* =========================================
+   GLOBAL RESETS & TYPOGRAPHY
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Playfair Display', serif;
+    color: #1a1a1a;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 90px; /* Prevents content from hiding under the fixed nav */
+}
+
+/* =========================================
+   UNIVERSAL NAVIGATION RIBBON
+   ========================================= */
+nav { 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 90px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 60px; 
+    background: white; 
+    border-bottom: 1px solid #f0f0f0; 
+    z-index: 1000; 
+}
+
+.logo { 
+    font-family: 'Montserrat', sans-serif; 
+    color: #d4af37; 
+    text-decoration: none; 
+    font-weight: 500; 
+    letter-spacing: 5px; 
+    text-transform: uppercase; 
+    font-size: 1.1rem; 
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 20px; 
+}
+
+.nav-links a { 
+    color: #1a1a1a; 
+    font-family: 'Montserrat', sans-serif; 
+    text-decoration: none; 
+    font-size: 0.65rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover { 
+    color: #d4af37; 
+}
+
+/* =========================================
+   ABOUT PAGE: EDITORIAL LAYOUT
+   ========================================= */
 .about-page {
-    padding: 140px 10% 80px;
+    padding: 60px 10% 80px;
     max-width: 1300px;
     margin: 0 auto;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 350px 1fr; /* Image is locked at 350px wide */
-    gap: 60px;
+    grid-template-columns: 350px 1fr;
+    gap: 80px; /* Slightly increased for more breathing room */
     align-items: start;
 }
 
@@ -26,12 +94,13 @@
     letter-spacing: 4px;
     color: #b0b0b0;
     margin-bottom: 20px;
+    display: block;
 }
 
 .bio-lead {
     font-size: 1.8rem;
-    line-height: 1.3;
-    color: #d4af37; /* Gold */
+    line-height: 1.4;
+    color: #d4af37;
     margin-bottom: 30px;
     font-style: italic;
 }
@@ -46,7 +115,7 @@
 /* Future Works Box */
 .future-works-section {
     margin-top: 50px;
-    padding: 35px;
+    padding: 40px;
     background: #fafafa;
     border-left: 3px solid #d4af37;
 }
@@ -65,11 +134,16 @@
 
 .works-list li {
     font-size: 1rem;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #eee;
 }
+.works-list li:last-child {
+    border-bottom: none;
+}
 
-/* --- WRITING GRID: HOVER & RESPONSIVENESS --- */
+/* =========================================
+   WRITING GRID (GALLERY STYLE)
+   ========================================= */
 .writing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -81,12 +155,18 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
     cursor: pointer;
+    background: #fff;
+    border: 0.5px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Restored the 20% border framing */
 .work-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 80%;
+    height: 80%;
+    object-fit: contain; 
 }
 
 /* The Hidden Info Overlay */
@@ -101,28 +181,51 @@
     align-items: center;
     text-align: center;
     padding: 20px;
-    
-    /* Hover logic */
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
+    z-index: 10;
 }
 
-/* This makes the info appear when you hover */
+.work-info h3 { 
+    font-family: 'Montserrat', sans-serif; 
+    color: #d4af37; 
+    text-transform: uppercase; 
+    font-size: 0.8rem; 
+    letter-spacing: 2px; 
+    margin-bottom: 8px; 
+    font-weight: 500;
+}
+
+.work-info p { 
+    font-size: 0.8rem; 
+    color: #666; 
+    font-style: italic; 
+}
+
+/* Hover logic */
 .work-card:hover .work-info {
     opacity: 1;
     visibility: visible;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 1000px) {
+    /* Hide nav links on smaller screens pending a hamburger menu */
+    nav { padding: 0 25px; }
+    .nav-links { display: none; }
+}
+
 @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; } /* Stack on mobile */
-    .about-image-column { max-width: 400px; margin: 0 auto; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; } 
+    .about-image-column { max-width: 100%; margin: 0 auto; }
     .writing-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-page { padding: 40px 5% 60px; }
 }
 
 @media (max-width: 600px) {
     .writing-grid { grid-template-columns: 1fr; }
-    /* Force info visible on small phones */
-    .work-info { opacity: 1; visibility: visible; position: relative; background: #fff; }
+    /* Touch devices handle hover by tapping; no need to break the absolute positioning */
 }
