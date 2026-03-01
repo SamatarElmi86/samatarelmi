@@ -5,22 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music | Samatar Elmi</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; font-family: 'Playfair Display', serif; -webkit-font-smoothing: antialiased; color: #1a1a1a; }
-        
-        nav { 
-            position: fixed; top: 0; width: 100%; height: 90px; 
-            display: flex; justify-content: space-between; align-items: center; 
-            padding: 0 60px; background: white; border-bottom: 1px solid #f0f0f0; z-index: 1000; 
-        }
-        .logo { font-family: 'Montserrat', sans-serif; color: #d4af37; text-decoration: none; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; font-size: 1.1rem; }
-        .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { color: #1a1a1a; font-family: 'Montserrat', sans-serif; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
+    
+    <link rel="stylesheet" href="style.css">
 
-        .music-container { padding-top: 90px; width: 100%; }
+    <style>
+        /* Specific layout for the Bandcamp Grid */
+        .music-container { 
+            width: 100%; 
+        }
         
-        /* 3-COLUMN ADAPTIVE GRID */
         .music-grid { 
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
@@ -35,7 +28,7 @@
             border-bottom: 1px solid #f0f0f0;
             background: #fff;
             display: flex;
-            align-items: flex-start; /* Aligns players to the top since heights vary */
+            align-items: flex-start;
             justify-content: center;
             padding: 40px 20px; 
         }
@@ -46,10 +39,33 @@
             border: 0; 
         }
 
-        /* Press Section */
-        .press-section { padding: 80px 10%; max-width: 1200px; margin: 0 auto; text-align: center; }
-        .press-header { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; color: #d4af37; margin-bottom: 40px; }
-        .press-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; font-size: 0.7rem; opacity: 0.7; }
+        /* Press Section Styling */
+        .press-section { 
+            padding: 80px 10%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            text-align: center; 
+        }
+        .press-header { 
+            font-family: 'Montserrat', sans-serif; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            font-size: 0.8rem; 
+            color: #d4af37; 
+            margin-bottom: 40px; 
+        }
+        .press-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            font-family: 'Montserrat', sans-serif; 
+            font-weight: 300; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            font-size: 0.7rem; 
+            opacity: 0.7; 
+        }
         .press-item { transition: 0.3s; }
         .press-item:hover { color: #d4af37; opacity: 1; }
 
@@ -59,19 +75,20 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="logo">SAMATAR ELMI</a>
-    <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="writing.html">Writing</a>
-        <a href="music.html">Music</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="graft.html">Graft</a>
-        <a href="hilaac.html">Hilaac</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="newsletter.html">Newsletter</a>
-    </div>
-</nav>
+    <nav>
+        <a href="index.html" class="logo">SAMATAR ELMI</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="graft.html">Graft</a>
+            <a href="hilaac.html">Hilaac</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="newsletter.html">Newsletter</a>
+        </div>
+    </nav>
+
     <main class="music-container">
         <div class="music-grid">
             
