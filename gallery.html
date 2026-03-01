@@ -5,23 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Samatar Elmi</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; font-family: 'Playfair Display', serif; -webkit-font-smoothing: antialiased; }
-        
-        /* Navigation */
-        nav { 
-            position: fixed; top: 0; width: 100%; height: 90px; 
-            display: flex; justify-content: space-between; align-items: center; 
-            padding: 0 60px; background: white; border-bottom: 1px solid #f0f0f0; z-index: 1000; 
-        }
-        .logo { font-family: 'Montserrat', sans-serif; color: #d4af37; text-decoration: none; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; font-size: 1.1rem; }
-        .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { color: #1a1a1a; font-family: 'Montserrat', sans-serif; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
+    
+    <link rel="stylesheet" href="style.css">
 
-        .gallery-container { padding-top: 90px; width: 100%; }
+    <style>
+        /* Specific layout for the Gallery Grid */
+        .gallery-container { 
+            width: 100%; 
+        }
         
-        /* THE GRID */
         .gallery-grid { 
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
@@ -62,30 +54,29 @@
         }
         .album-overlay p { font-size: 0.8rem; color: #666; font-style: italic; }
 
-        /* Responsive */
+        /* Responsive Adjustments */
         @media (max-width: 1000px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { 
             .gallery-grid { grid-template-columns: 1fr; } 
-            nav { padding: 0 30px; }
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html" class="logo">SAMATAR ELMI</a>
-    <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="writing.html">Writing</a>
-        <a href="music.html">Music</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="graft.html">Graft</a>
-        <a href="hilaac.html">Hilaac</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="newsletter.html">Newsletter</a>
-    </div>
-</nav>
-    
+    <nav>
+        <a href="index.html" class="logo">SAMATAR ELMI</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="graft.html">Graft</a>
+            <a href="hilaac.html">Hilaac</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="newsletter.html">Newsletter</a>
+        </div>
+    </nav>
+
     <main class="gallery-container">
         <div class="gallery-grid">
             
