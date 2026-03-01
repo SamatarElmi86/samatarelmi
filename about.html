@@ -5,34 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Samatar Elmi</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        /* Base Styles aligned to Graft/Hilaac */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #ffffff; font-family: 'Playfair Display', serif; color: #1a1a1a; line-height: 1.8; -webkit-font-smoothing: antialiased; }
-        
-        /* The Ribbon Navigation */
-        nav { 
-            position: fixed; top: 0; width: 100%; height: 90px; 
-            display: flex; justify-content: space-between; align-items: center; 
-            padding: 0 60px; background: white; border-bottom: 1px solid #f0f0f0; z-index: 1000; 
-        }
-        .logo { font-family: 'Montserrat', sans-serif; color: #d4af37; text-decoration: none; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; font-size: 1.1rem; }
-        .nav-links { display: flex; list-style: none; gap: 20px; }
-        .nav-links a { color: #1a1a1a; font-family: 'Montserrat', sans-serif; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; }
-        .nav-links a:hover { color: #d4af37; }
+    
+    <link rel="stylesheet" href="style.css">
 
-        /* Structural Layout */
+    <style>
+        /* Specific layout for this page only */
         .main-wrapper { 
-            padding-top: 90px;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Symmetrical split */
-            min-height: calc(100vh - 90px);
+            grid-template-columns: 1fr 1fr; 
+            min-height: calc(100vh - 100px);
         }
 
         .image-container {
             position: sticky;
-            top: 90px;
-            height: calc(100vh - 90px);
+            top: 100px;
+            height: calc(100vh - 100px);
             background: #fdfdfd;
             display: flex;
             align-items: center;
@@ -44,15 +31,14 @@
         .image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Maintains the ratio you liked */
+            object-fit: cover;
         }
 
         .content-container {
-            padding: 100px 10%;
+            padding: 80px 10%;
             background: #fff;
         }
 
-        /* Typography aligned to Hilaac */
         .name-heading {
             font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
@@ -82,7 +68,6 @@
             margin-bottom: 30px;
         }
 
-        /* Contact Details Footer */
         .contact-section {
             margin-top: 60px;
             padding-top: 40px;
@@ -112,7 +97,6 @@
             border-bottom: 1px solid #d4af37;
         }
 
-        /* Mobile Optimization */
         @media (max-width: 1000px) {
             .main-wrapper { grid-template-columns: 1fr; }
             .image-container { 
@@ -123,26 +107,24 @@
                 border-bottom: 1px solid #f0f0f0;
             }
             .content-container { padding: 60px 30px; }
-            nav { padding: 0 25px; }
-            .nav-links { display: none; } /* Mobile users typically use a burger menu; this keeps it clean for now */
         }
     </style>
 </head>
 <body>
 
     <nav>
-    <a href="index.html" class="logo">SAMATAR ELMI</a>
-    <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="writing.html">Writing</a>
-        <a href="music.html">Music</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="graft.html">Graft</a>
-        <a href="hilaac.html">Hilaac</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="newsletter.html">Newsletter</a>
-    </div>
-</nav>
+        <a href="index.html" class="logo">SAMATAR ELMI</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="writing.html">Writing</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="graft.html">Graft</a>
+            <a href="hilaac.html">Hilaac</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="newsletter.html">Newsletter</a>
+        </div>
+    </nav>
 
     <div class="main-wrapper">
         <div class="image-container">
