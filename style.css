@@ -224,4 +224,46 @@ nav {
 
 @media (max-width: 600px) {
     .writing-grid { grid-template-columns: 1fr; }
+   /* --- FOOTER STYLES --- */
+footer {
+    width: 100%;
+    padding: 60px 10% 40px;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+    margin-top: 100px; /* Gives space from the content above */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+@media (max-width: 600px) {
+    .footer-links { flex-direction: column; gap: 15px; }
+}
 }
