@@ -17,21 +17,21 @@ body {
 }
 
 /* =========================================
-   UNIVERSAL NAVIGATION RIBBON (GRAFT TEMPLATE)
+   UNIVERSAL NAVIGATION RIBBON
    ========================================= */
 nav { 
     position: fixed; 
     top: 0; 
     left: 0;
     width: 100%; 
-    height: 100px; /* Taller height for a gallery feel */
+    height: 100px; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 0 5%; 
     background: #ffffff; 
     z-index: 1000; 
-    border-bottom: none; /* Removed line for the clean look in screenshot */
+    border-bottom: none; 
 }
 
 .logo { 
@@ -47,14 +47,14 @@ nav {
 .nav-links { 
     display: flex; 
     list-style: none; 
-    gap: 35px; /* Generous spacing between links */
+    gap: 35px; 
 }
 
 .nav-links a { 
-    color: #555555; /* Softer charcoal grey from template */
+    color: #555555; 
     font-family: 'Montserrat', sans-serif; 
     text-decoration: none; 
-    font-size: 0.58rem; /* Delicate, small size matching screenshot */
+    font-size: 0.58rem; 
     font-weight: 500;
     text-transform: uppercase; 
     letter-spacing: 3px; 
@@ -208,6 +208,69 @@ nav {
 }
 
 /* =========================================
+   SOPHISTICATED FOOTER
+   ========================================= */
+footer {
+    width: 100%;
+    padding: 80px 10% 60px;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+    margin-top: 120px;
+}
+
+/* Monogram/Symbol above links */
+footer::before {
+    content: "S.E."; 
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    color: #d4af37;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 40px;
+}
+
+.footer-links a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 0 25px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* The delicate vertical divider */
+.footer-links a:not(:last-child) {
+    border-right: 1px solid #eee;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+    transform: translateY(-2px);
+}
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #bbb;
+    margin-top: 20px;
+}
+
+/* =========================================
    MOBILE RESPONSIVENESS
    ========================================= */
 @media (max-width: 1000px) {
@@ -222,48 +285,15 @@ nav {
     .about-page { padding: 40px 5% 60px; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .footer-links { flex-direction: column; }
+    .footer-links a { 
+        border-right: none; 
+        border-bottom: 1px solid #eee; 
+        padding: 15px 0; 
+        width: 100%; 
+    }
+    .footer-links a:last-child { border-bottom: none; }
+    
     .writing-grid { grid-template-columns: 1fr; }
-   /* --- FOOTER STYLES --- */
-footer {
-    width: 100%;
-    padding: 60px 10% 40px;
-    background: #fff;
-    border-top: 1px solid #f0f0f0;
-    text-align: center;
-    margin-top: 100px; /* Gives space from the content above */
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.footer-links a {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    color: #1a1a1a;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #d4af37;
-}
-
-.copyright {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #999;
-}
-
-@media (max-width: 600px) {
-    .footer-links { flex-direction: column; gap: 15px; }
-}
 }
