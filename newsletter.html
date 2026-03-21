@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Specific Bianca Pina Inspired Content Style */
         .main-content { 
-            padding: 100px 10% 100px; /* Reduced to balance with 100px body padding */
+            padding: 100px 10% 100px;
             max-width: 900px; 
             margin: 0 auto; 
             text-align: center;
@@ -43,38 +42,60 @@
             font-style: italic;
         }
 
-        /* Minimal Newsletter Form */
-        .subscribe-form { max-width: 500px; margin: 0 auto; }
-        
-        input[type="email"] {
-            width: 100%;
-            padding: 20px 0;
-            border: none;
-            border-bottom: 1px solid #1a1a1a;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            outline: none;
-            text-align: center;
-            margin-bottom: 30px;
-            background: transparent;
+        .recent-posts {
+            margin: 60px auto 60px;
+            max-width: 600px;
+            text-align: left;
         }
 
-        button {
-            background: #1a1a1a;
-            color: #fff;
-            border: none;
-            padding: 15px 40px;
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+        .recent-posts-heading {
             font-size: 0.7rem;
-            cursor: pointer;
-            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #d4af37;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
-        button:hover { 
-            background: #d4af37; 
+        .post-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .post-item:last-child {
+            border-bottom: none;
+        }
+
+        .post-item a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+            transition: color 0.3s;
+        }
+
+        .post-item a:hover {
+            color: #d4af37;
+        }
+
+        .post-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        .subscribe-wrapper {
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .subscribe-wrapper iframe {
+            max-width: 100%;
         }
 
         @media (max-width: 768px) {
@@ -107,41 +128,50 @@
             A space for the research that lives between the lines.
         </p>
 
-        <form class="subscribe-form" action="YOUR_BACKEND_URL" method="POST">
-            <input type="email" placeholder="YOUR EMAIL ADDRESS" required>
-            <br>
-            <button type="submit">Subscribe</button>
-        </form>
+        <!-- Subscribe Embed -->
+        <div class="subscribe-wrapper">
+            <iframe
+                src="https://samatarelmi.substack.com/embed"
+                width="480"
+                height="320"
+                style="border: 1px solid #EEE; background: white"
+                frameborder="0"
+                scrolling="no">
+            </iframe>
+        </div>
+
+        <!-- Recent Posts -->
+        <div class="recent-posts">
+            <p class="recent-posts-heading">Recent Dispatches</p>
+            <div id="substack-posts"></div>
+        </div>
+
     </main>
-    <!-- Recent Posts from Substack -->
-<div id="substack-posts"></div>
 
-<script>
-  const RSS_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://samatarelmi.substack.com/feed`;
+    <script>
+        const RSS_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://samatarelmi.substack.com/feed`;
 
-  fetch(RSS_URL)
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById('substack-posts');
-      data.items.slice(0, 5).forEach(post => {
-        container.innerHTML += `
-          <div style="margin-bottom: 1.5rem;">
-            <a href="${post.link}" target="_blank" style="font-size: 1.1rem; font-weight: bold;">${post.title}</a>
-            <p style="color: grey; font-size: 0.85rem;">${post.pubDate.slice(0, 10)}</p>
-          </div>`;
-      });
-    });
-</script>
-
-<!-- Subscribe Embed -->
-<iframe
-  src="https://samatarelmi.substack.com/embed"
-  width="480"
-  height="320"
-  style="border: 1px solid #EEE; background: white"
-  frameborder="0"
-  scrolling="no">
-</iframe>
+        fetch(RSS_URL)
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById('substack-posts');
+                if (!data.items || data.items.length === 0) {
+                    container.innerHTML = '<p style="color:#999; font-family: Montserrat, sans-serif; font-size: 0.8rem; letter-spacing:2px;">No posts yet.</p>';
+                    return;
+                }
+                data.items.slice(0, 5).forEach(post => {
+                    const date = new Date(post.pubDate).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+                    container.innerHTML += `
+                        <div class="post-item">
+                            <a href="${post.link}" target="_blank">${post.title}</a>
+                            <span class="post-date">${date}</span>
+                        </div>`;
+                });
+            })
+            .catch(() => {
+                document.getElementById('substack-posts').innerHTML = '';
+            });
+    </script>
 
 </body>
 </html>
