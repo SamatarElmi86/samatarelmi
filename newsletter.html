@@ -113,6 +113,35 @@
             <button type="submit">Subscribe</button>
         </form>
     </main>
+    <!-- Recent Posts from Substack -->
+<div id="substack-posts"></div>
+
+<script>
+  const RSS_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://samatarelmi.substack.com/feed`;
+
+  fetch(RSS_URL)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('substack-posts');
+      data.items.slice(0, 5).forEach(post => {
+        container.innerHTML += `
+          <div style="margin-bottom: 1.5rem;">
+            <a href="${post.link}" target="_blank" style="font-size: 1.1rem; font-weight: bold;">${post.title}</a>
+            <p style="color: grey; font-size: 0.85rem;">${post.pubDate.slice(0, 10)}</p>
+          </div>`;
+      });
+    });
+</script>
+
+<!-- Subscribe Embed -->
+<iframe
+  src="https://samatarelmi.substack.com/embed"
+  width="480"
+  height="320"
+  style="border: 1px solid #EEE; background: white"
+  frameborder="0"
+  scrolling="no">
+</iframe>
 
 </body>
 </html>
