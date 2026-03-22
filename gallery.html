@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .gallery-container { width: 100%; }
+        .gallery-container { width: 100%; display: flex; justify-content: center; }
 
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            width: 100%;
+            width: 75%;
             gap: 0;
         }
 
@@ -130,8 +130,8 @@
             color: #fff; opacity: 0.4;
         }
 
-        @media (max-width: 1000px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1000px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); width: 100%; } }
+        @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; width: 100%; } }
     </style>
 </head>
 <body>
@@ -186,32 +186,9 @@
             </div>
 
             <div class="album-box" onclick="openLightbox('analog', 0)">
-                <img src="A01.JPG" alt="Travels">
-               travels: [
-    { type: 'image', src: 'A01.JPG' },
-    { type: 'image', src: 'A02.JPG' },
-    { type: 'image', src: 'A03.JPG' },
-    { type: 'image', src: 'A04.JPG' },
-    { type: 'image', src: 'A05.JPG' },
-    { type: 'image', src: 'A06.JPG' },
-    { type: 'image', src: 'A07.JPG' },
-    { type: 'image', src: 'A08.JPG' },
-    { type: 'image', src: 'A09.JPG' },
-    { type: 'image', src: 'A10.JPG' },
-    { type: 'image', src: 'A11.JPG' },
-    { type: 'image', src: 'A12.JPG' },
-    { type: 'image', src: 'A13.JPG' },
-    { type: 'image', src: 'A14.JPG' },
-    { type: 'image', src: 'A15.JPG' },
-    { type: 'image', src: 'A16.JPG' },
-    { type: 'image', src: 'A17.JPG' },
-    { type: 'image', src: 'A18.JPG' },
-    { type: 'image', src: 'A19.JPG' },
-    { type: 'image', src: 'A20.JPG' },
-    { type: 'image', src: 'A21.JPG' },
-],
+                <img src="A01.JPG" alt="Analog">
                 <div class="album-overlay">
-                    <h3>Travels</h3>
+                    <h3>Analog</h3>
                     <p>Field notes</p>
                 </div>
             </div>
@@ -237,21 +214,11 @@
     </div>
 
     <script>
-        // ─────────────────────────────────────────────
-        // EDIT YOUR MEDIA HERE
-        // Each item can be:
-        //   { type: 'image',   src: 'filename.jpg' }
-        //   { type: 'youtube', src: 'VIDEO_ID' }       ← just the ID from the URL
-        //   { type: 'vimeo',   src: 'VIDEO_ID' }       ← just the ID from the URL
-        //   { type: 'mp4',     src: 'filename.mp4' }
-        // ─────────────────────────────────────────────
-
         const galleries = {
 
             performances: [
                 { type: 'image',   src: 'P01.jpg' },
                 { type: 'image',   src: 'P02.jpg' },
-                { type: 'youtube', src: 'YOUTUBE_VIDEO_ID' },
                 // add more...
             ],
 
@@ -268,45 +235,40 @@
             ],
 
             installations: [
-                { type: 'image',  src: 'I01.jpg' },
-                { type: 'mp4',    src: 'installation-video.mp4' },
+                { type: 'image', src: 'I01.jpg' },
                 // add more...
             ],
 
-            travels: [
-                { type: 'image', src: 'A01.jpg' },
-                { type: 'image', src: 'A02.jpg' },
-                { type: 'image', src: 'A03.jpg' },
-                { type: 'image', src: 'A04.jpg' },
-                { type: 'image', src: 'A05.jpg' },
-                { type: 'image', src: 'A06.jpg' },
-                { type: 'image', src: 'A07.jpg' },
-                { type: 'image', src: 'A08.jpg' },
-                { type: 'image', src: 'A09.jpg' },
-                { type: 'image', src: 'A10.jpg' },
-                { type: 'image', src: 'A11.jpg' },
-                { type: 'image', src: 'A12.jpg' },
-                { type: 'image', src: 'A13.jpg' },
-                { type: 'image', src: 'A14.jpg' },
-                { type: 'image', src: 'A15.jpg' },
-                { type: 'image', src: 'A16.jpg' },
-                { type: 'image', src: 'A17.jpg' },
-                { type: 'image', src: 'A18.jpg' },
-                { type: 'image', src: 'A19.jpg' },
-                { type: 'image', src: 'A20.jpg' },
+            analog: [
+                { type: 'image', src: 'A01.JPG' },
+                { type: 'image', src: 'A02.JPG' },
+                { type: 'image', src: 'A03.JPG' },
+                { type: 'image', src: 'A04.JPG' },
+                { type: 'image', src: 'A05.JPG' },
+                { type: 'image', src: 'A06.JPG' },
+                { type: 'image', src: 'A07.JPG' },
+                { type: 'image', src: 'A08.JPG' },
+                { type: 'image', src: 'A09.JPG' },
+                { type: 'image', src: 'A10.JPG' },
+                { type: 'image', src: 'A11.JPG' },
+                { type: 'image', src: 'A12.JPG' },
+                { type: 'image', src: 'A13.JPG' },
+                { type: 'image', src: 'A14.JPG' },
+                { type: 'image', src: 'A15.JPG' },
+                { type: 'image', src: 'A16.JPG' },
+                { type: 'image', src: 'A17.JPG' },
+                { type: 'image', src: 'A18.JPG' },
+                { type: 'image', src: 'A19.JPG' },
+                { type: 'image', src: 'A20.JPG' },
+                { type: 'image', src: 'A21.JPG' },
             ],
 
             collaborations: [
-                { type: 'image',  src: 'CO01.jpg' },
-                { type: 'vimeo',  src: 'VIMEO_VIDEO_ID' },
+                { type: 'image', src: 'CO01.jpg' },
                 // add more...
             ],
 
         };
-
-        // ─────────────────────────────────────────────
-        // Lightbox logic — no need to edit below here
-        // ─────────────────────────────────────────────
 
         let currentGallery = [];
         let currentIndex = 0;
