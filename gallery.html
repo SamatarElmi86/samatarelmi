@@ -5,41 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Samatar Elmi</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Specific layout for the Gallery Grid */
-        .gallery-container { 
-            width: 100%; 
-        }
-        
-        .gallery-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
+        .gallery-container { width: 100%; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             width: 100%;
             gap: 0;
         }
 
-        .album-box { 
-            position: relative; 
-            aspect-ratio: 1 / 1; 
-            overflow: hidden; 
+        .album-box {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
             background: #1a1a1a;
             cursor: pointer;
         }
 
-        .album-box img { 
+        .album-box img {
             width: 100%; height: 100%; object-fit: cover; display: block;
             transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.5s ease;
         }
 
-        /* Hover Overlay - Group Name */
-        .album-overlay { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-            background: rgba(255, 255, 255, 0.95); 
-            display: flex; flex-direction: column; justify-content: center; align-items: center; 
-            text-align: center; padding: 20px; 
+        .album-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 20px;
             opacity: 0; visibility: hidden; z-index: 10;
             transition: all 0.4s ease;
         }
@@ -47,18 +42,96 @@
         .album-box:hover .album-overlay { opacity: 1; visibility: visible; }
         .album-box:hover img { transform: scale(1.05); opacity: 0.3; }
 
-        .album-overlay h3 { 
-            font-family: 'Montserrat', sans-serif; color: #d4af37; 
-            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 3px; 
+        .album-overlay h3 {
+            font-family: 'Montserrat', sans-serif; color: #d4af37;
+            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 3px;
             margin-bottom: 5px;
         }
         .album-overlay p { font-size: 0.8rem; color: #666; font-style: italic; }
 
-        /* Responsive Adjustments */
-        @media (max-width: 1000px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { 
-            .gallery-grid { grid-template-columns: 1fr; } 
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.96);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
         }
+
+        .lightbox.active { display: flex; }
+
+        .lightbox-media {
+            max-width: 85vw;
+            max-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-media img {
+            max-width: 85vw;
+            max-height: 85vh;
+            object-fit: contain;
+            display: block;
+        }
+
+        .lightbox-media iframe,
+        .lightbox-media video {
+            width: 85vw;
+            max-width: 960px;
+            height: calc(85vw * 9 / 16);
+            max-height: 85vh;
+            display: block;
+            border: none;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 24px; right: 32px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            background: none;
+            border: none;
+        }
+
+        .lightbox-close:hover { opacity: 1; }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%; transform: translateY(-50%);
+            background: none; border: none;
+            color: #fff; font-size: 1.8rem;
+            cursor: pointer; opacity: 0.4;
+            transition: opacity 0.3s;
+            padding: 20px;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover { opacity: 1; }
+
+        .lightbox-prev { left: 16px; }
+        .lightbox-next { right: 16px; }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: 24px; left: 50%; transform: translateX(-50%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem; letter-spacing: 3px;
+            color: #fff; opacity: 0.4;
+        }
+
+        @media (max-width: 1000px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -79,49 +152,49 @@
 
     <main class="gallery-container">
         <div class="gallery-grid">
-            
-            <div class="album-box">
-                <img src="your-photo-1.jpg" alt="Live Performances">
+
+            <div class="album-box" onclick="openLightbox('performances', 0)">
+                <img src="P01.jpg" alt="Performances">
                 <div class="album-overlay">
                     <h3>Performances</h3>
                     <p>Live at Latitude & more</p>
                 </div>
             </div>
 
-            <div class="album-box">
-                <img src="your-photo-2.jpg" alt="Studio Sessions">
+            <div class="album-box" onclick="openLightbox('process', 0)">
+                <img src="C01.jpg" alt="Creative Process">
                 <div class="album-overlay">
                     <h3>Creative Process</h3>
                     <p>Studio & Archive</p>
                 </div>
             </div>
 
-            <div class="album-box">
-                <img src="0gs4mvja.JPEG" alt="Portraits">
+            <div class="album-box" onclick="openLightbox('portraits', 0)">
+                <img src="PR01.jpg" alt="Portraits">
                 <div class="album-overlay">
                     <h3>Portraits</h3>
                     <p>Press & Editorial</p>
                 </div>
             </div>
 
-            <div class="album-box">
-                <img src="your-photo-4.jpg" alt="Installations">
+            <div class="album-box" onclick="openLightbox('installations', 0)">
+                <img src="I01.jpg" alt="Installations">
                 <div class="album-overlay">
                     <h3>Installations</h3>
                     <p>DIY Multi-media</p>
                 </div>
             </div>
 
-            <div class="album-box">
-                <img src="your-photo-5.jpg" alt="Analog">
+            <div class="album-box" onclick="openLightbox('travels', 0)">
+                <img src="A01.jpg" alt="Travels">
                 <div class="album-overlay">
                     <h3>Travels</h3>
                     <p>Field notes</p>
                 </div>
             </div>
 
-            <div class="album-box">
-                <img src="your-photo-6.jpg" alt="Digital">
+            <div class="album-box" onclick="openLightbox('collaborations', 0)">
+                <img src="CO01.jpg" alt="Collaborations">
                 <div class="album-overlay">
                     <h3>Collaborations</h3>
                     <p>With Jamie Smith & others</p>
@@ -130,6 +203,158 @@
 
         </div>
     </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">Close</button>
+        <button class="lightbox-prev" onclick="changeMedia(-1)">&#8592;</button>
+        <div class="lightbox-media" id="lightbox-media"></div>
+        <button class="lightbox-next" onclick="changeMedia(1)">&#8594;</button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script>
+        // ─────────────────────────────────────────────
+        // EDIT YOUR MEDIA HERE
+        // Each item can be:
+        //   { type: 'image',   src: 'filename.jpg' }
+        //   { type: 'youtube', src: 'VIDEO_ID' }       ← just the ID from the URL
+        //   { type: 'vimeo',   src: 'VIDEO_ID' }       ← just the ID from the URL
+        //   { type: 'mp4',     src: 'filename.mp4' }
+        // ─────────────────────────────────────────────
+
+        const galleries = {
+
+            performances: [
+                { type: 'image',   src: 'P01.jpg' },
+                { type: 'image',   src: 'P02.jpg' },
+                { type: 'youtube', src: 'YOUTUBE_VIDEO_ID' },
+                // add more...
+            ],
+
+            process: [
+                { type: 'image', src: 'C01.jpg' },
+                { type: 'image', src: 'C02.jpg' },
+                // add more...
+            ],
+
+            portraits: [
+                { type: 'image', src: 'PR01.jpg' },
+                { type: 'image', src: 'PR02.jpg' },
+                // add more...
+            ],
+
+            installations: [
+                { type: 'image',  src: 'I01.jpg' },
+                { type: 'mp4',    src: 'installation-video.mp4' },
+                // add more...
+            ],
+
+            travels: [
+                { type: 'image', src: 'A01.jpg' },
+                { type: 'image', src: 'A02.jpg' },
+                { type: 'image', src: 'A03.jpg' },
+                { type: 'image', src: 'A04.jpg' },
+                { type: 'image', src: 'A05.jpg' },
+                { type: 'image', src: 'A06.jpg' },
+                { type: 'image', src: 'A07.jpg' },
+                { type: 'image', src: 'A08.jpg' },
+                { type: 'image', src: 'A09.jpg' },
+                { type: 'image', src: 'A10.jpg' },
+                { type: 'image', src: 'A11.jpg' },
+                { type: 'image', src: 'A12.jpg' },
+                { type: 'image', src: 'A13.jpg' },
+                { type: 'image', src: 'A14.jpg' },
+                { type: 'image', src: 'A15.jpg' },
+                { type: 'image', src: 'A16.jpg' },
+                { type: 'image', src: 'A17.jpg' },
+                { type: 'image', src: 'A18.jpg' },
+                { type: 'image', src: 'A19.jpg' },
+                { type: 'image', src: 'A20.jpg' },
+            ],
+
+            collaborations: [
+                { type: 'image',  src: 'CO01.jpg' },
+                { type: 'vimeo',  src: 'VIMEO_VIDEO_ID' },
+                // add more...
+            ],
+
+        };
+
+        // ─────────────────────────────────────────────
+        // Lightbox logic — no need to edit below here
+        // ─────────────────────────────────────────────
+
+        let currentGallery = [];
+        let currentIndex = 0;
+
+        function openLightbox(galleryName, index) {
+            currentGallery = galleries[galleryName];
+            currentIndex = index;
+            renderMedia();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.getElementById('lightbox-media').innerHTML = '';
+            document.body.style.overflow = '';
+        }
+
+        function changeMedia(direction) {
+            currentIndex = (currentIndex + direction + currentGallery.length) % currentGallery.length;
+            renderMedia();
+        }
+
+        function renderMedia() {
+            const item = currentGallery[currentIndex];
+            const container = document.getElementById('lightbox-media');
+            container.innerHTML = '';
+
+            if (item.type === 'image') {
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = '';
+                container.appendChild(img);
+
+            } else if (item.type === 'youtube') {
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://www.youtube.com/embed/${item.src}?autoplay=1`;
+                iframe.allow = 'autoplay; fullscreen';
+                iframe.allowFullscreen = true;
+                container.appendChild(iframe);
+
+            } else if (item.type === 'vimeo') {
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://player.vimeo.com/video/${item.src}?autoplay=1`;
+                iframe.allow = 'autoplay; fullscreen';
+                iframe.allowFullscreen = true;
+                container.appendChild(iframe);
+
+            } else if (item.type === 'mp4') {
+                const video = document.createElement('video');
+                video.src = item.src;
+                video.controls = true;
+                video.autoplay = true;
+                container.appendChild(video);
+            }
+
+            document.getElementById('lightbox-counter').textContent =
+                (currentIndex + 1) + ' / ' + currentGallery.length;
+        }
+
+        document.addEventListener('keydown', e => {
+            if (!document.getElementById('lightbox').classList.contains('active')) return;
+            if (e.key === 'ArrowRight') changeMedia(1);
+            if (e.key === 'ArrowLeft') changeMedia(-1);
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+    </script>
 
 </body>
 </html>
