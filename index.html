@@ -1,96 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samatar Elmi | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* GLOBAL OVERRIDE FOR HOME PAGE ONLY */
-        body, html { 
-            height: 100%; 
-            overflow: hidden; 
-            background-color: #000; 
-            padding-top: 0 !important; /* Forces video to top of screen */
-        }
-        
-        /* HERO VIDEO SECTION */
-        .hero { 
-            position: relative; 
-            height: 100vh; 
-            width: 100vw; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-        }
-        
-        .hero-video { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            z-index: 1; 
-        }
-        
-        .hero-content { 
-            position: relative; 
-            z-index: 2; 
-            text-align: center; 
-        }
-        
-        /* TYPOGRAPHY */
-        .gold-title { 
-            color: #d4af37; 
-            font-size: clamp(2.5rem, 8vw, 5.5rem); 
-            letter-spacing: 15px; 
-            text-transform: uppercase; 
-            font-weight: 400; 
-            text-shadow: 0px 4px 15px rgba(0,0,0,0.4); 
-            margin-bottom: 10px; 
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .gold-subtitle { 
-            color: #d4af37; 
-            letter-spacing: 6px; 
-            text-transform: uppercase; 
-            font-size: 0.9rem; 
-            font-weight: 300; 
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        @media (max-width: 800px) { 
-            .gold-title { letter-spacing: 8px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samatar Elmi — Poet, Musician, Editor &amp; Educator</title>
+  <meta name="description" content="Official website of Samatar Elmi: award-winning poet, musician, editor and educator. Books, music, 2026 tour dates, gallery and press information.">
+  <link rel="canonical" href="https://samatarelmi.co.uk/">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <meta name="theme-color" content="#171714">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Samatar Elmi — Poet, Musician, Editor &amp; Educator">
+  <meta property="og:description" content="Books, music, 2026 tour dates, gallery and press information from Samatar Elmi.">
+  <meta property="og:url" content="https://samatarelmi.co.uk/">
+  <meta property="og:image" content="https://samatarelmi.co.uk/assets/images/social-card.webp">
+  <meta property="og:image:alt" content="Samatar Elmi performing on stage">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Samatar Elmi",
+    "alternateName": "Knomad Spock",
+    "url": "https://samatarelmi.co.uk/",
+    "image": "https://samatarelmi.co.uk/assets/images/social-card.webp",
+    "jobTitle": "Poet, musician, editor and educator",
+    "sameAs": [
+      "https://www.instagram.com/knomadspock/",
+      "https://knomadspock.bandcamp.com/",
+      "https://www.poetryfoundation.org/poets/samatar-elmi",
+      "https://www.bloomsbury.com/uk/author/samatar-elmi/",
+      "https://greyhoundliterary.co.uk/books/portrait-of-colossus"
+    ]
+  }
+  </script>
 </head>
 <body>
-
-    <nav>
-        <a href="index.html" class="logo">SAMATAR ELMI</a>
-        <div class="nav-links">
-            <a href="about.html">About</a>
-            <a href="writing.html">Writing</a>
-            <a href="music.html">Music</a>
-            <a href="graft.html">Graft</a>
-            <a href="reviews.html">Reviews</a>
-            </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="wordmark" href="index.html" aria-current="page">Samatar Elmi</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle>Menu</button>
+      <ul class="nav-links" id="primary-menu" data-nav-links>
+        <li><a href="about.html">About</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="education-editorial.html">Education</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="homepage-video.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <h1 class="gold-title">Samatar Elmi</h1>
-            <p class="gold-subtitle">Artist &bull; Writer &bull; Musician</p>
+  <main id="main" class="home-main">
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero-media" autoplay muted loop playsinline poster="assets/images/homepage-poster.webp" aria-hidden="true">
+        <source src="assets/video/homepage.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <span class="eyebrow">Poet · Musician · Editor · Educator</span>
+        <h1 id="hero-title">Samatar Elmi</h1>
+        <p class="hero-deck">Writing and music shaped by diaspora, myth, language, neurodivergence and speculative futures.</p>
+        <div class="button-row">
+          <a class="button button--light" href="events.html">2026 tour dates</a>
+          <a class="button button--ghost" href="writing.html">Explore the writing</a>
         </div>
-    </div>
+      </div>
+    </section>
 
+    <section class="section section--white">
+      <div class="container intro-grid">
+        <p class="lead">Samatar Elmi is an award-winning writer and musician whose work moves between poetry, performance, sound, education and editorial practice.</p>
+        <div class="aside-note">
+          <span class="eyebrow">Now</span>
+          <p>Touring nationally throughout 2026 with three concurrently published collections, followed by new poetry and theatre work in 2027.</p>
+          <a href="about.html">Read the full biography</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--border">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Selected work</span>
+            <h2>Across page, stage and record</h2>
+          </div>
+          <p>Recent books, new collections and music released as Knomad Spock.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <p class="meta">Bloomsbury · 2024</p>
+            <h3>The Epic of Cader Idris</h3>
+            <p>The debut full-length collection, including the Geoffrey Dearmer Prize-winning poem.</p>
+          </article>
+          <article class="card">
+            <p class="meta">Three collections · 2026</p>
+            <h3>A year of new poetry</h3>
+            <p><em>Agen Bien Fou</em>, <em>Reclamations: Disregard Prior Prompt</em> and <em>26 Poems for Cash</em>.</p>
+          </article>
+          <article class="card">
+            <p class="meta">Knomad Spock</p>
+            <h3>Music and collaborations</h3>
+            <p>Albums, live sessions and collaborations spanning folk, hip-hop, spoken word and experimental sound.</p>
+          </article>
+        </div>
+        <div class="button-row" style="margin-top: 2rem">
+          <a class="button" href="writing.html">Writing</a>
+          <a class="button button--ghost" href="music.html">Music</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ink">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">On tour</span>
+            <h2>Next dates</h2>
+          </div>
+          <p>The 2026 national tour continues through London, Bristol, Belfast, Swansea, Liverpool, Manchester, Oxford, Rochester and beyond.</p>
+        </div>
+        <article class="event-preview">
+          <time datetime="2026-08-15">15 Aug 2026</time>
+          <h3>Mason &amp; Fifth</h3>
+          <span>London</span>
+        </article>
+        <article class="event-preview">
+          <time datetime="2026-08-30">30 Aug 2026</time>
+          <h3>Exchange</h3>
+          <span>Bristol</span>
+        </article>
+        <article class="event-preview">
+          <time datetime="2026-09-04">4 Sep 2026</time>
+          <h3>Native</h3>
+          <span>Belfast</span>
+        </article>
+        <div class="button-row" style="margin-top: 2rem">
+          <a class="button button--light" href="events.html">View all tour dates</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Archive</span>
+            <h2>Images, process and performance</h2>
+          </div>
+          <p>A growing visual archive organised across analog photography, collaborations, creative process, installations, performances and portraits.</p>
+        </div>
+        <a class="button" href="gallery.html">Open the gallery</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <p class="footer-title">Ancestral speculation. Speculative futures.</p>
+        <div>
+          <p class="footer-label">Enquiries</p>
+          <ul class="footer-links">
+            <li><a href="mailto:info@samatarelmi.co.uk">info@samatarelmi.co.uk</a></li>
+            <li><a href="contact.html">Contact and representation</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-label">Follow &amp; listen</p>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/knomadspock/" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://knomadspock.bandcamp.com/" rel="noopener noreferrer">Bandcamp</a></li>
+            <li><a href="https://music.apple.com/jp/artist/knomad-spock/1540264467" rel="noopener noreferrer">Apple Music</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta"><span>© <span data-year>2026</span> Samatar Elmi</span><span>samatarelmi.co.uk</span></div>
+    </div>
+  </footer>
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>

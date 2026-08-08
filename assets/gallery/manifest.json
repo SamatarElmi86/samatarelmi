@@ -1,0 +1,1777 @@
+{
+  "generated": "2026-08-08T19:29:26.819Z",
+  "counts": {
+    "Analog": 105,
+    "Collaborations": 15,
+    "Creative Process": 10,
+    "Digital": 16,
+    "Installations": 22,
+    "Performances": 30,
+    "Portraits": 23
+  },
+  "items": [
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a01.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A01.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a02.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A02.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a03.webp",
+      "width": 1440,
+      "height": 1080,
+      "originalName": "A03.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a04.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A04.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a05.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A05.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a06.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A06.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a07.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A07.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a08.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A08.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a09.webp",
+      "width": 1500,
+      "height": 1500,
+      "originalName": "A09.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a10.webp",
+      "width": 1500,
+      "height": 1500,
+      "originalName": "A10.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a11.webp",
+      "width": 1500,
+      "height": 1500,
+      "originalName": "A11.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a12.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A12.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a13.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A13.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a14.webp",
+      "width": 1500,
+      "height": 1500,
+      "originalName": "A14.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a15.webp",
+      "width": 1500,
+      "height": 1500,
+      "originalName": "A15.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a16.webp",
+      "width": 1440,
+      "height": 1080,
+      "originalName": "A16.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a17.webp",
+      "width": 1440,
+      "height": 1079,
+      "originalName": "A17.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a18.webp",
+      "width": 1500,
+      "height": 1500,
+      "originalName": "A18.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a19.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "A19.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a20.webp",
+      "width": 1217,
+      "height": 1800,
+      "originalName": "A20.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a21.webp",
+      "width": 1500,
+      "height": 1500,
+      "originalName": "A21.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/a22.webp",
+      "width": 1217,
+      "height": 1800,
+      "originalName": "A22.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/amkt0781.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "AMKT0781.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/athm5181.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "ATHM5181.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/bhcc8501.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "BHCC8501.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/cean0117.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "CEAN0117.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/chbq5622.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "CHBQ5622.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/cmms3176.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "CMMS3176.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/cneg6428.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "CNEG6428.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/dkrg1969.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "DKRG1969.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/dqww9770.webp",
+      "width": 1440,
+      "height": 1080,
+      "originalName": "DQWW9770.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/dsqw8967.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "DSQW8967.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ehdo9425.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "EHDO9425.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ffvh9731.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "FFVH9731.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/fwye1798.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "FWYE1798.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ghcc1223.webp",
+      "width": 1500,
+      "height": 1500,
+      "originalName": "GHCC1223.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/haso3611.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "HASO3611.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/hhpu0672.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "HHPU0672.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/hnos6445.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "HNOS6445.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/hqft1172.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "HQFT1172.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/huhp4112.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "HUHP4112.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/huzl3354.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "HUZL3354.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/iage6685.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "IAGE6685.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/idtk0548.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "IDTK0548.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ieex5738.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "IEEX5738.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/iemu9805.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "IEMU9805.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ierj3303.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "IERJ3303.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/irgf1403.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "IRGF1403.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ixss4684.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "IXSS4684.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/jgnh2860.webp",
+      "width": 1217,
+      "height": 1800,
+      "originalName": "JGNH2860.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/jimo3643.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "JIMO3643.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/jjlh4976.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "JJLH4976.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/kgsb1845.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "KGSB1845.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/kncve2735.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "KNCVE2735.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/kysn4894.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "KYSN4894.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/lnci0532.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "LNCI0532.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/lpho5346.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "LPHO5346.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/mimw1282.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "MIMW1282.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/mlzq3514.webp",
+      "width": 1217,
+      "height": 1800,
+      "originalName": "MLZQ3514.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ndrt7219.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "NDRT7219.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/nkuz8371.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "NKUZ8371.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/nosd2262.webp",
+      "width": 1013,
+      "height": 1800,
+      "originalName": "NOSD2262.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/nvhk2165.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "NVHK2165.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/nvmme6219.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "NVMME6219.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/nyod4730.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "NYOD4730.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/oakj0135.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "OAKJ0135.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ocgp5467.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "OCGP5467.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/odfh6213.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "ODFH6213.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/oetz2355.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "OETZ2355.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/omhv3687.webp",
+      "width": 1217,
+      "height": 1800,
+      "originalName": "OMHV3687.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/oxau0264.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "OXAU0264.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/pkss7305.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "PKSS7305.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/plyqe7273.webp",
+      "width": 1013,
+      "height": 1800,
+      "originalName": "PLYQE7273.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/poer2142.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "POER2142.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/pwwc8136.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "PWWC8136.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/qbxo7004.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "QBXO7004.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/qnej5736.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "QNEJ5736.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/rjut7198.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "RJUT7198.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/rpdt8702.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "RPDT8702.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/rshc7494.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "RSHC7494.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/rsqh6593.webp",
+      "width": 1440,
+      "height": 1080,
+      "originalName": "RSQH6593.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/rvpb4901.webp",
+      "width": 1440,
+      "height": 1080,
+      "originalName": "RVPB4901.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/rwnx1191.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "RWNX1191.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/rwvy8747.webp",
+      "width": 1440,
+      "height": 1080,
+      "originalName": "RWVY8747.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/sarf1846.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "SARF1846.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/sbtr7381.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "SBTR7381.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/sdcy7445.webp",
+      "width": 1440,
+      "height": 1080,
+      "originalName": "SDCY7445.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/shja8487.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "SHJA8487.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/swkt3965.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "SWKT3965.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/tuwi4923.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "TUWI4923.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/tvlg7217.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "TVLG7217.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/txhn5651.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "TXHN5651.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/txtx4474.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "TXTX4474.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/tyqy3850.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "TYQY3850.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/tyrl3476.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "TYRL3476.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ufuc1196.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "UFUC1196.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/uhqd7494.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "UHQD7494.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/whyd1675.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "WHYD1675.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/wngm8469.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "WNGM8469.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/wpbo5366.webp",
+      "width": 1217,
+      "height": 1800,
+      "originalName": "WPBO5366.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/wtgae1558.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "WTGAE1558.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/ybpj0829.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "YBPJ0829.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/yejc8160.webp",
+      "width": 1217,
+      "height": 1800,
+      "originalName": "YEJC8160.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/yjcf5592.webp",
+      "width": 1800,
+      "height": 1217,
+      "originalName": "YJCF5592.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Analog",
+      "src": "assets/gallery/analog/yksk7621.webp",
+      "width": 1440,
+      "height": 1800,
+      "originalName": "YKSK7621.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/024.webp",
+      "width": 1158,
+      "height": 1600,
+      "originalName": "024.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/025.webp",
+      "width": 1196,
+      "height": 1600,
+      "originalName": "025.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/146.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "146.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/183.webp",
+      "width": 1170,
+      "height": 1156,
+      "originalName": "183.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/206.webp",
+      "width": 1206,
+      "height": 1800,
+      "originalName": "206.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/219.webp",
+      "width": 1800,
+      "height": 1200,
+      "originalName": "219.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/220.webp",
+      "width": 1800,
+      "height": 1200,
+      "originalName": "220.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/221.webp",
+      "width": 1800,
+      "height": 1200,
+      "originalName": "221.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/315.webp",
+      "width": 1800,
+      "height": 1194,
+      "originalName": "315.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/317.webp",
+      "width": 1800,
+      "height": 1575,
+      "originalName": "317.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/456.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "456.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/491.webp",
+      "width": 1800,
+      "height": 1194,
+      "originalName": "491.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/779.webp",
+      "width": 1440,
+      "height": 1800,
+      "originalName": "779.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/cader-idris.webp",
+      "width": 571,
+      "height": 510,
+      "originalName": "Cader Idris.png"
+    },
+    {
+      "type": "image",
+      "category": "Collaborations",
+      "src": "assets/gallery/collaborations/img-2515.webp",
+      "width": 1200,
+      "height": 1800,
+      "originalName": "IMG_2515.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/372.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "372.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/448.webp",
+      "width": 1800,
+      "height": 1800,
+      "originalName": "448.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/480.webp",
+      "width": 1800,
+      "height": 1200,
+      "originalName": "480.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/670.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "670.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/671.webp",
+      "width": 1800,
+      "height": 1013,
+      "originalName": "671.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/672.webp",
+      "width": 1013,
+      "height": 1800,
+      "originalName": "672.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/727.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "727.HEIC"
+    },
+    {
+      "type": "video",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/736.mp4",
+      "poster": "assets/gallery/creative-process/736-poster.webp",
+      "originalName": "736.MOV"
+    },
+    {
+      "type": "image",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/img-0799.webp",
+      "width": 1800,
+      "height": 1350,
+      "originalName": "IMG_0799.HEIC"
+    },
+    {
+      "type": "video",
+      "category": "Creative Process",
+      "src": "assets/gallery/creative-process/sam-newspapers-timelapse-unedited.mp4",
+      "poster": "assets/gallery/creative-process/sam-newspapers-timelapse-unedited-poster.webp",
+      "originalName": "Sam Newspapers Timelapse unedited.mp4"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-0154.webp",
+      "width": 1800,
+      "height": 1350,
+      "originalName": "IMG_0154.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-0211.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_0211.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-0253.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_0253.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-0500.webp",
+      "width": 1800,
+      "height": 1350,
+      "originalName": "IMG_0500.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-0601.webp",
+      "width": 1800,
+      "height": 1350,
+      "originalName": "IMG_0601.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-0705.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_0705.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-0853.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_0853.HEIC"
+    },
+    {
+      "type": "video",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-1081.mp4",
+      "poster": "assets/gallery/digital/img-1081-poster.webp",
+      "originalName": "IMG_1081.MOV"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-1096.webp",
+      "width": 1800,
+      "height": 1350,
+      "originalName": "IMG_1096.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-1102.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_1102.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-1143.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_1143.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-1144.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_1144.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-e0205.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_E0205.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-e0206.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_E0206.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/img-e0953.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_E0953.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Digital",
+      "src": "assets/gallery/digital/uzrg3960.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "UZRG3960.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-010009.webp",
+      "width": 1177,
+      "height": 1028,
+      "originalName": "Screenshot 2026-03-02 010009.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-010049.webp",
+      "width": 1176,
+      "height": 1033,
+      "originalName": "Screenshot 2026-03-02 010049.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-010403.webp",
+      "width": 1182,
+      "height": 1035,
+      "originalName": "Screenshot 2026-03-02 010403.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-010529.webp",
+      "width": 1182,
+      "height": 1032,
+      "originalName": "Screenshot 2026-03-02 010529.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-010618.webp",
+      "width": 1178,
+      "height": 1021,
+      "originalName": "Screenshot 2026-03-02 010618.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-010723.webp",
+      "width": 1176,
+      "height": 1032,
+      "originalName": "Screenshot 2026-03-02 010723.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-010816.webp",
+      "width": 1181,
+      "height": 1025,
+      "originalName": "Screenshot 2026-03-02 010816.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-010932.webp",
+      "width": 1180,
+      "height": 1032,
+      "originalName": "Screenshot 2026-03-02 010932.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-011036.webp",
+      "width": 1176,
+      "height": 1030,
+      "originalName": "Screenshot 2026-03-02 011036.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-011131.webp",
+      "width": 1178,
+      "height": 1034,
+      "originalName": "Screenshot 2026-03-02 011131.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-011256.webp",
+      "width": 1179,
+      "height": 1032,
+      "originalName": "Screenshot 2026-03-02 011256.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-011347.webp",
+      "width": 1175,
+      "height": 1030,
+      "originalName": "Screenshot 2026-03-02 011347.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-011427.webp",
+      "width": 1201,
+      "height": 1011,
+      "originalName": "Screenshot 2026-03-02 011427.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-011454.webp",
+      "width": 1183,
+      "height": 1025,
+      "originalName": "Screenshot 2026-03-02 011454.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-011728.webp",
+      "width": 1181,
+      "height": 1033,
+      "originalName": "Screenshot 2026-03-02 011728.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-011907.webp",
+      "width": 1180,
+      "height": 1034,
+      "originalName": "Screenshot 2026-03-02 011907.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-012005.webp",
+      "width": 1174,
+      "height": 1032,
+      "originalName": "Screenshot 2026-03-02 012005.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-012038.webp",
+      "width": 1180,
+      "height": 1033,
+      "originalName": "Screenshot 2026-03-02 012038.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-012431.webp",
+      "width": 1177,
+      "height": 1026,
+      "originalName": "Screenshot 2026-03-02 012431.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-012504.webp",
+      "width": 1177,
+      "height": 1029,
+      "originalName": "Screenshot 2026-03-02 012504.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-012621.webp",
+      "width": 1175,
+      "height": 1025,
+      "originalName": "Screenshot 2026-03-02 012621.png"
+    },
+    {
+      "type": "image",
+      "category": "Installations",
+      "src": "assets/gallery/installations/screenshot-2026-03-02-012702.webp",
+      "width": 1170,
+      "height": 1031,
+      "originalName": "Screenshot 2026-03-02 012702.png"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/1k3mbeoq.webp",
+      "width": 800,
+      "height": 534,
+      "originalName": "1k3mbeOQ.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/7vwt1xwo.webp",
+      "width": 800,
+      "height": 534,
+      "originalName": "7VWT1xwo.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/492.webp",
+      "width": 768,
+      "height": 1024,
+      "originalName": "492.JPG"
+    },
+    {
+      "type": "video",
+      "category": "Performances",
+      "src": "assets/gallery/performances/625.mp4",
+      "poster": "assets/gallery/performances/625-poster.webp",
+      "originalName": "625.MOV"
+    },
+    {
+      "type": "video",
+      "category": "Performances",
+      "src": "assets/gallery/performances/626.mp4",
+      "poster": "assets/gallery/performances/626-poster.webp",
+      "originalName": "626.MOV"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/c02.webp",
+      "width": 1800,
+      "height": 1352,
+      "originalName": "C02.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/g02.webp",
+      "width": 1021,
+      "height": 1600,
+      "originalName": "G02.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/g05.webp",
+      "width": 1800,
+      "height": 1200,
+      "originalName": "G05.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/hibfdaqa.webp",
+      "width": 640,
+      "height": 960,
+      "originalName": "HIbfDaQA.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/img-3803.webp",
+      "width": 1107,
+      "height": 1235,
+      "originalName": "IMG_3803.png"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/img-3807.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_3807.jpeg"
+    },
+    {
+      "type": "video",
+      "category": "Performances",
+      "src": "assets/gallery/performances/jehst-gig.mp4",
+      "poster": "assets/gallery/performances/jehst-gig-poster.webp",
+      "originalName": "Jehst Gig.MP4"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/me.webp",
+      "width": 1219,
+      "height": 1626,
+      "originalName": "Me.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/nm1ofbfm.webp",
+      "width": 800,
+      "height": 534,
+      "originalName": "Nm1ofBfM.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013406-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013406_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013406bw-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013406bw_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013421-2-bw.webp",
+      "width": 541,
+      "height": 720,
+      "originalName": "P8013421_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013429-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013429_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013429bw-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013429bw_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013432-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013432_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013432bw-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013432bw_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013435-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013435_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013435bw-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013435bw_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013441-2-bw.webp",
+      "width": 541,
+      "height": 720,
+      "originalName": "P8013441_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013441bw-2-bw.webp",
+      "width": 541,
+      "height": 720,
+      "originalName": "P8013441bw_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013453-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013453_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/p8013453bw-2-bw.webp",
+      "width": 720,
+      "height": 541,
+      "originalName": "P8013453bw_2_BW.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/performance2.webp",
+      "width": 1000,
+      "height": 669,
+      "originalName": "performance2.jpg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/txpmiwzq.webp",
+      "width": 800,
+      "height": 534,
+      "originalName": "tXpMiWzQ.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/vs4s0n7c.webp",
+      "width": 800,
+      "height": 534,
+      "originalName": "vS4S0n7c.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/0gs4mvja.webp",
+      "width": 1200,
+      "height": 1800,
+      "originalName": "0GS4mVJA.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/4k4a4029-1.webp",
+      "width": 1800,
+      "height": 1200,
+      "originalName": "4K4A4029 (1).jpg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/194.webp",
+      "width": 1200,
+      "height": 1800,
+      "originalName": "194.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/197.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "197.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/204.webp",
+      "width": 809,
+      "height": 1214,
+      "originalName": "204.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/205.webp",
+      "width": 1214,
+      "height": 809,
+      "originalName": "205.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/233.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "233.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/276.webp",
+      "width": 1800,
+      "height": 1350,
+      "originalName": "276.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/313.webp",
+      "width": 1800,
+      "height": 1194,
+      "originalName": "313.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/314.webp",
+      "width": 1194,
+      "height": 1800,
+      "originalName": "314.JPG"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/323.webp",
+      "width": 1800,
+      "height": 1350,
+      "originalName": "323.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/347.webp",
+      "width": 1800,
+      "height": 1350,
+      "originalName": "347.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/482.webp",
+      "width": 1200,
+      "height": 1800,
+      "originalName": "482.JPEG"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/542.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "542.PNG"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/d35cu0ia.webp",
+      "width": 1200,
+      "height": 1800,
+      "originalName": "D35cu0IA.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/img-4799.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_4799.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/img-5002.webp",
+      "width": 1350,
+      "height": 1800,
+      "originalName": "IMG_5002.HEIC"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/mzao2-0.webp",
+      "width": 1200,
+      "height": 1800,
+      "originalName": "MzaO2_-0.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/n11jcbk8.webp",
+      "width": 1200,
+      "height": 1800,
+      "originalName": "N11jcBk8.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/photo005-1.webp",
+      "width": 1763,
+      "height": 1800,
+      "originalName": "photo005 (1).jpg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/photo006-1.webp",
+      "width": 1732,
+      "height": 1800,
+      "originalName": "photo006 (1).jpg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/photo007-1.webp",
+      "width": 1800,
+      "height": 1794,
+      "originalName": "photo007 (1).jpg"
+    },
+    {
+      "type": "image",
+      "category": "Portraits",
+      "src": "assets/gallery/portraits/samatarelmi6.webp",
+      "width": 1610,
+      "height": 1800,
+      "originalName": "samatarelmi6.jpg"
+    }
+  ],
+  "skipped": []
+}

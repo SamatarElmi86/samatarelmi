@@ -1,165 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Samatar Elmi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Specific layout for this page only */
-        .main-wrapper { 
-            display: grid;
-            grid-template-columns: 1fr 1fr; 
-            min-height: calc(100vh - 100px);
-        }
-
-        .image-container {
-            position: sticky;
-            top: 100px;
-            height: calc(100vh - 100px);
-            background: #fdfdfd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-right: 1px solid #f0f0f0;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .content-container {
-            padding: 80px 10%;
-            background: #fff;
-        }
-
-        .name-heading {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            letter-spacing: 12px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-
-        .role-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: #d4af37;
-            margin-bottom: 60px;
-            display: block;
-        }
-
-        .biography {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            color: #222;
-        }
-
-        .biography p {
-            margin-bottom: 30px;
-        }
-
-        .contact-section {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid #f0f0f0;
-        }
-
-        .contact-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #d4af37;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .contact-info {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            color: #1a1a1a;
-            letter-spacing: 1px;
-        }
-
-        .contact-info a {
-            color: #1a1a1a;
-            text-decoration: none;
-            border-bottom: 1px solid #d4af37;
-        }
-
-        @media (max-width: 1000px) {
-            .main-wrapper { grid-template-columns: 1fr; }
-            .image-container { 
-                position: relative; 
-                top: 0; 
-                height: 500px; 
-                border-right: none;
-                border-bottom: 1px solid #f0f0f0;
-            }
-            .content-container { padding: 60px 30px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Samatar Elmi</title>
+  <meta name="description" content="Biography of Samatar Elmi, award-winning poet, musician, editor and educator.">
+  <link rel="canonical" href="https://samatarelmi.co.uk/about.html">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About Samatar Elmi">
+  <meta property="og:description" content="Award-winning poet, musician, editor and educator.">
+  <meta property="og:url" content="https://samatarelmi.co.uk/about.html">
+  <meta property="og:image" content="https://samatarelmi.co.uk/assets/images/social-card.webp">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-
-    <nav>
-        <a href="index.html" class="logo">SAMATAR ELMI</a>
-        <div class="nav-links">
-            <a href="about.html">About</a>
-            <a href="writing.html">Writing</a>
-            <a href="music.html">Music</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="graft.html">Graft</a>
-            <a href="hilaac.html">Hilaac</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="newsletter.html">Newsletter</a>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="wordmark" href="index.html">Samatar Elmi</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle>Menu</button>
+      <ul class="nav-links" id="primary-menu" data-nav-links>
+        <li><a href="about.html" aria-current="page">About</a></li><li><a href="writing.html">Writing</a></li><li><a href="music.html">Music</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="education-editorial.html">Education</a></li><li><a href="press.html">Press</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div class="main-wrapper">
-        <div class="image-container">
-            <img src="00e6c02e-d257-4d92-ad82-2982028559bb.JPG" alt="Samatar Elmi">
+  <main id="main">
+    <header class="page-intro">
+      <div class="container">
+        <span class="eyebrow">Biography</span>
+        <h1>Writer, musician, editor and educator</h1>
+        <p>Samatar Elmi works across poetry, music, performance, education and interdisciplinary practice.</p>
+      </div>
+    </header>
+
+    <section class="section section--white">
+      <div class="container split">
+        <div class="split-media">
+          <img src="assets/images/samatar-elmi-portrait.webp" alt="Samatar Elmi speaking on stage" width="1400" height="1800">
         </div>
+        <article class="prose">
+          <p class="standfirst">Samatar Elmi is an award-winning writer, musician, editor and educator whose work brings poetry into conversation with myth, history, diaspora, sound and speculative futures.</p>
 
-        <main class="content-container">
-            <h1 class="name-heading">Samatar Elmi</h1>
-            <span class="role-subtitle">Writer • Musician • Educator</span>
+          <p>His debut pamphlet, <em>Portrait of Colossus</em> (flipped eye press, 2021), was selected as a Poetry Book Society Pamphlet Choice. His debut full-length collection, <em>The Epic of Cader Idris</em> (Bloomsbury, 2024), includes the poem that won the 2021 Geoffrey Dearmer Prize. His poetry has appeared in <em>Poetry</em>, <em>Prairie Schooner</em>, <em>The Poetry Review</em>, <em>Poetry Wales</em>, <em>Magma</em> and <em>Iota</em>, and in anthologies including <em>More Fiya</em>, <em>Filigree</em>, <em>After Plath</em> and <em>The Echoing Gallery</em>. He is an Obsidian Fellow and an associate poetry editor at flipped eye press.</p>
 
-            <article class="biography">
-                <p>Samatar Elmi is an award winning writer, musician and educator. His debut pamphlet, ‘Portrait of Colossus’ (flipped eye press, 2021), was selected as a PBS Pamphlet Choice. His stunning debut collection, ‘The Epic of Cader Idris’ (flipped eye press, 2024), includes the 2021 Geoffrey Dearmer Prize winning poem 'The Snails'. Poems have appeared widely including in Poetry, Prairie Schooner, Poetry Review, Poetry Wales, Magma, and Iota and anthologised in More Fiya, Filigree, After Plath, and The Echoing Gallery. Elmi is an Obsidian Fellow and a flipped eye press associate poetry editor.</p>
+          <p>Throughout 2026, Elmi is touring nationally with three collections published concurrently: <em>Agen Bien Fou</em> (Kulvert Books, 2026), <em>Reclamations: Disregard Prior Prompt</em> (Aout Fecit, 2026) and <em>26 Poems for Cash</em>, co-written with Sam Telford (Kulvert Books, 2026). Further books are in development for 2027: <em>Our Eyes Are Crystal Balls</em> and <em>Nightmares: Ekphrastic Meditations on Honoria Brown’s “Nightmares” Series</em>, co-written with Honoria Brown and Will Moorfoot.</p>
 
-                <p>Elmi has performed at Laugharne Festival, Latitude Festival, London Literature Festival, Somali Week, Aldeburgh Poetry Festival, Cheltenham Poetry Festival, for the Poetry Society, at the Serpentine Gallery, Southbank Centre, Cardiff Millennium Centre, Oxford House, Whitechapel Gallery and Rich Mix. His work has been commended in the Guardian Poetry Roundup. He also appeared on BBC Radio 4's 'Warsan Shire on a Nation of Poets'. As Knomad Spock, his albums 'Winter of Discontent', 'A Darker Light' and 'Through the Walls' have been met with critical acclaim (Clash, Afropunk, Buzzmag, Record Collector) and featured on BBC Radio 6, performing live in session for Janice Long (BBC Wales). He has also rapped on records with UK hiphop legends Chester P and Jehst, and has released a record under the moniker Nomad 'Preludes' (SFDB, 2017).</p>
+          <p>Elmi has also been commissioned by Fio Theatre in Cardiff to write <em>After Cordelia</em>, a stage reimagining of <em>King Lear</em>, for presentation in spring 2027.</p>
 
-                <p>Elmi holds a BA(Hons) in History from UCL, and an MA in Philosophy from University of Bristol. He is a trained specialist non-medical help mentor for students in higher education with neurodivergence and mental health needs. He is a peer reviewer for Neurodiversity, a SAGE journal, and delivers Neurodiversity & the Creative Process courses for organisations like Poetry School.</p>
+          <h2>Performance and music</h2>
+          <p>Elmi has performed at the Laugharne Festival, Latitude Festival, London Literature Festival, Somali Week, Aldeburgh Poetry Festival and Cheltenham Poetry Festival, as well as for the Poetry Society and at the Serpentine Gallery, Southbank Centre, Cardiff Millennium Centre, Oxford House, Whitechapel Gallery and Rich Mix. His work has been commended in the <em>Guardian</em> poetry roundup, and he appeared on BBC Radio 4’s <em>Warsan Shire on a Nation of Poets</em>.</p>
 
-                <p>He is currently working on a series of interdisciplinary DIY installations, combining poetry, visual animation and found sounds. His next poetry collection 'Agen Bien Fou' is due in June 2026 (Kulvert Press), with another collection 'Our Eyes are Crystal Balls' in the process of finding a home. An album with long-time Knomad Spock co-creator, Jamie Smith, is also due in 2026, as well as the follow up album to 'Preludes' with the indomitable Original Brew Crew (Dan and Mark Richardson) due early 2027.</p>
-            </article>
+          <p>As Knomad Spock, he has released the critically acclaimed albums <em>Winter of Discontent</em>, <em>A Darker Light</em> and <em>Through the Walls</em>. His music has been reviewed by <em>Clash</em>, Afropunk, <em>Buzz</em> and <em>Record Collector</em>, featured on BBC Radio 6, and performed live in session for Janice Long on BBC Wales. He has appeared on records with Chester P and Jehst, and released <em>Preludes</em> under the moniker Nomad (SFDB, 2017).</p>
 
-            <section class="contact-section">
-                <span class="contact-title">Bookings and general enquiries</span>
-                <p class="contact-info">Salma Begum: <a href="mailto:salma@greyhoundliterary.co.uk">salma@greyhoundliterary.co.uk</a></p>
-            </section>
-        </main>
+          <h2>Education and editorial work</h2>
+          <p>Alongside his creative practice, Elmi has extensive international experience as a training and development adviser, non-medical help mentor, neurodiversity and education specialist, and human capital development specialist. His work focuses on widening inclusion, improving access to future skills and developing humane responses to the fourth industrial revolution.</p>
+
+          <div class="button-row">
+            <a class="button" href="press.html">Press kit and biographies</a>
+            <a class="button button--ghost" href="contact.html">Enquiries</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <p class="footer-title">Ancestral speculation. Speculative futures.</p>
+        <div><p class="footer-label">Enquiries</p><ul class="footer-links"><li><a href="mailto:info@samatarelmi.co.uk">info@samatarelmi.co.uk</a></li><li><a href="contact.html">Contact and representation</a></li></ul></div>
+        <div><p class="footer-label">Follow &amp; listen</p><ul class="footer-links"><li><a href="https://www.instagram.com/knomadspock/" rel="noopener noreferrer">Instagram</a></li><li><a href="https://knomadspock.bandcamp.com/" rel="noopener noreferrer">Bandcamp</a></li><li><a href="https://music.apple.com/jp/artist/knomad-spock/1540264467" rel="noopener noreferrer">Apple Music</a></li></ul></div>
+      </div>
+      <div class="footer-meta"><span>© <span data-year>2026</span> Samatar Elmi</span><span>samatarelmi.co.uk</span></div>
     </div>
-
+  </footer>
+  <script src="assets/js/site.js" defer></script>
 </body>
-    <footer>
-    <div class="footer-links">
-        <a href="mailto:hello@samatarelmi.com">Email</a>
-        <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
-        <a href="https://twitter.com/yourprofile" target="_blank">Twitter / X</a>
-        <a href="https://samatarelmi.bandcamp.com" target="_blank">Bandcamp</a>
-    </div>
-    <p class="copyright">&copy; 2026 Samatar Elmi &mdash; Ancestral Speculation & Speculative Future</p>
-</footer>
 </html>
