@@ -11,6 +11,7 @@ This folder is ready to publish from the root of the `SamatarElmi86/samatarelmi`
 - `events.html` - 24 active dates from the supplied 2026 tour workbook, with the cancelled 24 October Mason & Fifth date removed
 - `gallery.html` - filterable gallery with 221 web-ready photographs and films across seven collections
 - `education-editorial.html` - combined education and editorial page
+- `services.html` - one-to-one mentoring, editorial and music services, standard prices and the Access Rate Scheme
 - `press.html` - approved bios, credits and downloadable press kit
 - `contact.html` - general and literary contacts
 
