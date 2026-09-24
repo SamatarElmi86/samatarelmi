@@ -383,6 +383,8 @@ h1, h2 { font-weight: 400; }
 .event-table td:first-child { width: 12rem; padding-right: 1rem; font-family: var(--sans); font-size: 0.82rem; font-weight: 730; }
 .event-table strong { font-size: 1.2rem; font-weight: 400; }
 .event-table .tbc { color: var(--rust); }
+.event-type { display: inline-block; margin: 0.45rem 0.4rem 0.2rem 0; padding: 0.22rem 0.52rem; border: 1px solid rgba(28,28,25,0.28); border-radius: 999px; color: var(--ink); font-family: var(--sans); font-size: 0.62rem; font-weight: 780; letter-spacing: 0.1em; line-height: 1; text-transform: uppercase; vertical-align: 0.12em; }
+.event-type--workshop { border-color: var(--rust); background: var(--rust); color: var(--white); }
 
 .gallery-controls { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 2rem; }
 .filter-button { border: 1px solid var(--line); padding: 0.55rem 0.75rem; background: transparent; color: var(--ink); font-family: var(--sans); font-size: 0.68rem; font-weight: 730; letter-spacing: 0.07em; text-transform: uppercase; }
