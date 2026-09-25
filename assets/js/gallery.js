@@ -49,7 +49,7 @@ function openLightbox(item, label) {
     image.height = item.height;
     dialogMedia.append(image);
   }
-  dialogCaption.textContent = label;
+  dialogCaption.textContent = item.credit ? `${label} · Photograph: ${item.credit}` : label;
   dialog.showModal();
 }
 
@@ -67,7 +67,8 @@ function render() {
     figure.className = "gallery-item";
     const button = document.createElement("button");
     button.type = "button";
-    button.setAttribute("aria-label", `Open ${label}`);
+    const credit = item.credit ? ` · Photograph: ${item.credit}` : "";
+    button.setAttribute("aria-label", `Open ${label}${credit}`);
 
     if (item.type === "video") {
       const image = document.createElement("img");
@@ -88,7 +89,7 @@ function render() {
 
     button.addEventListener("click", () => openLightbox(item, label));
     const caption = document.createElement("figcaption");
-    caption.textContent = `${item.category}${item.type === "video" ? " · Film" : ""}`;
+    caption.textContent = `${item.category}${item.type === "video" ? " · Film" : ""}${credit}`;
     figure.append(button, caption);
     grid.append(figure);
   });
