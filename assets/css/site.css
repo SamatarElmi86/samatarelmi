@@ -525,6 +525,48 @@ h1, h2 { font-weight: 400; }
 .contact-image img { display: block; width: 100%; height: 100%; min-height: 28rem; object-fit: cover; object-position: center 28%; }
 .contact-image figcaption { position: absolute; right: 1rem; bottom: 0.8rem; left: 1rem; color: var(--white); font-family: var(--sans); font-size: 0.65rem; letter-spacing: 0.04em; text-shadow: 0 1px 5px rgba(0,0,0,0.75); }
 
+.values-statement {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(2.5rem, 8vw, 7rem);
+  align-items: start;
+}
+.values-statement__intro { position: sticky; top: 110px; padding-top: 1rem; border-top: 3px solid var(--gold); }
+.values-statement__intro h2 { font-size: clamp(2.6rem, 5.2vw, 4.8rem); letter-spacing: -0.04em; }
+.values-statement__intro .lead { margin-top: 1.5rem; font-size: clamp(1.3rem, 2.4vw, 1.85rem); }
+.values-statement__body { padding: clamp(1.5rem, 4vw, 3rem); background: var(--white); box-shadow: var(--shadow); }
+.values-statement__body .statement-emphasis { margin: 2.4rem 0; color: var(--ink); font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.2; }
+
+.journal-intro { background: linear-gradient(135deg, var(--paper) 0%, var(--paper-deep) 100%); }
+.journal-intro__grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr); gap: clamp(2.5rem, 8vw, 7rem); align-items: end; }
+.journal-intro h1 { max-width: 760px; font-size: clamp(4.5rem, 11vw, 9rem); letter-spacing: -0.065em; }
+.journal-subscribe { padding: clamp(1.5rem, 3vw, 2.5rem); border-top: 3px solid var(--gold); background: rgba(255,253,248,0.76); }
+.journal-subscribe h2 { margin-bottom: 0.8rem; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.journal-subscribe p:not(.meta) { margin-top: 0; color: var(--muted); font-size: 1rem; }
+.journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); }
+.journal-card { display: flex; min-width: 0; min-height: 22rem; flex-direction: column; align-items: flex-start; padding: clamp(1.5rem, 3.5vw, 2.6rem); background: var(--paper); }
+.journal-card h3 { margin-bottom: 1rem; font-size: clamp(1.8rem, 3vw, 2.7rem); font-weight: 400; }
+.journal-card h3 a { text-decoration: none; }
+.journal-card > p:not(.meta) { color: var(--muted); }
+.journal-card .text-link { margin-top: auto; font-family: var(--sans); font-size: 0.76rem; font-weight: 760; letter-spacing: 0.05em; text-transform: uppercase; }
+.journal-card:only-child { display: grid; grid-column: 1 / -1; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); grid-template-rows: auto 1fr auto; gap: 0.7rem clamp(2rem, 7vw, 7rem); min-height: 19rem; }
+.journal-card:only-child .meta, .journal-card:only-child h3 { grid-column: 1; }
+.journal-card:only-child > p:not(.meta) { grid-column: 2; grid-row: 1 / span 2; align-self: center; max-width: 620px; font-size: clamp(1.15rem, 2vw, 1.45rem); }
+.journal-card:only-child .text-link { grid-column: 2; grid-row: 3; }
+.journal-loading, .journal-empty { grid-column: 1 / -1; margin: 0; padding: 3rem; background: var(--paper); color: var(--muted); }
+.journal-principles { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(2.5rem, 8vw, 7rem); align-items: start; }
+.journal-principles h2 { max-width: 560px; font-size: clamp(2.8rem, 6vw, 5.5rem); letter-spacing: -0.045em; }
+.article-header { padding: clamp(5rem, 12vw, 10rem) 0 clamp(3.5rem, 8vw, 6.5rem); border-bottom: 1px solid var(--line); background: var(--paper-deep); }
+.article-header__inner { max-width: 980px; }
+.article-header h1 { margin: 1.1rem 0 1.5rem; font-size: clamp(3.4rem, 8vw, 7.6rem); letter-spacing: -0.055em; }
+.article-header .lead { max-width: 780px; margin: 0; font-size: clamp(1.35rem, 2.8vw, 2rem); line-height: 1.42; }
+.article-layout { display: grid; grid-template-columns: minmax(80px, 0.35fr) minmax(0, 1fr); gap: clamp(2rem, 7vw, 7rem); }
+.article-rule { min-height: 12rem; border-top: 3px solid var(--gold); }
+.article-body { font-size: clamp(1.08rem, 1.7vw, 1.28rem); }
+.article-body .article-emphasis { margin: 2.8rem 0; color: var(--ink); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.16; }
+.article-end { display: flex; gap: 1rem; align-items: baseline; margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--gold); }
+.article-end p { margin: 0; color: var(--ink); font-family: var(--sans); font-size: 0.76rem; font-weight: 760; letter-spacing: 0.06em; text-transform: uppercase; }
+
 .callout { margin-top: 3rem; padding: clamp(1.5rem, 4vw, 3rem); background: var(--paper-deep); border-left: 4px solid var(--gold); }
 .callout h2 { font-size: 2rem; }
 
@@ -551,11 +593,12 @@ h1, h2 { font-weight: 400; }
 
 @media (max-width: 800px) {
   :root { --content: min(100% - 28px, 1180px); }
-  .section-heading, .intro-grid, .split, .footer-grid { grid-template-columns: 1fr; }
+  .section-heading, .intro-grid, .split, .values-statement, .journal-intro__grid, .journal-principles, .footer-grid { grid-template-columns: 1fr; }
   .split > * { min-width: 0; }
   .split-media { position: static; }
+  .values-statement__intro { position: static; }
   .split-media img { max-height: 680px; }
-  .card-grid, .album-grid, .collection-grid, .press-quote-grid, .review-columns, .release-grid, .route-grid, .boundary-grid { grid-template-columns: 1fr; }
+  .card-grid, .album-grid, .collection-grid, .journal-grid, .press-quote-grid, .review-columns, .release-grid, .route-grid, .boundary-grid { grid-template-columns: 1fr; }
   .praise-grid, .publication-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .album-feature, .press-photo-panel, .education-photo-panel { grid-template-columns: 1fr; }
   .album-art { max-width: 620px; }
@@ -573,6 +616,9 @@ h1, h2 { font-weight: 400; }
   .nav-links.is-open { grid-template-columns: 1fr; max-height: calc(100svh - 78px); overflow-y: auto; }
   .hero h1 { font-size: clamp(3.2rem, 18vw, 5rem); }
   .work { grid-template-columns: 1fr; }
+  .journal-card:only-child { display: flex; min-height: 22rem; }
+  .article-layout { grid-template-columns: 1fr; }
+  .article-rule { min-height: 0; }
   .work-cover { max-width: 220px; }
   .event-table, .event-table tbody, .event-table tr, .event-table td { display: block; }
   .event-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
