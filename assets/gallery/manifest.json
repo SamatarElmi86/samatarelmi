@@ -1,12 +1,12 @@
 {
-  "generated": "2026-08-08T19:29:26.819Z",
+  "generated": "2026-09-25T12:30:00.000Z",
   "counts": {
     "Analog": 105,
     "Collaborations": 15,
     "Creative Process": 10,
     "Digital": 16,
     "Installations": 22,
-    "Performances": 30,
+    "Performances": 35,
     "Portraits": 23
   },
   "items": [
@@ -1587,6 +1587,51 @@
       "width": 800,
       "height": 534,
       "originalName": "vS4S0n7c.jpeg"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/ian-irwin-performance-01.jpg",
+      "width": 1200,
+      "height": 901,
+      "originalName": "WhatsApp Image 2026-09-25 at 12.27.53 (4).jpeg",
+      "credit": "Ian Irwin"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/ian-irwin-performance-02.jpg",
+      "width": 1200,
+      "height": 901,
+      "originalName": "WhatsApp Image 2026-09-25 at 12.27.53 (6).jpeg",
+      "credit": "Ian Irwin"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/ian-irwin-performance-03.jpg",
+      "width": 1200,
+      "height": 901,
+      "originalName": "WhatsApp Image 2026-09-25 at 12.27.53 (1).jpeg",
+      "credit": "Ian Irwin"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/ian-irwin-performance-04.jpg",
+      "width": 901,
+      "height": 1200,
+      "originalName": "WhatsApp Image 2026-09-25 at 12.27.53 (2).jpeg",
+      "credit": "Ian Irwin"
+    },
+    {
+      "type": "image",
+      "category": "Performances",
+      "src": "assets/gallery/performances/ian-irwin-performance-05.jpg",
+      "width": 1200,
+      "height": 901,
+      "originalName": "WhatsApp Image 2026-09-25 at 12.27.53.jpeg",
+      "credit": "Ian Irwin"
     },
     {
       "type": "image",
