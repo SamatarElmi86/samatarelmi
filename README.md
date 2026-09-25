@@ -7,15 +7,16 @@ This folder is ready to publish from the root of the `SamatarElmi86/samatarelmi`
 - `index.html` - home
 - `about.html` - long biography
 - `writing.html` - books, 2026 collections and forthcoming work
+- `newsletter.html` - Dunya journal and newsletter, with website-hosted essays and public Substack excerpts
 - `music.html` - Knomad Spock music and listening links
 - `events.html` - 24 active dates from the supplied 2026 tour workbook, with the cancelled 24 October Mason & Fifth date removed
-- `gallery.html` - filterable gallery with 221 web-ready photographs and films across seven collections
+- `gallery.html` - filterable gallery with 226 web-ready photographs and films across seven collections
 - `education-editorial.html` - combined education and editorial page
 - `services.html` - one-to-one mentoring, editorial and music services, standard prices and the Access Rate Scheme
 - `press.html` - approved bios, credits and downloadable press kit
 - `contact.html` - general and literary contacts
 
-`graft.html`, `hilaac.html`, `newsletter.html` and `reviews.html` are redirect-only files for old links. They are not part of the navigation or the new content structure.
+`graft.html`, `hilaac.html` and `reviews.html` are redirect-only files for old links. They are not part of the navigation or the new content structure.
 
 ## Publishing
 
@@ -41,4 +42,10 @@ Future additions can use the same seven folders: Analog, Collaborations, Creativ
 - The approved downloadable press image is `downloads/samatar-elmi-press-photo.jpg`; the web version is `assets/images/samatar-elmi-portrait.webp`, and the photographer credit is Stewart Baxter, 2023.
 - The Music page presents the full 28-track album catalogue as accessible direct Bandcamp links, plus BØMBED BUILDINGS `000`, `001` and “Storm Z Meal”.
 - The site continues to use `info@samatarelmi.co.uk`; `management@samatarelmi.co.uk` has not yet been created.
-- Spotify is not linked until artist mapping is confirmed. Bandcamp and Apple Music are linked and tested.
+- Bandcamp is the only music-platform link. Social-media, Spotify and Apple Music links are intentionally omitted; the contact page explains this values-led choice and gives direct email, journal and newsletter routes.
+
+## Dunya journal and newsletter
+
+The website owns the permanent public journal at `newsletter.html`; complete site essays live in `journal/`. The post index is `assets/data/newsletter-posts.json` and is rendered progressively by `assets/js/newsletter.js`, with a readable no-JavaScript fallback.
+
+The scheduled GitHub Action in `.github/workflows/sync-newsletter.yml` checks the public Dunya Substack feed each morning and adds sanitised excerpts that link to the complete posts. The current Substack feed is invite-only, so the sync safely leaves the website unchanged until public feed items become available.
