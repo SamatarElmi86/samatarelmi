@@ -821,87 +821,61 @@ h1, h2 { font-weight: 400; }
   }
 }
 
-/* Hero Audio Player - Another Day (Knomad Spock) */
-.hero-audio-card {
-  margin-top: clamp(1.5rem, 3.5vw, 2.5rem);
-  max-width: 520px;
-  background: rgba(23, 23, 20, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(210, 170, 87, 0.35);
-  border-radius: 4px;
-  padding: 0.9rem 1.1rem 0.85rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-}
-.hero-audio-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.65rem;
-  gap: 1rem;
-}
-.hero-audio-track {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.hero-audio-pill {
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.2rem 0.55rem;
-  background: rgba(210, 170, 87, 0.2);
-  color: var(--gold-bright);
-  border: 1px solid rgba(210, 170, 87, 0.4);
-  border-radius: 2px;
-}
-.hero-audio-info {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-}
-.hero-audio-title {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #fffdf8;
-}
-.hero-audio-artist {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  color: rgba(255, 253, 248, 0.72);
-}
-.hero-audio-artist em {
-  font-style: italic;
-  font-family: var(--serif);
-}
-.hero-audio-bandcamp {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  color: var(--gold-bright);
-  text-decoration: none;
+/* Floating Subtle Audio Control (Another Day - Knomad Spock) */
+.sound-toggle {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 1000;
   display: inline-flex;
   align-items: center;
-  gap: 0.2rem;
-  transition: color 0.2s ease;
-  white-space: nowrap;
-}
-.hero-audio-bandcamp:hover {
+  gap: 0.55rem;
+  padding: 0.45rem 0.85rem;
+  background: rgba(23, 23, 20, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(210, 170, 87, 0.45);
+  border-radius: 9999px;
   color: #fffdf8;
-  text-decoration: underline;
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
-.hero-audio-embed {
-  position: relative;
-  width: 100%;
-  border-radius: 2px;
-  overflow: hidden;
+.sound-toggle:hover {
   background: #171714;
+  border-color: var(--gold-bright);
+  transform: translateY(-1px);
 }
-.hero-audio-embed iframe {
+.sound-bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 12px;
+}
+.sound-bar {
   display: block;
-  width: 100%;
-  height: 42px;
-  border: 0;
+  width: 2px;
+  background: var(--gold-bright, #d2aa57);
+  border-radius: 1px;
+  height: 3px;
+}
+.sound-toggle.is-playing .sound-bar:nth-child(1) {
+  animation: eqBar 0.8s ease-in-out infinite alternate;
+}
+.sound-toggle.is-playing .sound-bar:nth-child(2) {
+  animation: eqBar 1.2s ease-in-out 0.2s infinite alternate;
+}
+.sound-toggle.is-playing .sound-bar:nth-child(3) {
+  animation: eqBar 0.9s ease-in-out 0.4s infinite alternate;
+}
+.sound-toggle.is-playing .sound-bar:nth-child(4) {
+  animation: eqBar 1.4s ease-in-out 0.1s infinite alternate;
+}
+@keyframes eqBar {
+  0% { height: 2px; }
+  100% { height: 12px; }
 }

@@ -7,7 +7,7 @@
   <meta name="description" content="Official website of Samatar Elmi: award-winning poet, musician, editor and educator. Books, music, 2026 tour dates, gallery and press information.">
   <link rel="canonical" href="https://samatarelmi.co.uk/">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260926_anotherday">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260926_autoplay">
   <meta name="theme-color" content="#171714">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Samatar Elmi — Poet, Musician, Editor &amp; Educator">
@@ -65,23 +65,6 @@
         <div class="button-row">
           <a class="button button--light" href="events.html">2026 tour dates</a>
           <a class="button button--ghost" href="writing.html">Explore the writing</a>
-        </div>
-        <div class="hero-audio-card" role="region" aria-label="Featured music player">
-          <div class="hero-audio-bar">
-            <div class="hero-audio-track">
-              <span class="hero-audio-pill">Featured Track</span>
-              <div class="hero-audio-info">
-                <strong class="hero-audio-title">Another Day</strong>
-                <span class="hero-audio-artist">Knomad Spock · <em>Through the Walls</em></span>
-              </div>
-            </div>
-            <a class="hero-audio-bandcamp" href="https://knomadspock.bandcamp.com/track/another-day-2" target="_blank" rel="noopener noreferrer">
-              <span>Bandcamp</span> ↗
-            </a>
-          </div>
-          <div class="hero-audio-embed">
-            <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=4110367352/size=small/bgcol=171714/linkcol=d2aa57/transparent=true/" seamless title="Play Another Day by Knomad Spock on Bandcamp"><a href="https://knomadspock.bandcamp.com/track/another-day-2">Another Day by Knomad Spock</a></iframe>
-          </div>
         </div>
       </div>
     </section>
@@ -233,6 +216,73 @@
     </div>
   </footer>
   <script src="assets/js/site.js?v=20260924" defer></script>
+  <!-- Background Audio: Another Day by Knomad Spock -->
+  <audio id="bg-audio" preload="auto" loop playsinline>
+    <source src="assets/audio/another-day.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="sound-toggle" id="sound-toggle" type="button" aria-label="Toggle music: Another Day by Knomad Spock" title="Knomad Spock — Another Day">
+    <span class="sound-bars" aria-hidden="true">
+      <span class="sound-bar"></span>
+      <span class="sound-bar"></span>
+      <span class="sound-bar"></span>
+      <span class="sound-bar"></span>
+    </span>
+    <span class="sound-toggle-text">Another Day</span>
+  </button>
+
+  <script>
+    (function() {
+      const audio = document.getElementById("bg-audio");
+      const toggle = document.getElementById("sound-toggle");
+
+      function setPlaying(playing) {
+        if (!toggle) return;
+        toggle.classList.toggle("is-playing", playing);
+        toggle.setAttribute("aria-label", playing ? "Pause audio: Another Day" : "Play audio: Another Day");
+      }
+
+      function startAudio() {
+        if (!audio) return;
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            setPlaying(true);
+          }).catch(() => {
+            // Autoplay restricted until user interaction
+            const onInteract = () => {
+              audio.play().then(() => setPlaying(true)).catch(() => {});
+              window.removeEventListener("pointerdown", onInteract);
+              window.removeEventListener("keydown", onInteract);
+              window.removeEventListener("scroll", onInteract);
+            };
+            window.addEventListener("pointerdown", onInteract, { once: true });
+            window.addEventListener("keydown", onInteract, { once: true });
+            window.addEventListener("scroll", onInteract, { once: true });
+          });
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", startAudio);
+      } else {
+        startAudio();
+      }
+
+      if (toggle) {
+        toggle.addEventListener("click", function(e) {
+          e.stopPropagation();
+          if (!audio) return;
+          if (audio.paused) {
+            audio.play().then(() => setPlaying(true)).catch(() => {});
+          } else {
+            audio.pause();
+            setPlaying(false);
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
 
