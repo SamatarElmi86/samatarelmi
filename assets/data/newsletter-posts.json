@@ -1,7 +1,7 @@
 {
   "publication": "Dunya",
   "sourceUrl": "https://samatarelmi.substack.com/",
-  "updated": "2026-09-25T12:45:00.000Z",
+  "updated": "2026-09-26T16:41:48.669Z",
   "posts": [
     {
       "title": "Why I’m not on social media",
@@ -10,6 +10,22 @@
       "excerpt": "A decision to step away from platforms whose values and practices I can no longer reconcile with my own—and to place more trust in direct, deliberate community.",
       "url": "journal/why-im-not-on-social-media.html",
       "source": "SamatarElmi.co.uk"
+    },
+    {
+      "title": "Time | Date | Now",
+      "date": "2025-03-03",
+      "category": "Substack",
+      "excerpt": "The time is irrelevant. As is the date. It suffices to say that we are in the ever present Now of Things. A singularity; plump with the infinite possibilities of Now+Nanosecond...",
+      "url": "https://samatarelmi.substack.com/p/time-date-now",
+      "source": "Substack"
+    },
+    {
+      "title": "Coming soon",
+      "date": "2025-03-03",
+      "category": "Substack",
+      "excerpt": "This is Dunya: art, culture, education, philosophy, history, and neurodivergence.",
+      "url": "https://samatarelmi.substack.com/p/coming-soon",
+      "source": "Substack"
     }
   ]
 }
