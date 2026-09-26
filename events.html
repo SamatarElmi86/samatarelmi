@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2026 Tour Dates — Samatar Elmi</title>
   <meta name="description" content="Samatar Elmi's 2026 performances, poetry readings and creative-writing workshops across Cardiff, Liverpool, London, Oxford and Rochester.">
-  <link rel="canonical" href="https://samatarelmi.co.uk/events.html"><link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/site.css?v=20260926_multifeatures">
+  <link rel="canonical" href="https://samatarelmi.co.uk/events.html"><link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/site.css?v=20260926_events117">
   <meta property="og:type" content="website"><meta property="og:title" content="2026 Tour Dates — Samatar Elmi"><meta property="og:description" content="Dates and venues for Samatar Elmi's 2026 national tour."><meta property="og:url" content="https://samatarelmi.co.uk/events.html"><meta property="og:image" content="https://samatarelmi.co.uk/assets/images/social-card.webp"><meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -32,24 +32,38 @@
   <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="wordmark" href="index.html">Samatar Elmi</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle>Menu</button><ul class="nav-links" id="primary-menu" data-nav-links><li><a href="about.html">About</a></li><li><a href="writing.html">Writing</a></li><li><a href="newsletter.html">Journal</a></li><li><a href="music.html">Music</a></li><li><a href="events.html" aria-current="page">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="work-with-me.html">Work with me</a></li><li><a href="press.html">Press</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
   <main id="main">
     <header class="page-intro"><div class="container"><span class="eyebrow">National tour</span><h1>2026 tour dates</h1><p>Performances, readings and workshops across the UK. Past dates move automatically into the archive; dates marked TBC will be updated when confirmed.</p><nav class="page-jump" aria-label="On this page"><a href="#tour-map">Tour Map</a><a href="#upcoming">Upcoming</a><a href="#earlier">Earlier in 2026</a></nav>
-        <div class="audio-feature-card" role="region" aria-label="Featured tour listening">
+                <div class="audio-feature-card" role="region" aria-label="Featured tour track">
           <div class="audio-feature-bar">
             <div class="audio-feature-track">
-              <span class="audio-feature-pill">Featured Release</span>
+              <span class="audio-feature-pill">Featured Track · 1:17 Verse</span>
               <div class="audio-feature-info">
                 <strong class="audio-feature-title">Storm Z Meal</strong>
-                <span class="audio-feature-artist">Jehst, Samatar Elmi, Diminutive Arthur · <em>Album</em></span>
+                <span class="audio-feature-artist">Jehst feat. Samatar Elmi</span>
               </div>
             </div>
-            <a class="audio-feature-bandcamp" href="https://diminutivearthur.bandcamp.com/album/storm-z-meal" target="_blank" rel="noopener noreferrer">
+            <a class="audio-feature-bandcamp" href="https://jehst.bandcamp.com/track/storm-z-meal-feat-samatar-elmi-2" target="_blank" rel="noopener noreferrer">
               <span>Bandcamp</span> ↗
             </a>
           </div>
-          <div class="audio-feature-embed">
-            <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4238543450/size=small/bgcol=171714/linkcol=d2aa57/transparent=true/" seamless title="Play Storm Z Meal on Bandcamp"><a href="https://diminutivearthur.bandcamp.com/album/storm-z-meal">Storm Z Meal by Jehst, Samatar Elmi, Diminutive Arthur</a></iframe>
+          <div class="audio-custom-player" id="events-player">
+            <audio id="events-audio" preload="metadata">
+              <source src="assets/audio/storm-z-meal.mp3" type="audio/mpeg">
+            </audio>
+            <button class="audio-play-btn" id="events-play-btn" type="button" aria-label="Play Storm Z Meal from 1:17">
+              <svg class="play-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><polygon points="6,4 20,12 6,20"/></svg>
+              <svg class="pause-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <span class="audio-time" id="events-time">1:17</span>
+            <div class="audio-scrub-wrap" id="events-scrub" role="slider" aria-label="Audio scrubber" aria-valuemin="0" aria-valuemax="184" aria-valuenow="77" tabindex="0">
+              <div class="audio-scrub-track">
+                <div class="audio-scrub-fill" id="events-scrub-fill" style="width: 41.8%;"></div>
+                <div class="audio-scrub-handle" id="events-scrub-handle" style="left: 41.8%;"></div>
+              </div>
+            </div>
+            <span class="audio-time audio-time--total" id="events-duration">3:04</span>
+            <button class="audio-jump-btn" id="events-jump-btn" type="button" title="Jump to Samatar Elmi verse at 1:17">Verse 1:17</button>
           </div>
-        </div>
-      </div></header>
+        </div></header>
 
     <section class="section section--white">
       <div class="container">
@@ -331,7 +345,143 @@
       });
     });
   </script>
+  <script>
+    (function() {
+      const audio = document.getElementById("events-audio");
+      const playBtn = document.getElementById("events-play-btn");
+      const playIcon = playBtn ? playBtn.querySelector(".play-icon") : null;
+      const pauseIcon = playBtn ? playBtn.querySelector(".pause-icon") : null;
+      const timeDisplay = document.getElementById("events-time");
+      const durationDisplay = document.getElementById("events-duration");
+      const scrubWrap = document.getElementById("events-scrub");
+      const scrubFill = document.getElementById("events-scrub-fill");
+      const scrubHandle = document.getElementById("events-scrub-handle");
+      const jumpBtn = document.getElementById("events-jump-btn");
+
+      const START_TIME = 77; // 1:17 in seconds
+      let hasInitializedStart = false;
+
+      function formatTime(s) {
+        if (isNaN(s)) return "0:00";
+        const m = Math.floor(s / 60);
+        const sec = Math.floor(s % 60);
+        return m + ":" + (sec < 10 ? "0" : "") + sec;
+      }
+
+      function initStartTime() {
+        if (!hasInitializedStart && audio.duration) {
+          audio.currentTime = START_TIME;
+          hasInitializedStart = true;
+          updateProgress();
+        }
+      }
+
+      function updateProgress() {
+        const cur = audio.currentTime || START_TIME;
+        const dur = audio.duration || 184;
+        if (timeDisplay) timeDisplay.textContent = formatTime(cur);
+        if (durationDisplay && audio.duration) durationDisplay.textContent = formatTime(dur);
+        const pct = Math.max(0, Math.min(100, (cur / dur) * 100));
+        if (scrubFill) scrubFill.style.width = pct + "%";
+        if (scrubHandle) scrubHandle.style.left = pct + "%";
+        if (scrubWrap) scrubWrap.setAttribute("aria-valuenow", Math.round(cur));
+      }
+
+      function togglePlay() {
+        if (!audio) return;
+        if (!hasInitializedStart && (audio.currentTime < 1 || isNaN(audio.currentTime))) {
+          audio.currentTime = START_TIME;
+          hasInitializedStart = true;
+        }
+        if (audio.paused) {
+          audio.play().then(() => {
+            if (playIcon) playIcon.style.display = "none";
+            if (pauseIcon) pauseIcon.style.display = "block";
+            playBtn.setAttribute("aria-label", "Pause audio");
+          }).catch(() => {});
+        } else {
+          audio.pause();
+          if (playIcon) playIcon.style.display = "block";
+          if (pauseIcon) pauseIcon.style.display = "none";
+          playBtn.setAttribute("aria-label", "Play Storm Z Meal from 1:17");
+        }
+      }
+
+      if (audio) {
+        audio.addEventListener("loadedmetadata", function() {
+          if (!hasInitializedStart) {
+            audio.currentTime = START_TIME;
+            hasInitializedStart = true;
+          }
+          updateProgress();
+        });
+
+        audio.addEventListener("timeupdate", updateProgress);
+
+        audio.addEventListener("ended", function() {
+          if (playIcon) playIcon.style.display = "block";
+          if (pauseIcon) pauseIcon.style.display = "none";
+          audio.currentTime = START_TIME;
+          updateProgress();
+        });
+      }
+
+      if (playBtn) {
+        playBtn.addEventListener("click", togglePlay);
+      }
+
+      if (jumpBtn) {
+        jumpBtn.addEventListener("click", function(e) {
+          e.preventDefault();
+          if (!audio) return;
+          audio.currentTime = START_TIME;
+          hasInitializedStart = true;
+          updateProgress();
+          audio.play().then(() => {
+            if (playIcon) playIcon.style.display = "none";
+            if (pauseIcon) pauseIcon.style.display = "block";
+          }).catch(() => {});
+        });
+      }
+
+      function seekTo(e) {
+        if (!audio || !scrubWrap) return;
+        const rect = scrubWrap.getBoundingClientRect();
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX) || rect.left;
+        const frac = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+        const dur = audio.duration || 184;
+        audio.currentTime = frac * dur;
+        hasInitializedStart = true;
+        updateProgress();
+      }
+
+      if (scrubWrap) {
+        let isScrubbing = false;
+        scrubWrap.addEventListener("mousedown", function(e) {
+          isScrubbing = true;
+          seekTo(e);
+        });
+        window.addEventListener("mousemove", function(e) {
+          if (isScrubbing) seekTo(e);
+        });
+        window.addEventListener("mouseup", function() {
+          isScrubbing = false;
+        });
+
+        scrubWrap.addEventListener("touchstart", function(e) {
+          seekTo(e);
+        }, { passive: true });
+        scrubWrap.addEventListener("touchmove", function(e) {
+          seekTo(e);
+        }, { passive: true });
+      }
+
+      // Initialize initial state immediately
+      updateProgress();
+    })();
+  </script>
 </body>
 
 </html>
+
 
