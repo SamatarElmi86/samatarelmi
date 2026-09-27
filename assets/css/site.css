@@ -2054,3 +2054,71 @@ h1, h2 { font-weight: 400; }
   background: rgba(0, 0, 0, 0.45);
   pointer-events: none;
 }
+
+/* ==========================================================================
+   Press Kit Utility Styles: Bio Copy Controls & Image Metadata
+   ========================================================================== */
+.bio-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.bio-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.bio-copy-btn:hover,
+.bio-copy-btn:focus-visible {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+.bio-copy-btn.is-copied {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  color: var(--ink);
+}
+.press-metadata {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--paper-deep);
+  border-radius: 3px;
+  border: 1px solid var(--line);
+}
+.press-meta-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-secondary);
+}
+.press-meta-list strong {
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   Gallery Noscript Fallback
+   ========================================================================== */
+.gallery-noscript-fallback {
+  padding-bottom: 3rem;
+}

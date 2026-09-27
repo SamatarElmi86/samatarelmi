@@ -131,4 +131,50 @@
       if (show) visibleUpcoming += 1;
     });
   }
+
+  // --- 4. Press Kit Biography Clipboard Copy ---
+  document.querySelectorAll("[data-copy-bio]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const bioKey = btn.dataset.copyBio;
+      const target = document.querySelector(`[data-bio-content="${bioKey}"]`);
+      if (!target) return;
+
+      const textToCopy = target.innerText.trim();
+      const labelSpan = btn.querySelector(".bio-copy-btn__text") || btn;
+      const originalText = labelSpan.textContent;
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(textToCopy);
+        } else {
+          // Fallback
+          const textArea = document.createElement("textarea");
+          textArea.value = textToCopy;
+          textArea.style.position = "fixed";
+          textArea.style.left = "-999999px";
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          document.execCommand("copy");
+          textArea.remove();
+        }
+
+        btn.classList.add("is-copied");
+        labelSpan.textContent = "Copied!";
+        btn.setAttribute("aria-live", "polite");
+
+        setTimeout(() => {
+          btn.classList.remove("is-copied");
+          labelSpan.textContent = originalText;
+        }, 2200);
+      } catch (err) {
+        console.warn("Could not copy biography text:", err);
+        labelSpan.textContent = "Press Ctrl+C to copy";
+        setTimeout(() => {
+          labelSpan.textContent = originalText;
+        }, 2200);
+      }
+    });
+  });
+
 })();

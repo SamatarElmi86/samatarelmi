@@ -112,7 +112,7 @@ function getCanonicalFooter(prefix = "") {
         <div class="footer-col">
           <p class="footer-label">Enquiries</p>
           <ul class="footer-links">
-            <li><a href="mailto:info@samatarelmi.co.uk">info@samatarelmi.co.uk</a></li>
+            <li><a href="mailto:management@samatarelmi.co.uk">management@samatarelmi.co.uk</a></li>
             <li><a href="${prefix}contact.html">Contact and representation</a></li>
           </ul>
         </div>
