@@ -2122,3 +2122,88 @@ h1, h2 { font-weight: 400; }
 .gallery-noscript-fallback {
   padding-bottom: 3rem;
 }
+
+/* Compact Press Biographies Utility Panel */
+.bio-actions-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+}
+.bio-action-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  transition: border-color 0.15s ease;
+}
+.bio-action-card:hover {
+  border-color: rgba(23, 23, 20, 0.28);
+}
+.bio-action-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.bio-action-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--ink);
+}
+.bio-action-meta {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.bio-disclosure-preview {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+.bio-disclosure-summary {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  cursor: pointer;
+  outline: none;
+}
+.bio-disclosure-summary:hover,
+.bio-disclosure-summary:focus-visible {
+  color: var(--rust);
+}
+.bio-text-containers {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.bio-text-item h4 {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+.bio-text-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+}
+.bio-long-text p + p {
+  margin-top: 0.75rem;
+}

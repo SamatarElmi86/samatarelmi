@@ -75,7 +75,7 @@ function getCanonicalHeader(pageId, prefix = "") {
           <ul class="nav-dropdown" id="dropdown-education" data-dropdown-menu>
             <li><a class="nav-dropdown-link" href="${prefix}work-with-me.html"${cur("work-with-me.html")}>Work with Me</a></li>
             <li><a class="nav-dropdown-link" href="${prefix}education-editorial.html"${cur("education-editorial.html")}>Education &amp; Editorial</a></li>
-            <li><a class="nav-dropdown-link" href="${prefix}course.html"${cur("course.html")}>Course</a></li>
+            <li><a class="nav-dropdown-link" href="${prefix}course.html"${cur("course.html")}>Courses</a></li>
             <li><a class="nav-dropdown-link" href="${prefix}services.html"${cur("services.html")}>Mentoring &amp; Services</a></li>
             <li><a class="nav-dropdown-link" href="${prefix}research-tools.html"${cur("research-tools.html")}>Research &amp; Tools</a></li>
           </ul>

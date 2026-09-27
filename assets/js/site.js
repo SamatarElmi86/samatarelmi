@@ -169,7 +169,9 @@
         }, 2200);
       } catch (err) {
         console.warn("Could not copy biography text:", err);
-        labelSpan.textContent = "Press Ctrl+C to copy";
+        const details = document.querySelector(".bio-disclosure-preview");
+        if (details) details.open = true;
+        labelSpan.textContent = "Opened below";
         setTimeout(() => {
           labelSpan.textContent = originalText;
         }, 2200);
