@@ -2207,3 +2207,50 @@ h1, h2 { font-weight: 400; }
 .bio-long-text p + p {
   margin-top: 0.75rem;
 }
+
+/* Publication Cover Framing & Standardised Hierarchy */
+.collection-cover-wrap,
+.work-cover-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background: var(--paper-subtle);
+  border-bottom: 1px solid var(--line-light);
+}
+.collection-cover {
+  display: block;
+  max-height: 340px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 8px 24px rgba(23, 23, 20, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.collection-card:hover .collection-cover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(23, 23, 20, 0.18);
+}
+.work-cover-wrap {
+  background: var(--paper-subtle);
+  border: 1px solid var(--line-light);
+  border-radius: 2px;
+  padding: 1.25rem 1rem;
+}
+.work-cover {
+  display: block;
+  max-height: 280px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 8px 24px rgba(23, 23, 20, 0.12);
+}
+.album-title {
+  margin: 0 0 0.65rem;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  color: var(--ink);
+}
