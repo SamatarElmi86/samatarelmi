@@ -2333,7 +2333,7 @@ h1, h2 { font-weight: 400; }
   margin: 0;
 }
 
-/* --- Performance History (2011–2025 Archive) --- */
+/* --- Performance History (2010–2025 Archive) --- */
 .history-section {
   margin-top: clamp(3rem, 6vw, 5rem);
   padding-top: clamp(2rem, 4vw, 3rem);
@@ -2360,7 +2360,7 @@ h1, h2 { font-weight: 400; }
   font-family: var(--sans);
   font-size: 0.88rem;
   line-height: 1.55;
-  color: var(--muted);
+  color: var(--ink-secondary, #3b3935);
 }
 
 .history-year-group {
@@ -2397,7 +2397,7 @@ h1, h2 { font-weight: 400; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #444139;
   text-align: left;
   border-bottom: 1px solid var(--line);
 }
@@ -2416,8 +2416,9 @@ h1, h2 { font-weight: 400; }
   width: 25%;
   min-width: 110px;
   font-family: var(--sans);
-  font-size: 0.8rem;
-  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #444139;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -2429,15 +2430,31 @@ h1, h2 { font-weight: 400; }
 }
 
 .history-event-col strong {
+  font-family: var(--serif);
+  font-size: 0.94rem;
   font-weight: 600;
   color: var(--ink);
+}
+
+.history-event-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(23, 23, 20, 0.35);
+  text-underline-offset: 2.5px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.history-event-link:hover,
+.history-event-link:focus-visible {
+  color: var(--gold, #a8771d);
+  text-decoration-color: var(--gold, #a8771d);
 }
 
 .history-venue-col {
   width: 28%;
   font-family: var(--sans);
-  font-size: 0.8rem;
-  color: var(--muted);
+  font-size: 0.82rem;
+  color: #444139;
 }
 
 @media (max-width: 680px) {
@@ -2463,7 +2480,7 @@ h1, h2 { font-weight: 400; }
   .history-date-col {
     font-size: 0.78rem;
     font-weight: 600;
-    color: var(--muted);
+    color: #444139;
   }
   .history-event-col {
     font-size: 0.86rem;
@@ -2472,7 +2489,7 @@ h1, h2 { font-weight: 400; }
   }
   .history-venue-col {
     font-size: 0.8rem;
-    color: var(--muted);
+    color: #444139;
     margin-top: 0.15rem;
   }
 }
