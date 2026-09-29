@@ -2795,12 +2795,16 @@ html, body {
   background: rgba(168, 119, 29, 0.08);
 }
 
-.archive-disclosure:not([open]) .archive-disclosure__label-opened {
-  display: none;
+.archive-disclosure__summary {
+  touch-action: manipulation;
 }
 
-.archive-disclosure[open] .archive-disclosure__label-closed {
-  display: none;
+.tour-cities-disclosure__summary {
+  touch-action: manipulation;
+}
+
+.tour-cities-disclosure__summary * {
+  pointer-events: none;
 }
 
 .archive-disclosure__chevron {
@@ -2997,6 +3001,21 @@ html, body {
     padding: 0.75rem 0 2.5rem !important;
     border-bottom: 1px solid var(--line) !important;
     box-shadow: 0 16px 40px rgba(23, 23, 20, 0.15) !important;
+    display: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    z-index: 500 !important;
+  }
+
+  .nav-links.is-open {
+    display: flex !important;
+  }
+
+  .nav-item {
+    width: 100% !important;
+    border-bottom: 1px solid var(--line-light) !important;
+    position: relative !important;
   }
 
   .nav-link {
@@ -3006,20 +3025,58 @@ html, body {
     padding: 0.75rem var(--gutter, 1.25rem) !important;
     font-size: 0.94rem !important;
     font-weight: 650 !important;
+    width: 100% !important;
+    text-align: left !important;
   }
 
+  .nav-disclosure-btn {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 48px !important;
+    padding: 0.75rem var(--gutter, 1.25rem) !important;
+    font-size: 0.94rem !important;
+    font-weight: 650 !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: var(--ink) !important;
+    cursor: pointer !important;
+    text-align: left !important;
+  }
+
+  .nav-disclosure-btn * {
+    pointer-events: none !important;
+  }
+
+  /* Submenu hidden by default on mobile */
   .nav-dropdown {
     position: static !important;
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
     transform: none !important;
     box-shadow: none !important;
     border: 0 !important;
-    border-left: 2px solid var(--gold) !important;
-    background: #eee7d8 !important;
-    margin: 0.25rem var(--gutter, 1.25rem) 0.5rem calc(var(--gutter, 1.25rem) + 0.5rem) !important;
-    padding: 0.25rem 0 !important;
+    border-left: 3px solid var(--gold) !important;
+    background: #ede8dc !important;
+    margin: 0.25rem var(--gutter, 1.25rem) 0.65rem calc(var(--gutter, 1.25rem) + 0.5rem) !important;
+    padding: 0.35rem 0 !important;
     border-radius: 0 2px 2px 0 !important;
     width: auto !important;
     min-width: 0 !important;
+    list-style: none !important;
+  }
+
+  /* Submenu opened by .is-open on item OR aria-expanded="true" on button OR .is-open on dropdown */
+  .nav-item.is-open > .nav-dropdown,
+  .nav-disclosure-btn[aria-expanded="true"] + .nav-dropdown,
+  .nav-dropdown.is-open {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 
   .nav-dropdown-link {
@@ -3027,8 +3084,15 @@ html, body {
     display: flex !important;
     align-items: center !important;
     padding: 0.65rem 1rem !important;
-    font-size: 0.86rem !important;
+    font-size: 0.88rem !important;
     color: var(--ink-secondary) !important;
+  }
+
+  /* Chevron rotation indicator */
+  .nav-disclosure-btn[aria-expanded="true"] .dropdown-chevron,
+  .nav-item.is-open > .nav-disclosure-btn .dropdown-chevron {
+    transform: rotate(180deg) !important;
+    color: var(--gold) !important;
   }
 }
 
