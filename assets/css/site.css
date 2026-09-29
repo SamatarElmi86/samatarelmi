@@ -2825,3 +2825,53 @@ html, body {
     padding: 1.15rem 1rem;
   }
 }
+
+
+/* Contextual Archive Note (e.g. 2013–2021 reduced live activity) */
+.compact-history-note {
+  margin: 1.5rem 0 1.25rem;
+  padding: 0.85rem 1.1rem;
+  background: var(--paper-deep);
+  border-left: 2px solid var(--gold, #a8771d);
+  border-radius: 0 2px 2px 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.compact-history-note__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin-bottom: 0.25rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold, #a8771d);
+}
+
+.compact-history-note__sep {
+  color: rgba(28, 28, 25, 0.35);
+}
+
+.compact-history-note__heading {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.compact-history-note__text {
+  margin: 0;
+  font-family: var(--sans);
+  font-style: italic;
+  color: #444139;
+  font-size: 0.84rem;
+  line-height: 1.48;
+}
+
+@media (max-width: 640px) {
+  .compact-history-note {
+    padding: 0.75rem 0.85rem;
+    margin: 1.25rem 0 1rem;
+  }
+}
