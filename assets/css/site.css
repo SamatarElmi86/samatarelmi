@@ -2493,3 +2493,195 @@ h1, h2 { font-weight: 400; }
     margin-top: 0.15rem;
   }
 }
+
+
+/* ==========================================================================
+   Responsive Audit & Mobile Layout Repairs
+   ========================================================================== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#tour-map,
+#upcoming,
+#earlier,
+#history,
+.history-section,
+.event-group,
+.uk-tour-section {
+  scroll-margin-top: clamp(4rem, 8vw, 6rem);
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .section-heading h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+@media (max-width: 680px) {
+  .event-table, .event-table tbody, .event-table tr, .event-table td {
+    display: block;
+  }
+  .event-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .event-table tr {
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .event-table td {
+    width: auto !important;
+    padding: 0;
+    border: 0;
+  }
+  .event-table td + td {
+    margin-top: 0.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .audio-feature-card {
+    padding: 0.85rem 0.75rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .audio-feature-bar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .audio-feature-track {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .audio-custom-player {
+    gap: 0.4rem;
+    padding: 0.4rem 0.5rem;
+  }
+  .audio-time {
+    min-width: 24px;
+    font-size: 0.7rem;
+  }
+  .audio-jump-btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.62rem;
+  }
+}
+
+/* ==========================================================================
+   Compact Performance History Archive (2003–2025)
+   ========================================================================== */
+.history-archive-section {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.compact-history-ledger {
+  margin-top: 1.5rem;
+}
+
+.compact-history-year {
+  margin-top: 1.75rem;
+}
+
+.compact-history-year:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.compact-history-year-title {
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.28rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold, #a8771d);
+  border-bottom: 1px solid var(--line);
+}
+
+.compact-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.compact-history-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.32rem 0;
+  border-bottom: 1px solid rgba(28, 28, 25, 0.06);
+  font-size: 0.86rem;
+  line-height: 1.48;
+}
+
+.compact-history-row:last-child {
+  border-bottom: none;
+}
+
+.compact-history-date {
+  flex: 0 0 135px;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #444139;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.compact-history-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--ink);
+}
+
+.compact-history-venue {
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  color: #444139;
+}
+
+.compact-history-sep {
+  display: inline-block;
+  margin: 0 0.38rem;
+  color: rgba(28, 28, 25, 0.35);
+}
+
+.compact-history-event strong {
+  font-family: var(--serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .compact-history-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    padding: 0.42rem 0;
+  }
+  .compact-history-date {
+    flex: none;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--gold, #a8771d);
+  }
+  .compact-history-body {
+    font-size: 0.85rem;
+    line-height: 1.42;
+  }
+  .compact-history-sep {
+    margin: 0 0.25rem;
+  }
+}
