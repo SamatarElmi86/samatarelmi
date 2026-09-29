@@ -1523,6 +1523,17 @@ h1, h2 { font-weight: 400; }
   flex-shrink: 0;
   transition: transform 0.15s ease, background 0.15s ease;
   padding: 0;
+  position: relative;
+  touch-action: manipulation;
+}
+.audio-play-btn::before {
+  content: ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 44px;
+  min-height: 44px;
 }
 .audio-play-btn:hover {
   transform: scale(1.08);
@@ -2088,9 +2099,11 @@ h1, h2 { font-weight: 400; }
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--line);
-  padding: 0.35rem 0.75rem;
+  padding: 0.5rem 0.85rem;
+  min-height: 44px;
+  box-sizing: border-box;
   font-family: var(--sans);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2185,6 +2198,11 @@ h1, h2 { font-weight: 400; }
   border-radius: 3px;
 }
 .bio-disclosure-summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  touch-action: manipulation;
   font-family: var(--sans);
   font-size: 0.76rem;
   font-weight: 750;
@@ -2197,6 +2215,10 @@ h1, h2 { font-weight: 400; }
 .bio-disclosure-summary:hover,
 .bio-disclosure-summary:focus-visible {
   color: var(--rust);
+}
+.bio-disclosure-summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
 }
 .bio-text-containers {
   margin-top: 1.25rem;
