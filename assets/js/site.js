@@ -58,25 +58,65 @@
     }
   });
 
-  // Mobile Hamburger Toggle
+    // Mobile Hamburger Toggle & Scroll Lock Management
+  function closeMobileMenu() {
+    if (!navToggle || !navLinks) return;
+    navToggle.setAttribute("aria-expanded", "false");
+    navLinks.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    closeAllDropdowns();
+  }
+
+  function openMobileMenu() {
+    if (!navToggle || !navLinks) return;
+    navToggle.setAttribute("aria-expanded", "true");
+    navLinks.classList.add("is-open");
+    document.body.classList.add("menu-open");
+  }
+
   if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
       const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-      navToggle.setAttribute("aria-expanded", String(!isOpen));
-      navLinks.classList.toggle("is-open", !isOpen);
       if (isOpen) {
-        closeAllDropdowns();
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
       }
     });
 
-    // Close menu when a standard navigation link is clicked
+    // Close menu when a navigation link is clicked
     navLinks.addEventListener("click", (event) => {
       if (event.target.closest("a")) {
-        navToggle.setAttribute("aria-expanded", "false");
-        navLinks.classList.remove("is-open");
-        closeAllDropdowns();
+        closeMobileMenu();
       }
     });
+
+    // Global keyboard support: Escape closes mobile menu and restores focus
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navLinks.classList.contains("is-open")) {
+        closeMobileMenu();
+        navToggle.focus();
+      }
+    });
+
+    // Window resize handler: clean up mobile menu state when expanding to desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1040 && navLinks.classList.contains("is-open")) {
+        closeMobileMenu();
+      }
+    });
+  }
+
+  // --- 2b. Tour Cities Disclosure Responsive Sync ---
+  const tourCitiesDisclosure = document.getElementById("tour-cities-disclosure");
+  if (tourCitiesDisclosure) {
+    function syncTourCitiesDisclosure() {
+      if (window.innerWidth > 820) {
+        tourCitiesDisclosure.open = true;
+      }
+    }
+    syncTourCitiesDisclosure();
+    window.addEventListener("resize", syncTourCitiesDisclosure);
   }
 
   // --- 3. Events Date Management & Archive Sorting ---

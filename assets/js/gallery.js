@@ -319,7 +319,7 @@
         goNext();
       } else if (e.key === "Escape") {
         if (dialog && dialog.open) {
-          dialog.close();
+          dialog.close(); document.body.classList.remove("modal-open");
         } else {
           showDoors();
         }
@@ -364,10 +364,13 @@
       ? `${item.title || item.category} · Photograph: ${item.credit}`
       : (item.title || item.category);
 
-    dialog.showModal();
+    dialog.showModal(); document.body.classList.add("modal-open");
   }
 
   if (dialog) {
+    dialog.addEventListener("close", () => {
+      document.body.classList.remove("modal-open");
+    });
     dialog.addEventListener("click", (event) => {
       if (event.target === dialog || event.target.closest("[data-lightbox-close]")) {
         dialog.close();

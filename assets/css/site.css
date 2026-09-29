@@ -59,34 +59,49 @@
   --container-wide: 1280px;
   --container-reading: 720px;
   --container-hero: 820px;
-  --gutter: clamp(1.2rem, 3.5vw, 2.5rem);
-
-  --content: min(var(--container-max), calc(100vw - (var(--gutter) * 2)));
+  /* Mobile-first fluid gutter: 18px at 320px, 20px at 390px, up to 40px at desktop */
+  --gutter: clamp(1.125rem, 4.5vw, 2.5rem);
+  --header-height: 60px;
 }
 
 /* ==========================================================================
-   Content Width Containers
+   Global Reset & Layout Containers (Zero 100vw Scrollbar Overflow)
    ========================================================================== */
-.container {
-  width: min(var(--container-max), calc(100vw - (var(--gutter) * 2)));
-  margin-left: auto;
-  margin-right: auto;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-.container-wide {
-  width: min(var(--container-wide), calc(100vw - (var(--gutter) * 2)));
-  margin-left: auto;
-  margin-right: auto;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
-.container-reading {
-  width: min(var(--container-reading), calc(100vw - (var(--gutter) * 2)));
-  margin-left: auto;
-  margin-right: auto;
+
+body.menu-open,
+body.modal-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  touch-action: none;
 }
+
+.container,
+.container-wide,
+.container-reading,
 .container-hero {
-  width: min(var(--container-hero), calc(100vw - (var(--gutter) * 2)));
+  width: 100%;
+  max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  box-sizing: border-box;
 }
+
+.container-wide { max-width: var(--container-wide); }
+.container-reading { max-width: var(--container-reading); }
+.container-hero { max-width: var(--container-hero); }
 
 /* Major Section Spacing Hierarchy */
 .section {
@@ -746,7 +761,7 @@ h1, h2 { font-weight: 400; }
 .section--ink { background: var(--ink); color: var(--white); }
 .section--white { background: var(--white); }
 .section--border { border-top: 1px solid var(--line); }
-.container { width: var(--content); margin: 0 auto; }
+/* container standardized above */
 
 .section-heading {
   display: grid;
@@ -2873,5 +2888,819 @@ html, body {
   .compact-history-note {
     padding: 0.75rem 0.85rem;
     margin: 1.25rem 0 1rem;
+  }
+}
+
+
+/* ==========================================================================
+   Comprehensive Site-Wide Mobile-First Redesign & Architectural QA System
+   Applies below 768px (and 820px for tour map / 1040px for header navigation)
+   ========================================================================== */
+
+/* --- 1. Global Mobile Fluid Typography Scale --- */
+@media (max-width: 768px) {
+  h1, .hero-title {
+    font-size: clamp(1.85rem, 6.5vw, 2.85rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h2, .section-heading h2 {
+    font-size: clamp(1.4rem, 5vw, 2rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 3.8vw, 1.45rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  p.lead, .standfirst {
+    font-size: clamp(1rem, 3.2vw, 1.2rem) !important;
+    line-height: 1.52 !important;
+  }
+
+  /* Spacing Scale on Phone Viewports */
+  .section {
+    padding-top: clamp(2.25rem, 6vw, 3.5rem) !important;
+    padding-bottom: clamp(2.25rem, 6vw, 3.5rem) !important;
+  }
+
+  .section--tight {
+    padding-top: clamp(1.5rem, 4vw, 2.25rem) !important;
+    padding-bottom: clamp(1.5rem, 4vw, 2.25rem) !important;
+  }
+
+  .section-heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.65rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Avoid clipped rows of action buttons */
+  .button-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+  }
+
+  .button-row .button {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* --- 2. Mobile Navigation System (<= 1040px) --- */
+@media (max-width: 1040px) {
+  .site-header {
+    min-height: var(--header-height, 60px);
+  }
+
+  .nav-shell {
+    min-height: var(--header-height, 60px);
+    padding: 0.5rem 0;
+  }
+
+  .nav-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.6rem 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  .nav-links {
+    position: fixed !important;
+    top: var(--header-height, 60px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-height: calc(100dvh - var(--header-height, 60px)) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    background: var(--paper) !important;
+    padding: 0.75rem 0 2.5rem !important;
+    border-bottom: 1px solid var(--line) !important;
+    box-shadow: 0 16px 40px rgba(23, 23, 20, 0.15) !important;
+  }
+
+  .nav-link {
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.75rem var(--gutter, 1.25rem) !important;
+    font-size: 0.94rem !important;
+    font-weight: 650 !important;
+  }
+
+  .nav-dropdown {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    border-left: 2px solid var(--gold) !important;
+    background: #eee7d8 !important;
+    margin: 0.25rem var(--gutter, 1.25rem) 0.5rem calc(var(--gutter, 1.25rem) + 0.5rem) !important;
+    padding: 0.25rem 0 !important;
+    border-radius: 0 2px 2px 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  .nav-dropdown-link {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.65rem 1rem !important;
+    font-size: 0.86rem !important;
+    color: var(--ink-secondary) !important;
+  }
+}
+
+/* --- 3. Homepage Mobile Polish (<= 768px) --- */
+@media (max-width: 768px) {
+  /* Show only next 3 engagements on mobile */
+  .event-preview:nth-of-type(n+4) {
+    display: none !important;
+  }
+
+  .home-tour-cta {
+    margin-top: 1.25rem !important;
+  }
+
+  .home-tour-cta .button {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .split {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .split-media {
+    position: static !important;
+    max-width: 260px !important;
+    margin: 0 auto 1.5rem !important;
+  }
+}
+
+/* --- 4. Events Page Mobile Architectural Redesign (<= 768px) --- */
+@media (max-width: 768px) {
+  /* Transform upcoming table into clean editorial vertical records */
+  .event-table {
+    display: block !important;
+    width: 100% !important;
+    border: 0 !important;
+  }
+
+  .event-table thead {
+    display: none !important;
+  }
+
+  .event-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    border: 0 !important;
+  }
+
+  .event-table tr {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1.25rem 0 !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+    background: transparent !important;
+  }
+
+  .event-table tr:first-child {
+    padding-top: 0.5rem !important;
+  }
+
+  .event-table tr:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .event-table td {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    border: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Date as bold uppercase gold kicker */
+  .event-table td:first-child {
+    margin-bottom: 0.4rem !important;
+  }
+
+  .event-table td:first-child time {
+    font-family: var(--sans) !important;
+    font-size: 0.8rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: var(--gold) !important;
+    display: inline-block !important;
+  }
+
+  /* Event Details & Venue */
+  .event-table td:last-child {
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+    color: var(--ink) !important;
+  }
+
+  .event-table td:last-child strong {
+    color: var(--ink) !important;
+    font-family: var(--serif) !important;
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    display: inline !important;
+  }
+
+  .event-table td:last-child a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    margin-top: 0.45rem !important;
+    font-family: var(--sans) !important;
+    font-size: 0.78rem !important;
+    font-weight: 750 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    color: var(--gold) !important;
+    min-height: 44px !important;
+  }
+
+  /* Earlier in 2026: considerably more compact than Upcoming */
+  [data-event-earlier] tr {
+    padding: 0.65rem 0 !important;
+  }
+
+  [data-event-earlier] td:first-child {
+    margin-bottom: 0.15rem !important;
+  }
+
+  [data-event-earlier] td:first-child time {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    color: var(--gold) !important;
+  }
+
+  [data-event-earlier] td:last-child {
+    font-size: 0.84rem !important;
+    line-height: 1.4 !important;
+    color: var(--muted) !important;
+  }
+
+  [data-event-earlier] td:last-child strong {
+    font-family: var(--sans) !important;
+    font-size: 0.88rem !important;
+    font-weight: 650 !important;
+    color: var(--ink) !important;
+  }
+
+  [data-event-earlier] td:last-child a {
+    min-height: 38px !important;
+    font-size: 0.72rem !important;
+    margin-top: 0.2rem !important;
+  }
+
+  /* Compact Archive row mobile wrapping */
+  .compact-history-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.2rem !important;
+    padding: 0.45rem 0 !important;
+  }
+
+  .compact-history-date {
+    flex: none !important;
+    font-size: 0.74rem !important;
+    font-weight: 750 !important;
+    color: var(--gold) !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .compact-history-sep {
+    display: none !important;
+  }
+}
+
+/* --- 5. Tour Geography 12-City Disclosure Component --- */
+.tour-map-index__summary-bar {
+  margin-bottom: 0.75rem;
+}
+
+.tour-map-index__stats {
+  margin: 0.2rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.tour-cities-disclosure {
+  width: 100%;
+}
+
+.tour-cities-disclosure__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  min-height: 48px;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  transition: background 0.15s ease;
+}
+
+.tour-cities-disclosure__summary::-webkit-details-marker {
+  display: none;
+}
+
+.tour-cities-disclosure__summary:hover {
+  background: #ede8dc;
+}
+
+.tour-cities-disclosure__summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+.tour-cities-disclosure__badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+  padding: 0.2rem 0.5rem;
+  background: rgba(168, 119, 29, 0.12);
+  border-radius: 2px;
+}
+
+.tour-cities-disclosure .disclosure-chevron {
+  transition: transform 0.2s ease;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.tour-cities-disclosure[open] .disclosure-chevron {
+  transform: rotate(180deg);
+}
+
+/* Desktop: tour cities list is always visible beside the map */
+@media (min-width: 821px) {
+  .tour-cities-disclosure summary {
+    display: none !important;
+  }
+  .tour-cities-disclosure > .tour-map-city-list {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Mobile: tour cities list expands cleanly when toggled */
+@media (max-width: 820px) {
+  .tour-map-grid--compact {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .tour-map-visual--compact {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .tour-cities-disclosure:not([open]) > .tour-map-city-list {
+    display: none !important;
+  }
+
+  .tour-cities-disclosure[open] > .tour-map-city-list {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+}
+
+/* --- 6. Featured Track Audio Player Mobile Layout --- */
+@media (max-width: 640px) {
+  .audio-feature-card {
+    padding: 0.85rem 1rem !important;
+    margin-top: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .audio-feature-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .audio-feature-track {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .audio-feature-bandcamp {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .audio-custom-player {
+    height: auto !important;
+    min-height: 48px !important;
+    padding: 0.5rem 0.65rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .audio-play-btn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+  }
+}
+
+/* --- 7. Writing & Books Mobile Layout (<= 768px) --- */
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .collection-cover-wrap {
+    max-width: 240px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .collection-copy {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .collection-copy .button-row,
+  .collection-copy .button {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+  }
+
+  .work {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  .work-cover-wrap {
+    max-width: 220px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .work-copy .button-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.65rem !important;
+  }
+
+  .work-copy .button {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+  }
+
+  .publication-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.85rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .publication-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --- 8. Music & Discography Mobile Layout (<= 768px) --- */
+@media (max-width: 768px) {
+  .album-feature {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .album-art {
+    max-width: 260px !important;
+    margin: 0 auto 1rem !important;
+    width: 100% !important;
+  }
+
+  .track-list a {
+    min-height: 44px !important;
+    display: grid !important;
+    grid-template-columns: 1.75rem minmax(0, 1fr) auto !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+    padding: 0.65rem 0 !important;
+  }
+
+  .release-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .release-card .release-art {
+    max-width: 220px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+}
+
+/* --- 9. Press Kit Mobile Layout & Navigation (<= 768px) --- */
+@media (max-width: 768px) {
+  .press-jump {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    margin-top: 1.25rem !important;
+  }
+
+  .press-jump a {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.74rem !important;
+    font-weight: 750 !important;
+    letter-spacing: 0.06em !important;
+    border: 1px solid var(--line) !important;
+  }
+
+  .press-photo-panel {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .press-portrait-frame {
+    max-width: 280px !important;
+    margin: 0 auto 1rem !important;
+  }
+
+  .bio-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  .bio-action-btn {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.5rem 0.85rem !important;
+  }
+}
+
+/* --- 10. Services & Pricing Tables Stacked Records (<= 768px) --- */
+@media (max-width: 768px) {
+  .price-table-wrap {
+    overflow-x: visible !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .price-table {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .price-table thead {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+  }
+
+  .price-table caption {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0.85rem 1rem !important;
+    background: var(--paper-deep) !important;
+    border: 1px solid var(--line) !important;
+    border-bottom: 0 !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .price-table tbody {
+    display: grid !important;
+    gap: 0.85rem !important;
+    margin-top: 0 !important;
+    border: 1px solid var(--line) !important;
+    background: var(--paper) !important;
+    padding: 0.85rem !important;
+  }
+
+  .price-table tbody tr {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1rem !important;
+    background: var(--white) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 2px !important;
+    gap: 0.4rem !important;
+  }
+
+  .price-table tbody th {
+    padding: 0 !important;
+    border: 0 !important;
+    font-family: var(--serif) !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+    color: var(--ink) !important;
+    line-height: 1.3 !important;
+  }
+
+  .price-table tbody td {
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+    color: var(--muted) !important;
+  }
+
+  .price-table tbody td[data-label="Price"],
+  .price-table tbody td[data-label="Standard"],
+  .price-table tbody td:last-child {
+    margin-top: 0.35rem !important;
+    font-family: var(--sans) !important;
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    color: var(--gold) !important;
+  }
+
+  .price-table tbody td[data-label]:not([data-label="Scope"]):not([data-label="Price"])::before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .service-grid,
+  .credit-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .education-photo-panel {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* --- 11. Contact Page Mobile Layout (<= 768px) --- */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-card {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .contact-card a,
+  a[href^="mailto:"] {
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  .contact-image {
+    min-height: 240px !important;
+    max-height: 320px !important;
+  }
+
+  .contact-image img {
+    min-height: 240px !important;
+    max-height: 320px !important;
+    object-position: center 25% !important;
+  }
+
+  .values-statement {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .values-statement__intro {
+    position: static !important;
+  }
+
+  .journal-intro__grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* --- 12. Gallery Lightbox Viewport & Safe-Area Insets --- */
+.lightbox {
+  width: min(1080px, calc(100% - 24px)) !important;
+  max-height: calc(100dvh - 24px) !important;
+  box-sizing: border-box !important;
+}
+
+.lightbox-close {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  top: max(0.7rem, env(safe-area-inset-top)) !important;
+  right: max(0.7rem, env(safe-area-inset-right)) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+.lightbox-caption {
+  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom)) !important;
+  box-sizing: border-box !important;
+}
+
+.lightbox-media img,
+.lightbox-media video {
+  max-height: calc(100dvh - 120px) !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+}
+
+/* --- 13. Footer Responsive Layout & Touch Targets --- */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: clamp(2rem, 5vw, 3rem) 0 2rem !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .footer-links a {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0.25rem 0 !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  .footer-meta {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.65rem !important;
   }
 }

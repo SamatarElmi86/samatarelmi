@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Events — Samatar Elmi</title>
   <meta name="description" content="Samatar Elmi's 2026 performances and workshops across the UK, including Cardiff, Liverpool, London, Manchester, Oxford, Rochester and beyond.">
-  <link rel="canonical" href="https://samatarelmi.co.uk/events.html"><link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/site.css?v=20260929_archive_note">
+  <link rel="canonical" href="https://samatarelmi.co.uk/events.html"><link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/site.css?v=20260929_mobile_redesign">
   <meta property="og:type" content="website"><meta property="og:title" content="Events — Samatar Elmi"><meta property="og:description" content="Dates and venues for Samatar Elmi's 2026 national tour."><meta property="og:url" content="https://samatarelmi.co.uk/events.html"><meta property="og:image" content="https://samatarelmi.co.uk/assets/images/social-card.webp"><meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
 {
@@ -506,10 +506,19 @@
 </svg>
           </div>
 
-          <aside class="tour-map-index tour-map-index--compact" aria-label="2026 Performance Locations">
-            <h3 class="tour-map-index__title">Cities &amp; Gatherings (12)</h3>
+                    <aside class="tour-map-index tour-map-index--compact" aria-label="2026 Performance Locations">
+            <div class="tour-map-index__summary-bar">
+              <h3 class="tour-map-index__title">Cities &amp; Gatherings (12)</h3>
+              <p class="tour-map-index__stats">12 locations across England &amp; Wales · 27 performances &amp; workshops</p>
+            </div>
             <p class="tour-map-index__hint">Hover or tap any location to inspect dates and venues.</p>
-            <ul class="tour-map-city-list">
+            <details class="tour-cities-disclosure" id="tour-cities-disclosure">
+              <summary class="tour-cities-disclosure__summary">
+                <span class="tour-cities-disclosure__label">View 12-city breakdown</span>
+                <span class="tour-cities-disclosure__badge">12 cities</span>
+                <svg class="disclosure-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <ul class="tour-map-city-list">
               <li class="tour-city-item is-featured" data-city-target="bristol">
                 <div class="tour-city-item__header">
                   <strong>Bristol</strong>
@@ -607,6 +616,7 @@
                 <p class="tour-city-item__venues">Cheltenham Poetry Festival</p>
               </li>
             </ul>
+            </details>
           </aside>
         </div>
       </div>
