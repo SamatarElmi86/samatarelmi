@@ -64,11 +64,17 @@
     });
   });
 
-  // Click outside to close dropdowns
+  // Click outside to close dropdowns and mobile menu
   document.addEventListener("click", (e) => {
     const el = e.target instanceof Element ? e.target : (e.target && e.target.parentElement instanceof Element ? e.target.parentElement : null);
-    if (!el || !el.closest("[data-nav-dropdown]")) {
+    if (!el) return;
+
+    if (!el.closest("[data-nav-dropdown]")) {
       closeAllDropdowns();
+    }
+
+    if (navLinks && navLinks.classList.contains("is-open") && !el.closest(".site-header")) {
+      closeMobileMenu();
     }
   });
 
@@ -91,6 +97,7 @@
   if (navToggle && navLinks) {
     navToggle.addEventListener("click", (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const isOpen = navToggle.getAttribute("aria-expanded") === "true" || navLinks.classList.contains("is-open");
       if (isOpen) {
         closeMobileMenu();
