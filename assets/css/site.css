@@ -287,16 +287,20 @@ body.modal-open {
   right: 0;
   transform: translateY(4px);
 }
-.nav-item.is-open .nav-dropdown,
-.nav-item:focus-within .nav-dropdown {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+@media (min-width: 1041px) {
+  .nav-item--has-dropdown:hover .nav-dropdown,
+  .nav-item.is-open .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
 }
-.nav-item:last-child.is-open .nav-dropdown,
-.nav-item:last-child:focus-within .nav-dropdown {
-  transform: translateY(0);
+@media (min-width: 1041px) {
+  .nav-item:last-child:hover .nav-dropdown,
+  .nav-item:last-child.is-open .nav-dropdown {
+    transform: translateY(0);
+  }
 }
 
 .nav-dropdown li {
@@ -368,71 +372,7 @@ body.modal-open {
 }
 
 /* Mobile Navigation Breakpoint (<= 1040px) */
-@media (max-width: 1040px) {
-  .nav-toggle {
-    display: inline-flex;
-  }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 1rem 0 1.5rem;
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
-    box-shadow: var(--shadow);
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
-  .nav-links.is-open {
-    display: flex;
-  }
-  .nav-item {
-    border-bottom: 1px solid var(--line-light);
-  }
-  .nav-link {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.95rem var(--gutter);
-    font-size: 0.82rem;
-  }
-  .nav-link[aria-current="page"]::after,
-  .nav-item.is-active-parent > .nav-link::after {
-    left: var(--gutter);
-    right: auto;
-    width: 40px;
-    bottom: 6px;
-  }
-  /* Mobile Accordion Dropdowns */
-  .nav-dropdown {
-    position: static;
-    transform: none;
-    min-width: 100%;
-    box-shadow: none;
-    border: 0;
-    border-top: 1px solid var(--line-light);
-    background: var(--paper-deep);
-    border-radius: 0;
-    padding: 0.35rem 0;
-    display: none;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .nav-item.is-open .nav-dropdown,
-  .nav-disclosure-btn[aria-expanded="true"] + .nav-dropdown {
-    display: block;
-  }
-  .nav-dropdown-link {
-    padding: 0.85rem calc(var(--gutter) + 1.25rem);
-    font-size: 0.78rem;
-  }
-}
+
 
 /* ==========================================================================
    Canonical Global Footer
@@ -1148,7 +1088,7 @@ h1, h2 { font-weight: 400; }
 
 @media (max-width: 560px) {
   body { font-size: 1rem; }
-  .nav-links.is-open { grid-template-columns: 1fr; max-height: calc(100svh - 78px); overflow-y: auto; }
+  
   .hero h1 { font-size: clamp(3.2rem, 18vw, 5rem); }
   .work { grid-template-columns: 1fr; }
   .journal-card:only-child { display: flex; min-height: 22rem; }
@@ -2197,6 +2137,7 @@ h1, h2 { font-weight: 400; }
   border: 1px solid var(--line);
   border-radius: 3px;
 }
+.bio-disclosure-summary * { pointer-events: none; }
 .bio-disclosure-summary {
   display: inline-flex;
   align-items: center;
@@ -2739,6 +2680,7 @@ html, body {
   box-shadow: 0 4px 20px rgba(23, 23, 20, 0.04);
 }
 
+.archive-disclosure__summary * { pointer-events: none; }
 .archive-disclosure__summary {
   display: flex;
   align-items: center;
@@ -2817,6 +2759,7 @@ html, body {
   background: rgba(168, 119, 29, 0.08);
 }
 
+.archive-disclosure__summary * { pointer-events: none; }
 .archive-disclosure__summary {
   touch-action: manipulation;
 }
@@ -2851,7 +2794,8 @@ html, body {
 }
 
 @media (max-width: 640px) {
-  .archive-disclosure__summary {
+  .archive-disclosure__summary * { pointer-events: none; }
+.archive-disclosure__summary {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.85rem;
@@ -3790,3 +3734,5 @@ html, body {
     gap: 0.65rem !important;
   }
 }
+
+body.menu-open .sound-toggle { display: none !important; }
