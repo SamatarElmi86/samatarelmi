@@ -430,31 +430,19 @@
 
         <section class="section section--paper tour-map-section" id="tour-map" aria-labelledby="tour-map-heading">
       <div class="container">
-        <div class="section-heading section-heading--compact text-center tour-map-heading-block">
-          <div>
-            <span class="eyebrow">Geography of Performance</span>
-            <h2 id="tour-map-heading">2026 Tour Map</h2>
-          </div>
+        <div class="tour-map-heading-block">
+          <span class="eyebrow">Geography of Performance</span>
+          <h2 id="tour-map-heading">2026 Tour Map</h2>
           <p class="tour-map-stats-line"><strong>12 locations across England &amp; Wales</strong> · 28 performances &amp; workshops</p>
           <p class="tour-map-caption">Every city visited during the 2026 tour. Marker size indicates concentration of appearances.</p>
         </div>
 
         <div class="tour-map-wrapper">
-          <!-- Active city status banner (subtle editorial readout) -->
-          <div class="tour-map-readout" id="tour-map-readout" aria-live="polite">
-            <span class="tour-map-readout__hint">Hover or tap any location to inspect appearances</span>
-            <div class="tour-map-readout__content" hidden>
-              <strong class="tour-map-readout__city"></strong>
-              <span class="tour-map-readout__sep">·</span>
-              <span class="tour-map-readout__count"></span>
-              <span class="tour-map-readout__sep">·</span>
-              <span class="tour-map-readout__dates"></span>
-            </div>
-          </div>
-
-          <!-- The England & Wales Editorial SVG Map -->
+          <!-- The England & Wales Editorial SVG Map (Centred, modest illustration) -->
           <div class="tour-map-stage">
 <svg class="uk-tour-map" viewBox="0 0 520 630" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartographic map of England and Wales showing Samatar Elmi’s 2026 tour locations">
+<title>Cartographic map of England and Wales showing Samatar Elmi’s 2026 tour locations</title>
+<desc>Every city visited during the 2026 tour. Marker size indicates concentration of appearances.</desc>
 <defs>
   <filter id="map-shadow" x="-5%" y="-5%" width="110%" height="110%">
     <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(23, 23, 20, 0.06)" />
@@ -571,6 +559,18 @@
   </g>
 </g>
 </svg>
+          </div>
+
+          <!-- Small muted interaction note directly beneath map -->
+          <div class="tour-map-readout" id="tour-map-readout" aria-live="polite">
+            <span class="tour-map-readout__hint">Hover or tap a location to inspect appearances</span>
+            <div class="tour-map-readout__content" hidden>
+              <strong class="tour-map-readout__city"></strong>
+              <span class="tour-map-readout__sep">·</span>
+              <span class="tour-map-readout__count"></span>
+              <span class="tour-map-readout__sep">·</span>
+              <span class="tour-map-readout__dates"></span>
+            </div>
           </div>
 
           <!-- 12-City Collapsible Breakdown -->
