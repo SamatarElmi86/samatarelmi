@@ -130,17 +130,7 @@
     });
   }
 
-  // --- 2b. Tour Cities Disclosure Responsive Sync ---
-  const tourCitiesDisclosure = document.getElementById("tour-cities-disclosure");
-  if (tourCitiesDisclosure) {
-    function syncTourCitiesDisclosure() {
-      if (window.innerWidth > 820) {
-        tourCitiesDisclosure.open = true;
-      }
-    }
-    syncTourCitiesDisclosure();
-    window.addEventListener("resize", syncTourCitiesDisclosure);
-  }
+  // --- 2b. Tour Cities Disclosure (collapsed by default, user-toggled) ---
 
   // --- 3. Events Date Management & Archive Sorting ---
   const londonDateKey = (date = new Date()) => {
