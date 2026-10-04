@@ -25,6 +25,7 @@ const pages = [
   { id: "events.html", path: "events.html", prefix: "" },
   { id: "press.html", path: "press.html", prefix: "" },
   { id: "contact.html", path: "contact.html", prefix: "" },
+  { id: "after-cordelia.html", path: "after-cordelia.html", prefix: "" },
   { id: "journal/why-im-not-on-social-media.html", path: "journal/why-im-not-on-social-media.html", prefix: "../" }
 ];
 
@@ -120,7 +121,7 @@ function getCanonicalFooter(prefix = "") {
           <p class="footer-label">Music, journal &amp; values</p>
           <ul class="footer-links">
             <li><a href="https://knomadspock.bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a></li>
-            <li><a href="${prefix}newsletter.html">Dunya journal</a></li>
+            <li><a href="${prefix}newsletter.html">Disregard Prior Prompt journal</a></li>
             <li><a href="https://samatarelmi.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a></li>
             <li><a href="${prefix}contact.html#social-media">Why I’m not on social media</a></li>
           </ul>

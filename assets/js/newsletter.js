@@ -1,4 +1,4 @@
-// Dunya Journal & Substack Feed Synchronisation
+// Disregard Prior Prompt Journal & Substack Feed Synchronisation
 (function () {
   const journal = document.querySelector("[data-journal-posts]");
   if (!journal) return;
@@ -19,7 +19,7 @@
     meta.className = "meta";
     const sourceLabel =
       post.source === "Substack"
-        ? "Dunya · Substack"
+        ? "Disregard Prior Prompt · Substack"
         : (post.category || "Dispatch");
     meta.textContent = `${formatDate(post.date)} · ${sourceLabel}`;
 

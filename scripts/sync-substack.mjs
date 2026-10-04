@@ -60,7 +60,7 @@ async function fetchFeed() {
     }
     const xml = await response.text();
     if (!xml || /invite-only/i.test(xml)) {
-      console.warn("Dunya feed is not public or empty");
+      console.warn("Disregard Prior Prompt feed is not public or empty");
       return [];
     }
     const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map((match) => match[1]);
@@ -71,7 +71,7 @@ async function fetchFeed() {
       return {
         title: plainText(tagValue(item, "title")),
         date: Number.isNaN(published.getTime()) ? new Date().toISOString().slice(0, 10) : published.toISOString().slice(0, 10),
-        category: plainText(tagValue(item, "category")) || "Dunya",
+        category: plainText(tagValue(item, "category")) || "Disregard Prior Prompt",
         excerpt: excerpt(plainText(description)),
         url: tagValue(item, "link"),
         source: "Substack",
@@ -143,7 +143,7 @@ async function sync() {
       if (gridEnd !== -1) {
         const renderedCards = finalPosts.map((post) => {
           const isSubstack = post.source === "Substack";
-          const sourceLabel = isSubstack ? "Dunya · Substack" : (post.category || "Dispatch");
+          const sourceLabel = isSubstack ? "Disregard Prior Prompt · Substack" : (post.category || "Dispatch");
           const targetAttr = isSubstack ? ' target="_blank" rel="noopener noreferrer"' : '';
           const ctaText = isSubstack ? "Continue on Substack →" : "Read the essay →";
           return `          <article class="journal-card">

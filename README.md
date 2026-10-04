@@ -7,7 +7,7 @@ This folder is ready to publish from the root of the `SamatarElmi86/samatarelmi`
 - `index.html` - home
 - `about.html` - long biography
 - `writing.html` - books, 2026 collections and forthcoming work
-- `newsletter.html` - Dunya journal and newsletter, with website-hosted essays and public Substack excerpts
+- `newsletter.html` - Disregard Prior Prompt journal and newsletter, with website-hosted essays and public Substack excerpts
 - `music.html` - Knomad Spock music and listening links
 - `events.html` - 24 active dates from the supplied 2026 tour workbook, with the cancelled 24 October Mason & Fifth date removed
 - `gallery.html` - filterable gallery with 226 web-ready photographs and films across seven collections
@@ -44,8 +44,8 @@ Future additions can use the same seven folders: Analog, Collaborations, Creativ
 - The site continues to use `info@samatarelmi.co.uk`; `management@samatarelmi.co.uk` has not yet been created.
 - Bandcamp is the only music-platform link. Social-media, Spotify and Apple Music links are intentionally omitted; the contact page explains this values-led choice and gives direct email, journal and newsletter routes.
 
-## Dunya journal and newsletter
+## Disregard Prior Prompt journal and newsletter
 
 The website owns the permanent public journal at `newsletter.html`; complete site essays live in `journal/`. The post index is `assets/data/newsletter-posts.json` and is rendered progressively by `assets/js/newsletter.js`, with a readable no-JavaScript fallback.
 
-The scheduled GitHub Action in `.github/workflows/sync-newsletter.yml` checks the public Dunya Substack feed each morning and adds sanitised excerpts that link to the complete posts. The current Substack feed is invite-only, so the sync safely leaves the website unchanged until public feed items become available.
+The scheduled GitHub Action in `.github/workflows/sync-newsletter.yml` checks the public Substack feed each morning and adds sanitised excerpts that link to the complete posts. The current Substack feed is invite-only, so the sync safely leaves the website unchanged until public feed items become available.
