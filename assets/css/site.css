@@ -173,9 +173,11 @@ body.modal-open {
   -webkit-backdrop-filter: blur(16px);
 }
 .nav-shell {
-  width: var(--content);
+  width: 100%;
   min-height: 78px;
   margin: 0 auto;
+  padding: 0 var(--gutter);
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
