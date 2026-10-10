@@ -14,13 +14,21 @@
   const makePost = (post) => {
     const article = document.createElement("article");
     article.className = "journal-card";
+    const isPaid = Boolean(post.isPaid || post.access === "paid");
+    if (isPaid) {
+      article.setAttribute("data-access", "paid");
+    }
 
     const meta = document.createElement("p");
     meta.className = "meta";
-    const sourceLabel =
-      post.source === "Substack"
-        ? "Disregard Prior Prompt · Substack"
-        : (post.category || "Dispatch");
+    let sourceLabel;
+    if (post.source === "Substack") {
+      sourceLabel = isPaid
+        ? "Paid subscribers · Disregard Prior Prompt"
+        : "Disregard Prior Prompt · Substack";
+    } else {
+      sourceLabel = post.category || "Dispatch";
+    }
     meta.textContent = `${formatDate(post.date)} · ${sourceLabel}`;
 
     const heading = document.createElement("h3");
@@ -33,17 +41,27 @@
     }
     heading.append(titleLink);
 
-    const excerpt = document.createElement("p");
-    excerpt.textContent = post.excerpt;
+    let excerpt = null;
+    if (post.excerpt && post.excerpt.trim()) {
+      excerpt = document.createElement("p");
+      excerpt.textContent = post.excerpt;
+    }
 
     const readLink = titleLink.cloneNode();
     readLink.className = "text-link";
-    readLink.textContent =
-      post.source === "Substack"
-        ? "Continue on Substack →"
-        : "Read the essay →";
+    if (isPaid) {
+      readLink.textContent = "Read with a subscription →";
+    } else if (post.source === "Substack") {
+      readLink.textContent = "Continue on Substack →";
+    } else {
+      readLink.textContent = "Read the essay →";
+    }
 
-    article.append(meta, heading, excerpt, readLink);
+    article.append(meta, heading);
+    if (excerpt) {
+      article.append(excerpt);
+    }
+    article.append(readLink);
     return article;
   };
 

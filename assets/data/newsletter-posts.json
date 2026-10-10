@@ -1,15 +1,27 @@
 {
   "publication": "Disregard Prior Prompt",
   "sourceUrl": "https://samatarelmi.substack.com/",
-  "updated": "2026-10-10T12:33:57.294Z",
+  "updated": "2026-10-10T12:36:05.340Z",
   "posts": [
+    {
+      "title": "Disregard Prior Prompt",
+      "date": "2026-10-10",
+      "category": "Disregard Prior Prompt",
+      "excerpt": "Season 10 Episode 1",
+      "url": "https://samatarelmi.substack.com/p/disregard-prior-prompt-602",
+      "source": "Substack",
+      "isPaid": true,
+      "access": "paid"
+    },
     {
       "title": "Disregard Prior Prompt",
       "date": "2026-10-01",
       "category": "Disregard Prior Prompt",
       "excerpt": "an Agen Bien Fou Abduction",
       "url": "https://samatarelmi.substack.com/p/disregard-prior-prompt",
-      "source": "Substack"
+      "source": "Substack",
+      "isPaid": false,
+      "access": "public"
     },
     {
       "title": "Why I’m not on social media",
