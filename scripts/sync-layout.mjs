@@ -13,7 +13,7 @@ const repoRoot = path.resolve(__dirname, "..");
 const pages = [
   { id: "index.html", path: "index.html", prefix: "" },
   { id: "about.html", path: "about.html", prefix: "" },
-  { id: "writing.html", path: "writing.html", prefix: "" },
+  { id: "poetry.html", path: "poetry.html", prefix: "" },
   { id: "theatre.html", path: "theatre.html", prefix: "" },
   { id: "music.html", path: "music.html", prefix: "" },
   { id: "gallery.html", path: "gallery.html", prefix: "" },
@@ -26,12 +26,11 @@ const pages = [
   { id: "events.html", path: "events.html", prefix: "" },
   { id: "press.html", path: "press.html", prefix: "" },
   { id: "contact.html", path: "contact.html", prefix: "" },
-  { id: "after-cordelia.html", path: "after-cordelia.html", prefix: "" },
   { id: "journal/why-im-not-on-social-media.html", path: "journal/why-im-not-on-social-media.html", prefix: "../" }
 ];
 
 function getCanonicalHeader(pageId, prefix = "") {
-  const practicePages = ["writing.html", "theatre.html", "after-cordelia.html", "music.html", "gallery.html"];
+  const practicePages = ["poetry.html", "theatre.html", "music.html", "gallery.html"];
   const educationPages = ["work-with-me.html", "education-editorial.html", "course.html", "services.html", "research-tools.html"];
   const connectPages = ["press.html", "contact.html"];
 
@@ -63,22 +62,12 @@ function getCanonicalHeader(pageId, prefix = "") {
             <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 1 5 5 9 1"></polyline></svg>
           </button>
           <ul class="nav-dropdown" id="dropdown-practice" data-dropdown-menu>
-            <li class="nav-dropdown-branch">
-              <a class="nav-dropdown-link" href="${prefix}writing.html"${cur("writing.html")}>Writing</a>
-              <ul class="nav-subdropdown" aria-label="Writing sections">
-                <li class="nav-dropdown-branch">
-                  <a class="nav-dropdown-link nav-dropdown-link--sub" href="${prefix}theatre.html"${cur("theatre.html")}>Theatre</a>
-                  <ul class="nav-subdropdown nav-subdropdown--deep" aria-label="Theatre works">
-                    <li><a class="nav-dropdown-link nav-dropdown-link--sub-deep" href="${prefix}after-cordelia.html"${cur("after-cordelia.html")}>After Cordelia</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+            <li><a class="nav-dropdown-link" href="${prefix}poetry.html"${cur("poetry.html")}>Poetry</a></li>
+            <li><a class="nav-dropdown-link" href="${prefix}theatre.html"${cur("theatre.html")}>Theatre</a></li>
             <li><a class="nav-dropdown-link" href="${prefix}music.html"${cur("music.html")}>Music</a></li>
             <li><a class="nav-dropdown-link" href="${prefix}gallery.html"${cur("gallery.html")}>Gallery</a></li>
           </ul>
         </li>
-
         <li class="nav-item nav-item--has-dropdown${isEducationActive ? " is-active-parent" : ""}" data-nav-dropdown>
           <button class="nav-link nav-disclosure-btn" type="button" aria-expanded="false" aria-controls="dropdown-education" data-nav-toggle-dropdown>
             <span>Education &amp; Services</span>
@@ -169,7 +158,7 @@ for (const page of pages) {
   if (footerRegex.test(html)) {
     html = html.replace(footerRegex, footer);
   }
-  html = html.replace(/site\.css\?v=[a-zA-Z0-9_]+/g, "site.css?v=20261116_theatre_feedback");
+  html = html.replace(/site\.css\?v=[a-zA-Z0-9_]+/g, "site.css?v=20261116_poetry_theatre");
 
   fs.writeFileSync(fullPath, html, "utf-8");
   updated++;
