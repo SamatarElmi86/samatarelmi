@@ -179,7 +179,7 @@
     let visibleUpcoming = 0;
     homeEvents.forEach((event) => {
       const dateKey = eventDateKey(event);
-      const show = (!dateKey || dateKey >= todayInLondon) && visibleUpcoming < 3;
+      const show = (!dateKey || dateKey >= todayInLondon) && visibleUpcoming < 6;
       event.hidden = !show;
       if (show) visibleUpcoming += 1;
     });

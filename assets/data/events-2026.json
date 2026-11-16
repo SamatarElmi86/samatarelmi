@@ -1,29 +1,29 @@
 {
   "tour": "2026 UK Tour",
-  "updated": "2026-10-02T11:15:00Z",
+  "updated": "2026-11-16T17:30:00Z",
   "events": [
     {
       "id": "2026-02-27-kertecz-34",
       "date": "2026-02-27",
-      "dateDisplay": "27 February 2026, 7.30\u201310pm",
+      "dateDisplay": "27 February 2026, 7.30–10pm",
       "datetime": "2026-02-27T19:30:00+00:00",
       "title": "KERTECZ #34",
       "type": "Poetry event",
-      "venue": "L'\u00c9toile Studio",
+      "venue": "L'Étoile Studio",
       "city": "Bristol",
-      "details": "Kertecz Press \u00b7 L'\u00c9toile Studio, Bristol",
+      "details": "Kertecz Press · L'Étoile Studio, Bristol",
       "url": "https://www.headfirstbristol.co.uk/whats-on/letoile-studio/fri-27-feb-kertecz-34-148487"
     },
     {
       "id": "2026-03-28-anglo-somali-poetry",
       "date": "2026-03-28",
-      "dateDisplay": "28 March 2026, 1\u20134pm",
+      "dateDisplay": "28 March 2026, 1–4pm",
       "datetime": "2026-03-28T13:00:00+00:00",
       "title": "International Anglo-Somali Poetry | Anthology Workshop",
       "type": "Workshop",
       "venue": "Easton Community Centre",
       "city": "Bristol",
-      "details": "Writing, discussion, mentorship and live readings with Samatar Elmi and Asmaa Jama \u00b7 Lyra Bristol Poetry Festival\nEaston Community Centre \u00b7 Bristol",
+      "details": "Writing, discussion, mentorship and live readings with Samatar Elmi and Asmaa Jama · Lyra Bristol Poetry Festival\nEaston Community Centre · Bristol",
       "url": "https://www.headfirstbristol.co.uk/whats-on/easton-community-centre/sat-28-mar-international-anglo-somali-poetry-anthology-workshop-150980"
     },
     {
@@ -207,18 +207,6 @@
       "url": ""
     },
     {
-      "id": "2026-09-17-after-cordelia-scratch",
-      "date": "2026-09-17",
-      "dateDisplay": "17 September 2026, 3pm & 7pm",
-      "datetime": "2026-09-17T15:00:00+01:00",
-      "title": "After Cordelia",
-      "type": "R&D scratch",
-      "venue": "Chapter Arts Centre",
-      "city": "Cardiff",
-      "details": "Two 30-minute scratch performances \u00b7 directed by Mathilde Lopez\nChapter Arts Centre \u00b7 Cardiff",
-      "url": "after-cordelia.html"
-    },
-    {
       "id": "2026-09-17-down-by-here",
       "date": "2026-09-17",
       "dateDisplay": "17 September 2026",
@@ -231,6 +219,18 @@
       "url": "https://events.humanitix.com/an-evening-with-samatar-elmi-agen-bien-fou-and-reclamations"
     },
     {
+      "id": "2026-09-17-after-cordelia-scratch",
+      "date": "2026-09-17",
+      "dateDisplay": "17 September 2026, 3pm & 7pm",
+      "datetime": "2026-09-17T15:00:00+01:00",
+      "title": "After Cordelia",
+      "type": "R&D scratch",
+      "venue": "Chapter Arts Centre",
+      "city": "Cardiff",
+      "details": "Two 30-minute scratch performances · directed by Mathilde Lopez\nChapter Arts Centre · Cardiff",
+      "url": "after-cordelia.html"
+    },
+    {
       "id": "2026-10-01-liverpool-everyman",
       "date": "2026-10-01",
       "dateDisplay": "1 October 2026",
@@ -239,7 +239,7 @@
       "type": "Workshop + performance",
       "venue": "Liverpool Everyman Theatre",
       "city": "Liverpool",
-      "details": "Liverpool \u00b7 \u201cNight of Poetry\u201d around Death of a Salesman\nWorkshop: 2pm \u00b7 Neuro-Divergence and Creative Writing \u2014 pre-show poetry workshop\nPerformance: 10.30pm \u00b7 Poetry performance",
+      "details": "Liverpool · “Night of Poetry” around Death of a Salesman\nWorkshop: 2pm · Neuro-Divergence and Creative Writing — pre-show poetry workshop\nPerformance: 10.30pm · Poetry performance",
       "url": ""
     },
     {
@@ -251,7 +251,7 @@
       "type": "Performance",
       "venue": "Cardiff Music City Festival / Church of Noise",
       "city": "Cardiff",
-      "details": "Cardiff Music City Festival / Church of Noise \u00b7 Cardiff",
+      "details": "Cardiff Music City Festival / Church of Noise · Cardiff",
       "url": ""
     },
     {
@@ -261,21 +261,33 @@
       "datetime": "2026-10-19",
       "title": "Kertecz",
       "type": "Performance",
-      "venue": "L'\u00c9toile Studio (18 West St, Bristol BS2 0BH)",
+      "venue": "L'Étoile Studio (18 West St, Bristol BS2 0BH)",
       "city": "Bristol",
-      "details": "L'\u00c9toile Studio (18 West St, Bristol BS2 0BH) \u00b7 Bristol",
+      "details": "L'Étoile Studio (18 West St, Bristol BS2 0BH) · Bristol",
       "url": ""
     },
     {
       "id": "2026-10-21-somali-week-oxford-house",
       "date": "2026-10-21",
-      "dateDisplay": "21 October 2026, 6\u20138pm",
+      "dateDisplay": "21 October 2026, 6–8pm",
       "datetime": "2026-10-21T18:00:00+01:00",
       "title": "Neurodiversity and the Creative Process: A Workshop with Samatar Elmi",
       "type": "Workshop",
       "venue": "Oxford House",
       "city": "London",
-      "details": "Followed by an open mic night \u00b7 Somali Week Festival\nOxford House, Bethnal Green, London",
+      "details": "Followed by an open mic night · Somali Week Festival\nOxford House, Bethnal Green, London",
+      "url": ""
+    },
+    {
+      "id": "2026-10-21-open-start-launch-bath",
+      "date": "2026-10-21",
+      "dateDisplay": "21 October 2026, 6:00pm",
+      "datetime": "2026-10-21T18:00:00+01:00",
+      "title": "Launch of Open Start",
+      "type": "Poetry reading",
+      "venue": "The Egg, Theatre Royal Bath",
+      "city": "Bath",
+      "details": "The Egg, Theatre Royal Bath · Bath",
       "url": ""
     },
     {
@@ -299,7 +311,7 @@
       "type": "Performance",
       "venue": "Manchester Poetry Library",
       "city": "Manchester",
-      "details": "Manchester Poetry Library \u00b7 Manchester",
+      "details": "Manchester Poetry Library · Manchester",
       "url": ""
     },
     {
@@ -311,7 +323,19 @@
       "type": "Performance",
       "venue": "Isis River Farmhouse",
       "city": "Oxford",
-      "details": "Isis River Farmhouse \u00b7 Oxford",
+      "details": "Isis River Farmhouse · Oxford",
+      "url": ""
+    },
+    {
+      "id": "2026-11-19-cluster-hours-bristol",
+      "date": "2026-11-19",
+      "dateDisplay": "19 November 2026, 5:00 PM",
+      "datetime": "2026-11-19T17:00:00+00:00",
+      "title": "Celebrating Nick Moore's exhibition CLUSTER (with Nick Moore)",
+      "type": "Event",
+      "venue": "HOURS",
+      "city": "Bristol",
+      "details": "Celebrating Nick Moore's exhibition CLUSTER (with Nick Moore)\nHOURS · Bristol",
       "url": ""
     },
     {
@@ -323,7 +347,31 @@
       "type": "Performance",
       "venue": "Sun Pier House",
       "city": "Chatham",
-      "details": "7.20pm start \u00b7 30 minutes\nSun Pier House \u00b7 Chatham",
+      "details": "7.20pm start · 30 minutes\nSun Pier House · Chatham",
+      "url": ""
+    },
+    {
+      "id": "2026-11-29-bring-down-the-house-bristol",
+      "date": "2026-11-29",
+      "dateDisplay": "29 November 2026, 5:00 PM – 7:00 PM",
+      "datetime": "2026-11-29T17:00:00+00:00",
+      "title": "Bring Down The House",
+      "type": "Event",
+      "venue": "Bookhaus",
+      "city": "Bristol",
+      "details": "Bring Down The House\nBookhaus · Bristol",
+      "url": ""
+    },
+    {
+      "id": "2026-12-05-flipped-eye-25th-london",
+      "date": "2026-12-05",
+      "dateDisplay": "5 December 2026, 12:00 PM – 8:00 PM",
+      "datetime": "2026-12-05T12:00:00+00:00",
+      "title": "Flipped Eye 25th Anniversary Celebrations",
+      "type": "Celebration",
+      "venue": "Mason & Fifth, Westbourne Park",
+      "city": "London",
+      "details": "Sets from Roger Robinson and Samatar Elmi starting at 5:00 PM\nMason & Fifth, Westbourne Park · London",
       "url": ""
     }
   ]
